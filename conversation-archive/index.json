@@ -1,0 +1,303 @@
+{
+  "schema_version": 1,
+  "captured_at_utc": "2026-10-03T16:14:50+00:00",
+  "captured_at_asia_shanghai": "2026-10-04T00:14:50+08:00",
+  "repository": "xiaoxingzi0405/001",
+  "snapshot_type": "readable_conversation_records",
+  "complete_material_backup": false,
+  "all_original_logs_guaranteed": false,
+  "api_limits": {
+    "maximum_requested_item_text_characters": 20000,
+    "responses_are_bounded": true
+  },
+  "source_threads_path": "source-threads.json",
+  "local_sources_path": "local-sources.json",
+  "totals": {
+    "thread_count": 9,
+    "page_count": 71,
+    "window_count": 71,
+    "deduplicated_message_count": 665,
+    "completed_image_generation_record_count": 208,
+    "binary_files_archived": 0,
+    "source_materials_retrieved": false
+  },
+  "threads": [
+    {
+      "thread_id": "01a0fbd7-4d8a-7220-a2c1-0487662562c2",
+      "title": "游戏1号",
+      "archived": false,
+      "source_host_id": "local",
+      "source_cwd": "/Users/wangye/Desktop/贴纸",
+      "page_count": 21,
+      "window_count": 21,
+      "deduplicated_message_count": 192,
+      "summary_message_count": 192,
+      "completed_image_generation_record_count": 11,
+      "source_materials_retrieved": false,
+      "binary_files_archived": 0,
+      "conversation_path": "threads/01a0fbd7-4d8a-7220-a2c1-0487662562c2/conversation.md",
+      "summary_path": "threads/01a0fbd7-4d8a-7220-a2c1-0487662562c2/summary.json",
+      "inventory_path": "threads/01a0fbd7-4d8a-7220-a2c1-0487662562c2/inventory.json",
+      "completeness": {
+        "full_historical_log_guaranteed": false,
+        "tool_output_truncation_count": 17,
+        "command_executions_without_output_count": 85,
+        "details_summary_path": "threads/01a0fbd7-4d8a-7220-a2c1-0487662562c2/summary.json",
+        "summary_fields_with_limitation_evidence": [
+          "historicalTextCompleteness",
+          "emptyItemTurns",
+          "rawEmptyTurnOccurrences",
+          "rawTruncatedResponseOccurrences",
+          "truncatedItems",
+          "commandExecutionsWithoutOutput",
+          "limitations"
+        ]
+      }
+    },
+    {
+      "thread_id": "01a0fe5e-185b-7f20-917e-d6558aafc741",
+      "title": "游戏2号",
+      "archived": false,
+      "source_host_id": "local",
+      "source_cwd": "/Users/wangye/Desktop/贴纸",
+      "page_count": 8,
+      "window_count": 8,
+      "deduplicated_message_count": 49,
+      "summary_message_count": 49,
+      "completed_image_generation_record_count": 10,
+      "source_materials_retrieved": false,
+      "binary_files_archived": 0,
+      "conversation_path": "threads/01a0fe5e-185b-7f20-917e-d6558aafc741/conversation.md",
+      "summary_path": "threads/01a0fe5e-185b-7f20-917e-d6558aafc741/summary.json",
+      "inventory_path": "threads/01a0fe5e-185b-7f20-917e-d6558aafc741/inventory.json",
+      "completeness": {
+        "full_historical_log_guaranteed": false,
+        "tool_output_truncation_count": 11,
+        "command_executions_without_output_count": 28,
+        "details_summary_path": "threads/01a0fe5e-185b-7f20-917e-d6558aafc741/summary.json",
+        "summary_fields_with_limitation_evidence": [
+          "historicalTextCompleteness",
+          "emptyItemTurns",
+          "rawEmptyTurnOccurrences",
+          "rawTruncatedResponseOccurrences",
+          "truncatedItems",
+          "commandExecutionsWithoutOutput",
+          "limitations"
+        ]
+      }
+    },
+    {
+      "thread_id": "01a0fe5a-9c61-7391-b8a3-3a6c45a47f8b",
+      "title": "游戏2号",
+      "archived": true,
+      "source_host_id": "local",
+      "source_cwd": "/Users/wangye/Desktop/贴纸",
+      "page_count": 1,
+      "window_count": 1,
+      "deduplicated_message_count": 4,
+      "summary_message_count": 4,
+      "completed_image_generation_record_count": 0,
+      "source_materials_retrieved": false,
+      "binary_files_archived": 0,
+      "conversation_path": "threads/01a0fe5a-9c61-7391-b8a3-3a6c45a47f8b/conversation.md",
+      "summary_path": "threads/01a0fe5a-9c61-7391-b8a3-3a6c45a47f8b/summary.json",
+      "inventory_path": "threads/01a0fe5a-9c61-7391-b8a3-3a6c45a47f8b/inventory.json",
+      "completeness": {
+        "full_historical_log_guaranteed": false,
+        "tool_output_truncation_count": 0,
+        "command_executions_without_output_count": 1,
+        "details_summary_path": "threads/01a0fe5a-9c61-7391-b8a3-3a6c45a47f8b/summary.json",
+        "summary_fields_with_limitation_evidence": [
+          "historicalTextCompleteness",
+          "emptyItemTurns",
+          "rawEmptyTurnOccurrences",
+          "rawTruncatedResponseOccurrences",
+          "truncatedItems",
+          "commandExecutionsWithoutOutput",
+          "limitations"
+        ]
+      }
+    },
+    {
+      "thread_id": "01a0ff53-d4ce-7223-9893-2c65418ffa2d",
+      "title": "游戏3号",
+      "archived": false,
+      "source_host_id": "local",
+      "source_cwd": "/Users/wangye/Desktop/贴纸",
+      "page_count": 5,
+      "window_count": 5,
+      "deduplicated_message_count": 59,
+      "summary_message_count": 59,
+      "completed_image_generation_record_count": 23,
+      "source_materials_retrieved": false,
+      "binary_files_archived": 0,
+      "conversation_path": "threads/01a0ff53-d4ce-7223-9893-2c65418ffa2d/conversation.md",
+      "summary_path": "threads/01a0ff53-d4ce-7223-9893-2c65418ffa2d/summary.json",
+      "inventory_path": "threads/01a0ff53-d4ce-7223-9893-2c65418ffa2d/inventory.json",
+      "completeness": {
+        "full_historical_log_guaranteed": false,
+        "tool_output_truncation_count": 11,
+        "command_executions_without_output_count": 14,
+        "details_summary_path": "threads/01a0ff53-d4ce-7223-9893-2c65418ffa2d/summary.json",
+        "summary_fields_with_limitation_evidence": [
+          "historicalTextCompleteness",
+          "emptyItemTurns",
+          "rawEmptyTurnOccurrences",
+          "rawTruncatedResponseOccurrences",
+          "truncatedItems",
+          "commandExecutionsWithoutOutput",
+          "limitations"
+        ]
+      }
+    },
+    {
+      "thread_id": "01a0fd6e-3a20-7be0-b98f-6ea35299628c",
+      "title": "生图1号",
+      "archived": false,
+      "source_host_id": "local",
+      "source_cwd": "/Users/wangye/Desktop/贴纸",
+      "page_count": 13,
+      "window_count": 13,
+      "deduplicated_message_count": 124,
+      "summary_message_count": 124,
+      "completed_image_generation_record_count": 70,
+      "source_materials_retrieved": false,
+      "binary_files_archived": 0,
+      "conversation_path": "threads/01a0fd6e-3a20-7be0-b98f-6ea35299628c/conversation.md",
+      "summary_path": "threads/01a0fd6e-3a20-7be0-b98f-6ea35299628c/summary.json",
+      "inventory_path": "threads/01a0fd6e-3a20-7be0-b98f-6ea35299628c/inventory.json",
+      "completeness": {
+        "full_historical_log_guaranteed": false,
+        "tool_output_truncation_count": 2,
+        "command_executions_without_output_count": 29,
+        "details_summary_path": "threads/01a0fd6e-3a20-7be0-b98f-6ea35299628c/summary.json",
+        "summary_fields_with_limitation_evidence": [
+          "raw_response_empty_turn_observation_count",
+          "completeness"
+        ]
+      }
+    },
+    {
+      "thread_id": "01a0fe6a-db08-7a60-b448-d6689edfd31a",
+      "title": "生图2号",
+      "archived": false,
+      "source_host_id": "local",
+      "source_cwd": "/Users/wangye/Desktop/贴纸",
+      "page_count": 5,
+      "window_count": 5,
+      "deduplicated_message_count": 35,
+      "summary_message_count": 35,
+      "completed_image_generation_record_count": 13,
+      "source_materials_retrieved": false,
+      "binary_files_archived": 0,
+      "conversation_path": "threads/01a0fe6a-db08-7a60-b448-d6689edfd31a/conversation.md",
+      "summary_path": "threads/01a0fe6a-db08-7a60-b448-d6689edfd31a/summary.json",
+      "inventory_path": "threads/01a0fe6a-db08-7a60-b448-d6689edfd31a/inventory.json",
+      "completeness": {
+        "full_historical_log_guaranteed": false,
+        "tool_output_truncation_count": 0,
+        "command_executions_without_output_count": 22,
+        "details_summary_path": "threads/01a0fe6a-db08-7a60-b448-d6689edfd31a/summary.json",
+        "summary_fields_with_limitation_evidence": [
+          "raw_response_empty_turn_observation_count",
+          "completeness"
+        ]
+      }
+    },
+    {
+      "thread_id": "01a0fbff-d08a-7711-9289-3207ba7d5f78",
+      "title": "分割1号",
+      "archived": false,
+      "source_host_id": "local",
+      "source_cwd": "/Users/wangye/Desktop/贴纸",
+      "page_count": 11,
+      "window_count": 11,
+      "deduplicated_message_count": 137,
+      "summary_message_count": 137,
+      "completed_image_generation_record_count": 48,
+      "source_materials_retrieved": false,
+      "binary_files_archived": 0,
+      "conversation_path": "threads/01a0fbff-d08a-7711-9289-3207ba7d5f78/conversation.md",
+      "summary_path": "threads/01a0fbff-d08a-7711-9289-3207ba7d5f78/summary.json",
+      "inventory_path": "threads/01a0fbff-d08a-7711-9289-3207ba7d5f78/inventory.json",
+      "completeness": {
+        "full_historical_log_guaranteed": false,
+        "tool_output_truncation_count": 10,
+        "command_executions_without_output_count": null,
+        "details_summary_path": "threads/01a0fbff-d08a-7711-9289-3207ba7d5f78/summary.json",
+        "summary_fields_with_limitation_evidence": [
+          "empty_turn_count",
+          "empty_turn_ids",
+          "tool_output_truncation_count",
+          "truncation_locations",
+          "limitations"
+        ]
+      }
+    },
+    {
+      "thread_id": "01a0fdbd-87ca-7fe3-85eb-c71bf1dc0620",
+      "title": "分割2号",
+      "archived": false,
+      "source_host_id": "local",
+      "source_cwd": "/Users/wangye/Desktop/贴纸",
+      "page_count": 3,
+      "window_count": 3,
+      "deduplicated_message_count": 32,
+      "summary_message_count": 32,
+      "completed_image_generation_record_count": 28,
+      "source_materials_retrieved": false,
+      "binary_files_archived": 0,
+      "conversation_path": "threads/01a0fdbd-87ca-7fe3-85eb-c71bf1dc0620/conversation.md",
+      "summary_path": "threads/01a0fdbd-87ca-7fe3-85eb-c71bf1dc0620/summary.json",
+      "inventory_path": "threads/01a0fdbd-87ca-7fe3-85eb-c71bf1dc0620/inventory.json",
+      "completeness": {
+        "full_historical_log_guaranteed": false,
+        "tool_output_truncation_count": 2,
+        "command_executions_without_output_count": null,
+        "details_summary_path": "threads/01a0fdbd-87ca-7fe3-85eb-c71bf1dc0620/summary.json",
+        "summary_fields_with_limitation_evidence": [
+          "empty_turn_count",
+          "empty_turn_ids",
+          "tool_output_truncation_count",
+          "truncation_locations",
+          "limitations"
+        ]
+      }
+    },
+    {
+      "thread_id": "01a0fe67-aeca-70b1-a1cb-6834350c2059",
+      "title": "分割3号",
+      "archived": false,
+      "source_host_id": "local",
+      "source_cwd": "/Users/wangye/Desktop/贴纸",
+      "page_count": 4,
+      "window_count": 4,
+      "deduplicated_message_count": 33,
+      "summary_message_count": 33,
+      "completed_image_generation_record_count": 5,
+      "source_materials_retrieved": false,
+      "binary_files_archived": 0,
+      "conversation_path": "threads/01a0fe67-aeca-70b1-a1cb-6834350c2059/conversation.md",
+      "summary_path": "threads/01a0fe67-aeca-70b1-a1cb-6834350c2059/summary.json",
+      "inventory_path": "threads/01a0fe67-aeca-70b1-a1cb-6834350c2059/inventory.json",
+      "completeness": {
+        "full_historical_log_guaranteed": false,
+        "tool_output_truncation_count": 1,
+        "command_executions_without_output_count": null,
+        "details_summary_path": "threads/01a0fe67-aeca-70b1-a1cb-6834350c2059/summary.json",
+        "summary_fields_with_limitation_evidence": [
+          "empty_turn_count",
+          "empty_turn_ids",
+          "tool_output_truncation_count",
+          "truncation_locations",
+          "limitations"
+        ]
+      }
+    }
+  ],
+  "limitations": [
+    "这份归档是 API 当前可读取会话记录的快照，不能保证原始日志全文。",
+    "工具输出可能截断或缺失，逐会话 summary.json 保存相关细节。",
+    "全部工程、附件、图片和生成成果仍需从 Mac 传入，路径元数据不等于文件内容。"
+  ]
+}

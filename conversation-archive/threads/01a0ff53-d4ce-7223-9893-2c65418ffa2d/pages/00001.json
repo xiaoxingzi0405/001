@@ -1,0 +1,802 @@
+{
+  "schemaVersion": 1,
+  "thread": {
+    "id": "01a0ff53-d4ce-7223-9893-2c65418ffa2d",
+    "kind": "codex",
+    "hostId": "local",
+    "title": "游戏3号",
+    "preview": "此会话框为游戏3号 一切执行准则以codex://threads/01a0fbd7-4d8a-7220-a2c1-0487662562c2为主",
+    "status": {
+      "type": "idle"
+    },
+    "cwd": "/Users/wangye/Desktop/贴纸",
+    "createdAt": 1790990079,
+    "updatedAt": 1791023753
+  },
+  "page": {
+    "order": "newest_first",
+    "limit": 1,
+    "nextCursor": "{\"requestedThreadId\":\"01a0ff53-d4ce-7223-9893-2c65418ffa2d\",\"rolloutOrdinal\":3290,\"includeAnchor\":false,\"scope\":{\"kind\":\"turns\"}}",
+    "hasMore": true
+  },
+  "turns": [
+    {
+      "id": "01a10103-11fe-7493-8c53-d5336600683a",
+      "status": "completed",
+      "error": null,
+      "startedAt": 1791018340,
+      "completedAt": 1791023753,
+      "durationMs": 5412144,
+      "items": [
+        {
+          "type": "commandExecution",
+          "id": "exec-5959c295-447b-4bcd-8565-b3907d44d991",
+          "command": "/bin/zsh -lc \"/Users/wangye/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node -e \\\"console.log(require('/Users/wangye/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/@napi-rs/canvas/package.json').version)\\\"\"",
+          "cwd": "/Users/wangye/Desktop/贴纸",
+          "status": "completed",
+          "exitCode": 0,
+          "durationMs": 0,
+          "output": {
+            "text": "0.1.100\n",
+            "truncated": false
+          }
+        },
+        {
+          "type": "commandExecution",
+          "id": "exec-c966d7b5-b897-4d48-aff2-11f65b42e137",
+          "command": "/bin/zsh -lc \"rg -n 'occlusion|FAIL|PIL|PNG|revision4' work/fragrance-pearl/occlusion-v4/audit/after-review/*.md\"",
+          "cwd": "/Users/wangye/Desktop/贴纸",
+          "status": "failed",
+          "exitCode": 1,
+          "durationMs": 0,
+          "output": {
+            "text": "zsh:1: no matches found: work/fragrance-pearl/occlusion-v4/audit/after-review/*.md\n",
+            "truncated": false
+          }
+        },
+        {
+          "type": "subAgentActivity",
+          "id": "call_8B7ISLzGiJ2BlggLG9oi18b6",
+          "kind": "interacted",
+          "agentThreadId": "01a0ff58-361a-7101-8347-64762b16d7f3",
+          "agentPath": "/root/fragrance_validation"
+        },
+        {
+          "type": "mcpToolCall",
+          "id": "call_TAoihSB2UGU4MijvtSyCCcbd",
+          "server": "cua_repl",
+          "tool": "js",
+          "arguments": {
+            "code": "await cameraProofTab.reload(); await cameraProofTab.getAXState(); await cameraProofTab.playwright.getByRole('button',{name:'运行四尺寸镜头验证',exact:true}).click(); await cameraProofTab.getAXState();",
+            "title": "重试修正后的实际镜头测试"
+          },
+          "status": "completed",
+          "durationMs": 592
+        },
+        {
+          "type": "agentMessage",
+          "id": "msg_0a956b8366d1b95b016ac0d3c7f56087d296fb8f7191031eec",
+          "text": "全量顺序检查已通过：同一组贴纸，无论先贴哪件，最终画面都一致。另发现编辑层级后，Cocos现有节点偶尔没有按新顺序排列；我会补修这一处，确保“调整排布”中的遮挡也正确。",
+          "phase": "commentary"
+        },
+        {
+          "type": "fileChange",
+          "id": "exec-739e27ee-1422-43fa-a1f4-4448b3fc6a4e",
+          "status": "completed",
+          "changes": [
+            {
+              "path": "/Users/wangye/Desktop/贴纸/outputs/fragrance-pearl-game/src/adapters/cocos/FragranceGame.ts",
+              "kind": {
+                "type": "update",
+                "move_path": null
+              },
+              "diff": {
+                "text": "@@ -416,3 +416,7 @@\n     for (const item of this.pressPapers) ordered.push({ order: item.part.placementOrder + 0.01, node: item.paper.root });\n-    ordered.sort((a, b) => a.order - b.order).forEach((entry, index) => entry.node.setSiblingIndex(index + 2));\n+    // Reused nodes may start anywhere after an editor layer change. Appending\n+    // the sorted entries establishes their actual relative order without an\n+    // assumed number of background or inactive children.\n+    ordered.sort((a, b) => a.order - b.order).forEach(entry =>\n+      entry.node.setSiblingIndex(this.world!.children.length - 1));\n     this.paintShadow();\n",
+                "truncated": false
+              }
+            }
+          ]
+        },
+        {
+          "type": "subAgentActivity",
+          "id": "call_XmW4VZQvtfJaasJRIyM3OKlz",
+          "kind": "interacted",
+          "agentThreadId": "01a0ff58-361a-7101-8347-64762b16d7f3",
+          "agentPath": "/root/fragrance_validation"
+        },
+        {
+          "type": "subAgentActivity",
+          "id": "call_9Nrn9XsAOEbTd4Ah5lCfCNjI",
+          "kind": "interacted",
+          "agentThreadId": "01a0ff56-99a5-7aa2-84da-65b8bf39cb80",
+          "agentPath": "/root/fragrance_runtime"
+        },
+        {
+          "type": "mcpToolCall",
+          "id": "call_Anm7JuiJlrjwzO6WBZ19nhtY",
+          "server": "cua_repl",
+          "tool": "js",
+          "arguments": {
+            "code": "nodeRepl.write(await cameraProofTab.playwright.locator('#status').textContent()); nodeRepl.write((await cameraProofTab.playwright.locator('#result').textContent()).slice(0,5000)); await cameraProofTab.getScreenshot();",
+            "title": "查看真实浏览器镜头验证结果"
+          },
+          "status": "completed",
+          "durationMs": 119
+        },
+        {
+          "type": "mcpToolCall",
+          "id": "call_nvjO6aoXioVsyFwIFCxfkPYG",
+          "server": "cua_repl",
+          "tool": "js",
+          "arguments": {
+            "code": "let cameraResultText = await cameraProofTab.playwright.locator('#result').textContent(); await rackProofFs.writeFile('/Users/wangye/Desktop/贴纸/work/fragrance-pearl/occlusion-v4/iab-camera-four-sizes.json',cameraResultText); let cameraResult = JSON.parse(cameraResultText); nodeRepl.write(cameraResult.records.map(r=>({name:r.name,raf:r.rafIntervalsMs,cpu:r.renderCPUms,holdPaints:r.overviewHoldPaints,queueResolves:r.resolvedQueueCallsDuringTour,staticTrayPaints:r.staticTrayPaints}))); await rackProofFs.writeFile('/Users/wangye/Desktop/贴纸/work/fragrance-pearl/occlusion-v4/iab-camera-four-sizes.jpg',await cameraProofTab.getScreenshot());",
+            "title": "保存真实帧间隔与镜头缓存证据"
+          },
+          "status": "completed",
+          "durationMs": 168
+        },
+        {
+          "type": "subAgentActivity",
+          "id": "subagent-completed-01a1013c-c93b-7302-9b3b-6b20e4e1d700",
+          "kind": "completed",
+          "agentThreadId": "01a0ff56-99a5-7aa2-84da-65b8bf39cb80",
+          "agentPath": "/root/fragrance_runtime"
+        },
+        {
+          "type": "agentMessage",
+          "id": "msg_0a956b8366d1b95b016ac0d522b85c87d297346b1ce4830fe2",
+          "text": "刚才的 Cocos 排序告警是测试把隐藏节点也算进了显示顺序，实际可见层级没有错。我会恢复原排序实现，只保留已经确认的镜头和遮挡修复。",
+          "phase": "commentary"
+        },
+        {
+          "type": "fileChange",
+          "id": "exec-6e34389e-ab9d-4d4f-94d7-bd5ff8254601",
+          "status": "completed",
+          "changes": [
+            {
+              "path": "/Users/wangye/Desktop/贴纸/outputs/fragrance-pearl-game/src/adapters/cocos/FragranceGame.ts",
+              "kind": {
+                "type": "update",
+                "move_path": null
+              },
+              "diff": {
+                "text": "@@ -416,7 +416,3 @@\n     for (const item of this.pressPapers) ordered.push({ order: item.part.placementOrder + 0.01, node: item.paper.root });\n-    // Reused nodes may start anywhere after an editor layer change. Appending\n-    // the sorted entries establishes their actual relative order without an\n-    // assumed number of background or inactive children.\n-    ordered.sort((a, b) => a.order - b.order).forEach(entry =>\n-      entry.node.setSiblingIndex(this.world!.children.length - 1));\n+    ordered.sort((a, b) => a.order - b.order).forEach((entry, index) => entry.node.setSiblingIndex(index + 2));\n     this.paintShadow();\n",
+                "truncated": false
+              }
+            }
+          ]
+        },
+        {
+          "type": "subAgentActivity",
+          "id": "call_zHOmX6ZRabOPSysKQ3FxBVFX",
+          "kind": "interacted",
+          "agentThreadId": "01a0ff58-361a-7101-8347-64762b16d7f3",
+          "agentPath": "/root/fragrance_validation"
+        },
+        {
+          "type": "subAgentActivity",
+          "id": "call_8S5h5XxyaiVNnoG0HJg1Y4lg",
+          "kind": "interacted",
+          "agentThreadId": "01a0ff56-99a5-7aa2-84da-65b8bf39cb80",
+          "agentPath": "/root/fragrance_runtime"
+        },
+        {
+          "type": "mcpToolCall",
+          "id": "call_QoeI6icjfs65c2dN7dQkYh1h",
+          "server": "cua_repl",
+          "tool": "js",
+          "arguments": {
+            "code": "await cameraProofTab.playwright.getByRole('button',{name:'运行四尺寸镜头验证',exact:true}).click(); await cameraProofTab.getAXState();",
+            "title": "核验纹理解码后的连续放大过渡"
+          },
+          "status": "completed",
+          "durationMs": 1208
+        },
+        {
+          "type": "subAgentActivity",
+          "id": "subagent-completed-01a10143-18a6-7b52-a220-3d5821652320",
+          "kind": "completed",
+          "agentThreadId": "01a0ff56-99a5-7aa2-84da-65b8bf39cb80",
+          "agentPath": "/root/fragrance_runtime"
+        },
+        {
+          "type": "contextCompaction",
+          "id": "01a10143-cc37-7761-ad14-5f4990a211bd"
+        },
+        {
+          "type": "mcpToolCall",
+          "id": "call_hnzWWpgXzU6bHVqsnMGeIGZx",
+          "server": "cua_repl",
+          "tool": "js",
+          "arguments": {
+            "code": "await cua.rewriteDocumentation();",
+            "title": "恢复浏览器验证上下文"
+          },
+          "status": "completed",
+          "durationMs": 5
+        },
+        {
+          "type": "agentMessage",
+          "id": "msg_0a956b8366d1b95b016ac0d704eae487d283ad7d7603a11f59",
+          "text": "已把放大区域的镜头过渡接入，并重新检查了 175 张贴纸的覆盖关系。柜内书本、蓝金盒和前框已分开处理，原贴纸画风与其他交互效果保留；现在正在核验浏览器拖放并导出修正版素材包。",
+          "phase": "commentary"
+        },
+        {
+          "type": "mcpToolCall",
+          "id": "call_hS5VLg0UzOmnHzHYKiKdZzng",
+          "server": "cua_repl",
+          "tool": "js",
+          "arguments": {
+            "code": "let repeatStatusV4 = await cameraProofTab.playwright.locator('#status').textContent(); nodeRepl.write(repeatStatusV4); let repeatRawV4 = await cameraProofTab.playwright.locator('#result').textContent(); await rackProofFs.writeFile('/Users/wangye/Desktop/贴纸/work/fragrance-pearl/occlusion-v4/iab-camera-four-sizes-repeat.json', repeatRawV4); let repeatReportV4 = JSON.parse(repeatRawV4); nodeRepl.write(Object.keys(repeatReportV4)); nodeRepl.write(repeatReportV4.records?.map(r => ({name:r.name, raf:r.raf, cpu:r.cpu, queueResolvesDuringTour:r.queueResolvesDuringTour,holdPaints:r.holdPaints})));",
+            "title": "读取第二次四尺寸镜头验证结果"
+          },
+          "status": "completed",
+          "durationMs": 132
+        },
+        {
+          "type": "commandExecution",
+          "id": "exec-f6be53f3-3888-4f44-bee0-4117e952d04e",
+          "command": "/bin/zsh -lc 'cat outputs/fragrance-pearl-game/package.json'",
+          "cwd": "/Users/wangye/Desktop/贴纸",
+          "status": "completed",
+          "exitCode": 0,
+          "durationMs": 0,
+          "output": {
+            "text": "{\n  \"name\": \"fragrance-pearl-sticker-mobile\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"build\": \"node tools/build.cjs\",\n    \"test\": \"node tests/session-check.mjs && node tests/alpha-threshold-check.cjs && node tests/hd-paper-check.cjs && node tests/hd-resource-check.cjs && node tests/progress-migration-check.cjs && node tests/placement-intent-check.cjs && node tests/viewport-check.cjs && node tests/camera-check.cjs\"\n  },\n  \"devDependencies\": {\n    \"typescript\": \"5.9.3\",\n    \"@cocos/creator-types\": \"3.8.8\"\n  }\n}\n",
+            "truncated": false
+          }
+        },
+        {
+          "type": "commandExecution",
+          "id": "exec-0432575b-f34a-4b75-be2a-3188a69f8efc",
+          "command": "/bin/zsh -lc \"sed -n '1,260p' work/fragrance-pearl/occlusion-v4/export-kit.py\"",
+          "cwd": "/Users/wangye/Desktop/贴纸",
+          "status": "completed",
+          "exitCode": 0,
+          "durationMs": 0,
+          "output": {
+            "text": "\"\"\"Export the accepted game layout as a portable complete-scene material kit.\"\"\"\nfrom pathlib import Path\nimport hashlib\nimport json\nimport shutil\nimport zipfile\nfrom PIL import Image\n\nROOT = Path(__file__).resolve().parents[3]\nGAME = ROOT / 'outputs/fragrance-pearl-game'\nSOURCE = ROOT / 'work/fragrance-pearl/source/花香与珠光-分割2号素材包'\nKIT = ROOT / 'outputs/花香与珠光-层级修正版素材包'\nWORK = ROOT / 'work/fragrance-pearl/occlusion-v4'\nlayout = json.loads((GAME / 'data/fragrance-pearl-layout.json').read_text())\nKIT.mkdir(parents=True, exist_ok=True)\n\ndef sha(path):\n    return hashlib.sha256(path.read_bytes()).hexdigest()\n\ndef copy(source, relative):\n    target = KIT / relative\n    target.parent.mkdir(parents=True, exist_ok=True)\n    shutil.copy2(source, target)\n    return relative\n\ndef dump(relative, value):\n    target = KIT / relative\n    target.parent.mkdir(parents=True, exist_ok=True)\n    target.write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\\n')\n\ncopy(SOURCE / 'original.png', 'original.png')\ncopy(GAME / layout['scene']['baseAssetKey'], 'base.png')\ncopy(ROOT / 'outputs/花香与珠光-交互验证.html', '试玩.html')\ncopy(GAME / 'data/fragrance-pearl-layout.json', 'game-layout.json')\ncopy(ROOT / 'outputs/贴纸排布规则.md', '说明/共享工作准则.md')\ncopy(WORK / 'occlusion-repair.json', '证据/本次层级修改.json')\nfor relative in ['all-175-occlusion-audit.md', 'all-175-occlusion-audit.json']:\n    copy(WORK / 'audit' / relative, '证据/' + relative)\ncopy(ROOT / 'work/fragrance-pearl/validation/camera-followup/区域镜头修正说明.md', '说明/区域放大接入.md')\n\nassets = []\nfor owner in layout['stickers']:\n    identifier = owner['stickerId']\n    file = copy(GAME / owner['assetKey'], f'stickers/{identifier}.png')\n    mask = copy(SOURCE / 'masks' / f'{identifier}.png', f'masks/{identifier}.png')\n    parts = []\n    for index, part in enumerate(owner['renderParts']):\n        part_file = copy(GAME / part['assetKey'], f'assembly/{identifier}-{index}.png')\n        position = {'x': owner['position']['x'] + part['offset']['x'],\n                    'y': owner['position']['y'] + part['offset']['y']}\n        parts.append({'part_id': part['partId'], 'kind': 'complete', 'role': part.get('role'),\n                      'file': part_file, 'origin_xy': [position['x'], position['y']],\n                      'offset_xy': [part['offset']['x'], part['offset']['y']],\n                      'size_wh': [part['sourceSize']['width'], part['sourceSize']['height']],\n                      'pixel_size_wh': list(Image.open(GAME / part['assetKey']).size),\n                      'z': part['placementOrder'], 'layer_index': part['layerIndex'],\n                      'requires_asset_ids': part.get('requiresAssetIds', []),\n                      'transform_with_owner': part.get('transformWithOwner', False),\n                      'assembly_only': part.get('assemblyOnly', False),\n                      'sha256': sha(GAME / part['assetKey'])})\n    assets.append({'id': identifier, 'name_zh': owner['name'], 'category': owner['category'],\n                   'region': owner['geoBlock'], 'area_level': owner['areaLevel'], 'file': file,\n                   'pixel_size_wh': list(Image.open(GAME / owner['assetKey']).size),\n                   'origin_xy': [owner['position']['x'], owner['position']['y']],\n                   'logical_size_wh': [owner['sourceSize']['width'], owner['sourceSize']['height']],\n                   'anchor_xy': [owner['anchor']['x'], owner['anchor']['y']],\n                   'scale': owner['scale'], 'rotation': owner['rotation'],\n                   'z': owner['layerIndex'], 'placement_order': owner['placementOrder'],\n                   'assembly_step': owner['assemblyStep'], 'depends_on': owner.get('dependsOn', []),\n                   'completed': True, 'intentional_edit': owner.get('intentionalEdit', False),\n                   'intentional_change': owner.get('intentionalChange'),\n                   'use_source_visible_overlay': False, 'original_visible_mask': mask,\n                   'original_correspondence': owner['sourcePlacement'],\n                   'complete_png_unchanged_in_revision4': True, 'sha256': sha(GAME / owner['assetKey']),\n                   'render_parts': parts})\n\nregions = []\nfor block in sorted(layout['geoBlocks'], key=lambda b: b['blockOrder']):\n    bounds = block['cameraBounds']\n    regions.append({'id': block['blockId'], 'name_zh': block['name'], 'block_order': block['blockOrder'],\n                    'camera_view_xyxy': [bounds['x'], bounds['y'], bounds['x'] + bounds['width'], bounds['y'] + bounds['height']],\n                    'required_asset_ids': block['requiredStickerIds'], 'area_counts': block['areaCounts'],\n                    'stage_order': ['L1', 'L2', 'L3'], 'empty_stage_policy': 'skip',\n                    'completion_rule': 'all logical owners placed and existing paste/celebration complete',\n                    'next_region': block['nextBlockId']})\n\nmanifest = {'schema_version': 'complete-scene-sticker-kit/2', 'layout_revision': 4,\n            'title': '花香与珠光 · 层级修正版', 'canvas_size_wh': [layout['scene']['width'], layout['scene']['height']],\n            'original': 'original.png', 'base': 'base.png', 'reconstructed': 'reconstructed.png',\n            'coordinate_system': 'top-left logical pixels, x right, y down; PNG texels separate',\n            'logical_asset_count': 175, 'render_part_count': 180,\n            'assets': assets, 'regions': regions,\n            'assembly_order': [s['stickerId'] for s in sorted(layout['stickers'], key=lambda s: s['assemblyStep'])],\n            'render_rule': 'sort every active render part globally by z ascending; placement time never changes paint order',\n            'camera_contract': {'reference': '游戏1号区域镜头，保持游戏3其他效果',\n                                'interpolation': 'smoothstep world translation and scale on one shared progress',\n                                'zoom_overview_ms': 700, 'hold_ms': 450, 'zoom_next_ms': 800,\n                                'final_region_total_ms': 1150, 'target_bounds': 'complete owner and render-part union',\n                                'raster_policy': 'keep native separate PNG textures; no low-resolution flattened world'},\n            'revision4_changes': layout['occlusionRepair'],\n            'source_archive_sha256': sha(Path(layout['source']['archive'])),\n            'source_files_unmodified': True, 'source_layout_sha256': sha(GAME / 'data/fragrance-pearl-layout.json')}\ndump('manifest.json', manifest)\n\nreconstruct_source = '''from pathlib import Path\nimport json\nfrom PIL import Image\n\nroot = Path(__file__).resolve().parent\nmanifest = json.loads((root / \"manifest.json\").read_text())\ncanvas = Image.open(root / manifest[\"base\"]).convert(\"RGBA\")\nparts = [(asset, part) for asset in manifest[\"assets\"] for part in asset[\"render_parts\"]]\nfor asset, part in sorted(parts, key=lambda pair: pair[1][\"z\"]):\n    if asset[\"scale\"] != 1 or asset[\"rotation\"] != 0 or asset[\"anchor_xy\"] != [0, 0]:\n        raise ValueError(\"Canonical reconstruction uses original owner pose; editable pose rendering is in game-layout.json.\")\n    image = Image.open(root / part[\"file\"]).convert(\"RGBA\")\n    size = tuple(map(int, part[\"size_wh\"]))\n    if image.size != size:\n        image = image.resize(size, Image.Resampling.LANCZOS)\n    canvas.alpha_composite(image, tuple(map(int, part[\"origin_xy\"])))\ncanvas.convert(\"RGB\").save(root / manifest[\"reconstructed\"])\nprint(\"Reconstructed 175 complete owners in 180 globally ordered parts.\")\n'''\n(KIT / 'reconstruct.py').write_text(reconstruct_source)\nexec(compile(reconstruct_source, str(KIT / 'reconstruct.py'), 'exec'), {'__file__': str(KIT / 'reconstruct.py')})\ncopy(KIT / 'reconstructed.png', '预览/完整组装.png')\nshutil.copy2(KIT / 'reconstructed.png', ROOT / 'outputs/花香与珠光-完成预览.png')\nfor name in ['perfume-cabinet-revision4.png', 'held-perfume-revision4.png', 'sofa-distillery-revision4.png',\n             'glass-sewing-intersection-revision4.png', 'jeweler-arms-revision4.png']:\n    copy(WORK / 'audit/after-review' / name, '预览/' + name)\n\n(KIT / '使用说明.txt').write_text('''花香与珠光 · 层级修正版素材包（版本4）\n\n打开“试玩.html”即可离线试玩。镜头只参考游戏1号的区域放大：0.7秒退全景、0.45秒停留、0.8秒进下区；最后一区1.15秒结束。游戏3的取贴、镊子、纸张压平、庆祝效果与界面继续使用原实现。\n\n175张完整透明贴纸在stickers目录，PNG像素为逻辑尺寸的2倍；完整单体的PNG与版本3逐字节一致。原始画风、色彩和原始ZIP保持。assembly目录是180个组装绘制部分，技术前景不增加玩家件数。\n\nmanifest.json记录每件坐标、尺寸、层级、区域、阶段、依赖与绘制子层。game-layout.json是游戏引擎使用的完整排布。按全局render_parts[].z升序绘制，不能按玩家贴放时间或区域父节点改变遮挡。纸栏和拿起效果必须使用完整stickers PNG。L050柜框及L002握瓶指尖采用当前同一PNG的互补分层，必须与所属物件共同移动、缩放、旋转、改锚点，不可留在旧位置。旧原画可见碎片只在masks目录留作对应证据，不参与绘制。\n\n本次修复柜框与书盒、沙发与后柜、玻璃展柜与后木柜、手指与瓶身的遮挡；笔记本略下移到实际桌面内。没有重新绘画。原图original.png用于对照；base.png为此前已批准的干净底图。reconstructed.png是当前全部贴完效果；原图与补全版存在先前授权的结构修复差异，不能称逐像素还原。\n\n运行python reconstruct.py可重复组装，需要Pillow。区域放大运动属于游戏运行逻辑，说明/区域放大接入.md描述接入方法；完整微信/Cocos接入代码在旁边“花香与珠光-手机游戏框架.zip”。本包保留浏览器试玩；微信、iOS/Android真机与Cocos GPU验收尚未进行。\n''')\nprint(json.dumps({'kit': str(KIT), 'owners': len(assets), 'parts': sum(len(a['render_parts']) for a in assets)}, ensure_ascii=False))\n",
+            "truncated": false
+          }
+        },
+        {
+          "type": "commandExecution",
+          "id": "exec-ab33a5a6-a0b9-432f-b2c1-71065c746afa",
+          "command": "/bin/zsh -lc \"rg --files work/fragrance-pearl/occlusion-v4 work/fragrance-pearl/validation/camera-followup | rg '(review|summary|results|scope|build|core-focus|handoff|audit|check)'\"",
+          "cwd": "/Users/wangye/Desktop/贴纸",
+          "status": "completed",
+          "exitCode": 0,
+          "durationMs": 0,
+          "output": {
+            "text": "work/fragrance-pearl/validation/camera-followup/candidate-build-4cd7dec4a96b.json\nwork/fragrance-pearl/validation/camera-followup/source-scope.json\nwork/fragrance-pearl/validation/camera-followup/superseded-append-trial-build.json\nwork/fragrance-pearl/validation/camera-followup/candidate-build.json\nwork/fragrance-pearl/validation/camera-followup/final-build.json\nwork/fragrance-pearl/occlusion-v4/audit/L047-primary-paper.jpg\nwork/fragrance-pearl/occlusion-v4/audit/B001-foreground.jpg\nwork/fragrance-pearl/occlusion-v4/audit/glass-sewing-intersection-original.png\nwork/fragrance-pearl/occlusion-v4/audit/candidate-glass-sewing.png\nwork/fragrance-pearl/occlusion-v4/audit/L002-finger-2x-grid.jpg\nwork/fragrance-pearl/occlusion-v4/audit/perfume-cabinet-original.png\nwork/fragrance-pearl/occlusion-v4/audit/C001-foreground.jpg\nwork/fragrance-pearl/occlusion-v4/audit/glass-sewing-intersection-current.png\nwork/fragrance-pearl/occlusion-v4/audit/glass-near-rim-current.png\nwork/fragrance-pearl/occlusion-v4/audit/R009-primary-paper.jpg\nwork/fragrance-pearl/occlusion-v4/audit/glass-near-rim-original.png\nwork/fragrance-pearl/occlusion-v4/audit/stable-contact-15.jpg\nwork/fragrance-pearl/occlusion-v4/audit/stable-contact-01.jpg\nwork/fragrance-pearl/occlusion-v4/audit/jeweler-arms-current.png\nwork/fragrance-pearl/occlusion-v4/audit/right-tabletop-current.png\nwork/fragrance-pearl/occlusion-v4/audit/stable-contact-14.jpg\nwork/fragrance-pearl/occlusion-v4/audit/stable-contact-02.jpg\nwork/fragrance-pearl/occlusion-v4/audit/C017-primary-paper.jpg\nwork/fragrance-pearl/occlusion-v4/audit/after-review/final-all-175-visual-acceptance.json\nwork/fragrance-pearl/occlusion-v4/audit/after-review/L049-earliest-single.png\nwork/fragrance-pearl/occlusion-v4/audit/after-review/L056-earliest-single.png\nwork/fragrance-pearl/occlusion-v4/audit/after-review/L057-earliest-single.png\nwork/fragrance-pearl/occlusion-v4/audit/after-review/final-layout-snapshot.json\nwork/fragrance-pearl/occlusion-v4/audit/after-review/L055-earliest-single.png\nwork/fragrance-pearl/occlusion-v4/audit/after-review/native175-contact-15.jpg\nwork/fragrance-pearl/occlusion-v4/audit/after-review/native175-contact-01.jpg\nwork/fragrance-pearl/occlusion-v4/audit/after-review/L058-earliest-single.png\nwork/fragrance-pearl/occlusion-v4/audit/after-review/native175-contact-14.jpg\nwork/fragrance-pearl/occlusion-v4/audit/after-review/native175-contact-02.jpg\nwork/fragrance-pearl/occlusion-v4/audit/after-review/perfume-cabinet-revision4.png\nwork/fragrance-pearl/occlusion-v4/audit/after-review/revision4-independent-full-2x.png\nwork/fragrance-pearl/occlusion-v4/audit/after-review/native175-contact-03.jpg\nwork/fragrance-pearl/occlusion-v4/audit/after-review/native175-contact-07.jpg\nwork/fragrance-pearl/occlusion-v4/audit/after-review/native175-contact-13.jpg\nwork/fragrance-pearl/occlusion-v4/audit/after-review/final-all-175-visual-acceptance.md\nwork/fragrance-pearl/occlusion-v4/audit/after-review/native175-contact-12.jpg\nwork/fragrance-pearl/occlusion-v4/audit/after-review/native175-contact-06.jpg\nwork/fragrance-pearl/occlusion-v4/audit/after-review/native175-contact-10.jpg\nwork/fragrance-pearl/occlusion-v4/audit/after-review/native175-contact-04.jpg\nwork/fragrance-pearl/occlusion-v4/audit/after-review/historical/4cd7dec4/L049-earliest-single.png\nwork/fragrance-pearl/occlusion-v4/audit/after-review/historical/4cd7dec4/L056-earliest-single.png\nwork/fragrance-pearl/occlusion-v4/audit/after-review/historical/4cd7dec4/L057-earliest-single.png\nwork/fragrance-pearl/occlusion-v4/audit/after-review/historical/4cd7dec4/L055-earliest-single.png\nwork/fragrance-pearl/occlusion-v4/audit/after-review/historical/4cd7dec4/L058-earliest-single.png\nwork/fragrance-pearl/occlusion-v4/audit/after-review/historical/4cd7dec4/perfume-cabinet-revision4.png\nwork/fragrance-pearl/occlusion-v4/audit/after-review/historical/4cd7dec4/revision4-independent-full-2x.png\nwork/fragrance-pearl/occlusion-v4/audit/after-review/historical/4cd7dec4/jeweler-arms-revision4.png\nwork/fragrance-pearl/occlusion-v4/audit/after-review/historical/4cd7dec4/glass-sewing-intersection-revision4.png\nwork/fragrance-pearl/occlusion-v4/audit/after-review/historical/4cd7dec4/held-perfume-revision4.png\nwork/fragrance-pearl/occlusion-v4/audit/after-review/historical/4cd7dec4/sofa-distillery-revision4.png\nwork/fragrance-pearl/occlusion-v4/audit/after-review/historical/4cd7dec4/left-trolley-revision4.png\nwork/fragrance-pearl/occlusion-v4/audit/after-review/historical/4cd7dec4/input-manifest.json\nwork/fragrance-pearl/occlusion-v4/audit/after-review/native175-contact-05.jpg\nwork/fragrance-pearl/occlusion-v4/audit/after-review/native175-contact-11.jpg\nwork/fragrance-pearl/occlusion-v4/audit/after-review/native175-contact-08.jpg\nwork/fragrance-pearl/occlusion-v4/audit/after-review/native175-contact-09.jpg\nwork/fragrance-pearl/occlusion-v4/audit/after-review/jeweler-arms-revision4.png\nwork/fragrance-pearl/occlusion-v4/audit/after-review/glass-sewing-intersection-revision4.png\nwork/fragrance-pearl/occlusion-v4/audit/after-review/held-perfume-revision4.png\nwork/fragrance-pearl/occlusion-v4/audit/after-review/sofa-distillery-revision4.png\nwork/fragrance-pearl/occlusion-v4/audit/after-review/left-trolley-revision4.png\nwork/fragrance-pearl/occlusion-v4/audit/after-review/input-manifest.json\nwork/fragrance-pearl/occlusion-v4/audit/after-review/summary.json\nwork/fragrance-pearl/occlusion-v4/audit/held-perfume-current.png\nwork/fragrance-pearl/occlusion-v4/audit/stable-contact-03.jpg\nwork/fragrance-pearl/occlusion-v4/audit/stable-contact-07.jpg\nwork/fragrance-pearl/occlusion-v4/audit/stable-contact-13.jpg\nwork/fragrance-pearl/occlusion-v4/audit/book-shelf-current.png\nwork/fragrance-pearl/occlusion-v4/audit/stable-contact-12.jpg\nwork/fragrance-pearl/occlusion-v4/audit/stable-contact-06.jpg\nwork/fragrance-pearl/occlusion-v4/audit/left-trolley-original.png\nwork/fragrance-pearl/occlusion-v4/audit/stable-contact-10.jpg\nwork/fragrance-pearl/occlusion-v4/audit/stable-contact-04.jpg\nwork/fragrance-pearl/occlusion-v4/audit/sofa-distillery-current.png\nwork/fragrance-pearl/occlusion-v4/audit/build-audit.py\nwork/fragrance-pearl/occlusion-v4/audit/input-layout-snapshot.json\nwork/fragrance-pearl/occlusion-v4/audit/stable-contact-05.jpg\nwork/fragrance-pearl/occlusion-v4/audit/candidate-depth-only.png\nwork/fragrance-pearl/occlusion-v4/audit/stable-contact-11.jpg\nwork/fragrance-pearl/occlusion-v4/audit/held-copper-original.png\nwork/fragrance-pearl/occlusion-v4/audit/held-copper-current.png\nwork/fragrance-pearl/occlusion-v4/audit/stable-contact-08.jpg\nwork/fragrance-pearl/occlusion-v4/audit/book-shelf-original.png\nwork/fragrance-pearl/occlusion-v4/audit/left-trolley-current.png\nwork/fragrance-pearl/occlusion-v4/audit/jeweler-arms-original.png\nwork/fragrance-pearl/occlusion-v4/audit/stable-contact-09.jpg\nwork/fragrance-pearl/occlusion-v4/audit/candidate-sofa.png\nwork/fragrance-pearl/occlusion-v4/audit/C032-primary-paper.jpg\nwork/fragrance-pearl/occlusion-v4/audit/C048-primary-paper.jpg\nwork/fragrance-pearl/occlusion-v4/audit/build-after-review.py\nwork/fragrance-pearl/occlusion-v4/audit/build-final-review.py\nwork/fragrance-pearl/occlusion-v4/audit/L049-primary-paper.jpg\nwork/fragrance-pearl/occlusion-v4/audit/right-tabletop-original.png\nwork/fragrance-pearl/occlusion-v4/audit/C002-primary-paper.jpg\nwork/fragrance-pearl/occlusion-v4/audit/R003-primary-paper.jpg\nwork/fragrance-pearl/occlusion-v4/audit/R001-foreground.jpg\nwork/fragrance-pearl/occlusion-v4/audit/C033-primary-paper.jpg\nwork/fragrance-pearl/occlusion-v4/audit/L050-primary-paper.jpg\nwork/fragrance-pearl/occlusion-v4/audit/held-perfume-original.png\nwork/fragrance-pearl/occlusion-v4/audit/C030-primary-paper.jpg\nwork/fragrance-pearl/occlusion-v4/audit/input-manifest.json\nwork/fragrance-pearl/occlusion-v4/audit/all-175-occlusion-audit.md\nwork/fragrance-pearl/occlusion-v4/audit/all-175-occlusion-audit.json\nwork/fragrance-pearl/occlusion-v4/audit/sofa-distillery-original.png\nwork/fragrance-pearl/occlusion-v4/audit/perfume-cabinet-current.png\nwork/fragrance-pearl/occlusion-v4/validation/core-focus-check.cjs\nwork/fragrance-pearl/occlusion-v4/validation/cocos-sibling-check.cjs\nwork/fragrance-pearl/occlusion-v4/validation/final-current/cocos-sibling-before-results.json\nwork/fragrance-pearl/occlusion-v4/validation/final-current/controller-results.json\nwork/fragrance-pearl/occlusion-v4/validation/cocos-controller-check.cjs\nwork/fragrance-pearl/occlusion-v4/validation/final-current/cocos-sibling-results.json\nwork/fragrance-pearl/occlusion-v4/validation/final-current/results.json\nwork/fragrance-pearl/occlusion-v4/validation/baseline-probes/results.json\nwork/fragrance-pearl/occlusion-v4/validation/core-focus/clipped-overview-with-margin.png\nwork/fragrance-pearl/occlusion-v4/validation/core-focus/complete-final-native-canvas.png\nwork/fragrance-pearl/occlusion-v4/validation/core-focus/results.json\nwork/fragrance-pearl/occlusion-v4/validation/core-focus/resource-hashes.json\nwork/fragrance-pearl/occlusion-v4/validation/core-focus/unclipped-region-with-margin.png\n",
+            "truncated": false
+          }
+        },
+        {
+          "type": "subAgentActivity",
+          "id": "call_C6mzSLLcY47j5B0sDzcyj9Ua",
+          "kind": "interacted",
+          "agentThreadId": "01a10106-6fcc-7e23-90fb-5ff0d1889c29",
+          "agentPath": "/root/occlusion_audit"
+        },
+        {
+          "type": "mcpToolCall",
+          "id": "call_HxGtBfUg0Fi7aGk9G9Wgk4z4",
+          "server": "cua_repl",
+          "tool": "js",
+          "arguments": {
+            "code": "nodeRepl.write(repeatReportV4.records.map(r=>Object.fromEntries(Object.entries(r).filter(([k,v])=>!Array.isArray(v))))); let repeatShotV4 = await cameraProofTab.getScreenshot({emit:false}); await rackProofFs.writeFile('/Users/wangye/Desktop/贴纸/work/fragrance-pearl/occlusion-v4/iab-camera-four-sizes-repeat.jpg',repeatShotV4); await cameraProofTab.playwright.locator('#books').click(); let booksStateV4 = await cameraProofTab.getAXState({emit:false}); nodeRepl.write(booksStateV4.slice(0,3500));",
+            "title": "保存复测证据并检查书盒合法贴放状态"
+          },
+          "status": "completed",
+          "durationMs": 1098
+        },
+        {
+          "type": "subAgentActivity",
+          "id": "call_2zYLmc1JaQgkPBj2s6o1nZ3X",
+          "kind": "interacted",
+          "agentThreadId": "01a0ff58-361a-7101-8347-64762b16d7f3",
+          "agentPath": "/root/fragrance_validation"
+        },
+        {
+          "type": "mcpToolCall",
+          "id": "call_BwCOirAffpBQp4EmTEQ14jBS",
+          "server": "cua_repl",
+          "tool": "js",
+          "arguments": {
+            "code": "let bookSamplesV4 = await cameraProofTab.playwright.locator('#samples img').evaluateAll(es=>es.map(e=>({label:e.dataset.label || e.alt,src:e.getAttribute('src')}))); for(let i=0;i<bookSamplesV4.length;i++){await rackProofFs.writeFile('/Users/wangye/Desktop/贴纸/work/fragrance-pearl/occlusion-v4/iab-book-earliest-'+i+'.png',Buffer.from(bookSamplesV4[i].src.split(',')[1],'base64'));} await cameraProofTab.playwright.locator('#prepare').click(); let dragStateV4 = await cameraProofTab.getAXState({emit:false}); nodeRepl.write(dragStateV4.slice(0,5500));",
+            "title": "保存柜内覆盖实图并准备一次真实拖放"
+          },
+          "status": "completed",
+          "durationMs": 1183
+        },
+        {
+          "type": "commandExecution",
+          "id": "exec-ecd72575-3dd6-45ba-a254-e21337ee8b82",
+          "command": "/bin/zsh -lc 'cat work/fragrance-pearl/occlusion-v4/audit/after-review/final-all-175-visual-acceptance.md'",
+          "cwd": "/Users/wangye/Desktop/贴纸",
+          "status": "completed",
+          "exitCode": 0,
+          "durationMs": 0,
+          "output": {
+            "text": "# Revision4 修复后视觉复核\n\n最终布局 SHA256：`6024fc6df3262ccca8ea81bb15279c5e2cd0ae00d6c1ff81dc00fd0f058eba16`。\n\n结论：接受。重新逐页查看当前真实Native Canvas的175个正序稳定放置帧，15页接触表全部实看；另直接看4本/盒单件最早态、小本最早态、手持瓶/小本/沙发/玻璃柜最新态。独立按当前180个renderParts资源与paintOrder合成6处全完成及5个合法单件最早态作为交叉检查。\n\n先前4cd7候选的蓝/棕碎边确为漏覆盖，上层板面前景补入后已在6024版消除，旧截图保留historical/4cd7dec4。现无未解决的视觉覆盖问题。\n\n175个完整owner PNG逐字节对照原9bae布局内记录SHA均不变。L002/L050互补part的alpha及所有alpha>0像素RGBA精确合回canonical完整PNG；完全透明区域的RGB差异没有视觉影响。\n\n这是实际Canvas资源绘制与人工视觉复核，不代替真机GPU验收，也未声称700帧全部逐张看。105组合法先后相同集合像素一致的验证证据由validation另存。诊断裁图越出原画范围的黑色留白不属于产品区域镜头；产品视口由root实际IAB检查。\n\n## 修复接受记录\n\n- L050：互补前景105取上下层板前缘/上层板面及左右柱；四个柜内单物最早态均被合理压边，内分隔板留后；全组合无木框穿书。\n- L055：最早单本及正序与另三物叠放都接受，底脚在柜前唇后，书脊完整可辨。\n- L056：前候选漏在上板的蓝色碎边已消除；最早单本/与相邻书组合均接受，未竖切书主体。\n- L057：前候选漏在上板的棕色短划已消除；最早单本/正序组合均接受，木框在脚缘前。\n- L058：单蓝盒和四物组合都被右柱/下前唇自然遮后角，完整箱形可辨，无残片压木框。\n- R003：56主层恢复完整扶手/坐垫，在B01640及瓶50前；空沙发、两枕、白裙/猫先后出现都接受。\n- R038：57位于沙发56前、绿枕58后，不再露出后柜蓝灰横条。\n- R005：58位于沙发/米枕前、白裙60及猫后，叠枕接触完整。\n- C030：75主层在R00970前，空玻璃柜及逐件珠宝出现都保持完整右上金框/透明玻璃；无木腿漏穿。\n- C032：青花金盖罐完整PNG原字节不变，恢复玻璃柜框后在实际台面内，无错认棕木足。\n- C033：绿瓶与玻璃柜台面/后壁关系恢复，未贴在木柜脸上。\n- L049：前握手指尖116包在瓶115前、后竖掌与后拇指仍在瓶后；瓶形和双手完整，不升整人。\n- L002：完整人物主体40及同源前指尖116互补合回；放瓶前后与前柜关系都自然，右后手未误提。\n- C008：y522把后缘小本移进木桌面；本单独最早态有承托，后被C011前托盘部分盖住合理，和C015工具未串层。\n\n## 当前实际175帧逐件接受表\n\n|步骤|贴纸|层|结论|理由|\n|---:|---|---:|---|---|\n|1|B027 完整四联拱窗与玻璃景色|15|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：门窗/框在墙面前，柜与室内主体按前景压它，未见局部错误覆盖。|\n|2|B030 左侧完整绿色门与门框|20|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：门窗/框在墙面前，柜与室内主体按前景压它，未见局部错误覆盖。|\n|3|B031 右侧完整绿色门与门框|20|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：门窗/框在墙面前，柜与室内主体按前景压它，未见局部错误覆盖。|\n|4|B028 左后完整药瓶陈列大柜|23|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：门窗/框在墙面前，柜与室内主体按前景压它，未见局部错误覆盖。|\n|5|B029 右后完整药瓶陈列柜|23|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：门窗/框在墙面前，柜与室内主体按前景压它，未见局部错误覆盖。|\n|6|B033 完整细金色陶盆托架|22|接受|重新实看本次实际Native Canvas正序稳定帧，接受。金架22被前柜B02823遮下杆和脚，托盘可见；现绿色窗15始终在金架后。|\n|7|B034 完整白色大理石矮台|25|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：整件结构可辨、前面物件与后景分离；未见需新增分层的局部覆盖。|\n|8|L046 完整空花艺工作桌|80|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：整件结构可辨、前面物件与后景分离；未见需新增分层的局部覆盖。|\n|9|L047 完整空木质花艺推车|132|接受|重新实看本次实际Native Canvas正序稳定帧，接受。推车在上/下盆物后，现盆足落在上/下木板的上面；前缘细线未見明确大片误盖，不新增整车前景去切枝叶。|\n|10|L005 青花盆高脚花架|52|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：整件结构可辨、前面物件与后景分离；未见需新增分层的局部覆盖。|\n|11|L004 青花盆蕨类|55|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：盆/瓶完整，接触承托面，枝叶位于其靠前容器/家具前；未见逆层。|\n|12|L012 门内青花盆绿植|59|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：盆/瓶完整，接触承托面，枝叶位于其靠前容器/家具前；未见逆层。|\n|13|L008 左侧长幅植物画|64|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。 有效alpha与其他owner无≥4像素交叠。|\n|14|L009 左侧横幅植物画|64|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。 有效alpha与其他owner无≥4像素交叠。|\n|15|L013 桌上宽叶盆栽|95|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：盆/瓶完整，接触承托面，枝叶位于其靠前容器/家具前；未见逆层。|\n|16|L014 玻璃瓶鲜花|125|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：盆/瓶完整，接触承托面，枝叶位于其靠前容器/家具前；未见逆层。|\n|17|L015 白瓷壶紫色鲜花|127|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：盆/瓶完整，接触承托面，枝叶位于其靠前容器/家具前；未见逆层。|\n|18|L051 绿软垫花篮小椅|128|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：整件结构可辨、前面物件与后景分离；未见需新增分层的局部覆盖。|\n|19|L001 绿裙花艺师|130|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：身体在相应桌/柜后，需露的上身与手可见；未见新增需改覆盖。|\n|20|L016 桌面横放花束|130|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：盆/瓶完整，接触承托面，枝叶位于其靠前容器/家具前；未见逆层。|\n|21|L021 地面藤篮绿植|133|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：盆/瓶完整，接触承托面，枝叶位于其靠前容器/家具前；未见逆层。|\n|22|L026 藤编空提篮|133|接受|重新实看本次实际Native Canvas正序稳定帧，接受。篮133在椅L051128/人物130前，座椅承托；椅依赖L051正确。|\n|23|L019 推车薰衣草青花盆|135|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：盆/瓶完整，接触承托面，枝叶位于其靠前容器/家具前；未见逆层。|\n|24|L020 推车雏菊盆花|136|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：盆/瓶完整，接触承托面，枝叶位于其靠前容器/家具前；未见逆层。|\n|25|L022 推车下层粉盆绿植|138|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：盆/瓶完整，接触承托面，枝叶位于其靠前容器/家具前；未见逆层。|\n|26|L025 座椅上的花篮|138|接受|重新实看本次实际Native Canvas正序稳定帧，接受。花篮138在空篮L026133前，椅/人物后景自然，叠篮内容不是穿模。|\n|27|L023 推车下层吊兰盆|139|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：盆/瓶完整，接触承托面，枝叶位于其靠前容器/家具前；未见逆层。|\n|28|L003 虎斑猫|150|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|29|L052 门内小陶盆绿植|59|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：盆/瓶完整，接触承托面，枝叶位于其靠前容器/家具前；未见逆层。|\n|30|L010 右侧长幅植物画|64|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。 有效alpha与其他owner无≥4像素交叠。|\n|31|L011 右侧小幅植物画|64|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。 有效alpha与其他owner无≥4像素交叠。|\n|32|L006 门边黄铜壁灯|65|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|33|L007 上方黄铜壁灯|65|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|34|L029 窗台陶盆吊兰|77|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：盆/瓶完整，接触承托面，枝叶位于其靠前容器/家具前；未见逆层。|\n|35|L028 后方低陶盆绿植|85|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：盆/瓶完整，接触承托面，枝叶位于其靠前容器/家具前；未见逆层。|\n|36|L027 门边小盆绿植|90|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：盆/瓶完整，接触承托面，枝叶位于其靠前容器/家具前；未见逆层。|\n|37|L017 桌面小绿玻璃壶|128|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|38|L018 桌面剪刀|132|接受|重新实看本次实际Native Canvas正序稳定帧，接受。剪刀132横置花桌80前缘，工具延伸越桌缘合理，不能用全桌前景截断。|\n|39|L053 浅青蓝小花器|137|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：盆/瓶完整，接触承托面，枝叶位于其靠前容器/家具前；未见逆层。|\n|40|L054 青蓝小壶花器|137|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：盆/瓶完整，接触承托面，枝叶位于其靠前容器/家具前；未见逆层。|\n|41|L024 铜浇水壶|145|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|42|L050 完整空调香陈列柜|98|接受|互补前景105取上下层板前缘/上层板面及左右柱；四个柜内单物最早态均被合理压边，内分隔板留后；全组合无木框穿书。|\n|43|L002 红裙调香师|40|接受|完整人物主体40及同源前指尖116互补合回；放瓶前后与前柜关系都自然，右后手未误提。|\n|44|L041 椭圆雕花座钟|75|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|45|L042 方形雕花座钟|75|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|46|L043 柜顶银壶|76|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|47|L055 柜内浅棕古籍|103|接受|最早单本及正序与另三物叠放都接受，底脚在柜前唇后，书脊完整可辨。|\n|48|L056 柜内青蓝古籍|103|接受|前候选漏在上板的蓝色碎边已消除；最早单本/与相邻书组合均接受，未竖切书主体。|\n|49|L057 柜内深棕古籍|103|接受|前候选漏在上板的棕色短划已消除；最早单本/正序组合均接受，木框在脚缘前。|\n|50|L045 调香台小黄花玻璃瓶|104|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：盆/瓶完整，接触承托面，枝叶位于其靠前容器/家具前；未见逆层。|\n|51|L058 青花描金收纳盒|104|接受|单蓝盒和四物组合都被右柱/下前唇自然遮后角，完整箱形可辨，无残片压木框。|\n|52|L030 绿色黄铜调香灯|105|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|53|L044 调香台左小蓝玻璃瓶|105|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|54|L031 白瓷玫瑰描金花瓶|110|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|55|L032 小白瓷描金瓶|110|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|56|L038 金色长颈香水瓶|111|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|57|L036 青绿玻璃香水瓶|112|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|58|L035 绿玻璃金盖香水瓶|113|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|59|L037 深青玻璃香水瓶|113|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|60|L033 青花香水瓷瓶|114|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|61|L048 透明小玻璃香水瓶|114|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|62|L034 白瓷小香水壶|115|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|63|L039 黄铜小烛台|115|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|64|L049 红裙手中香水瓶|115|接受|前握手指尖116包在瓶115前、后竖掌与后拇指仍在瓶后；瓶形和双手完整，不升整人。|\n|65|L040 白瓷描金小盖器|116|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|66|B016 完整空蒸馏工作台|40|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：整件结构可辨、前面物件与后景分离；未见需新增分层的局部覆盖。|\n|67|B035 完整四腿高脚木花架|24|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：整件结构可辨、前面物件与后景分离；未见需新增分层的局部覆盖。|\n|68|B006 白花瓶野花束|30|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：盆/瓶完整，接触承托面，枝叶位于其靠前容器/家具前；未见逆层。|\n|69|B008 陶盆长叶植物|30|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：盆/瓶完整，接触承托面，枝叶位于其靠前容器/家具前；未见逆层。|\n|70|B009 蓝白高花瓶粉百合|30|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：盆/瓶完整，接触承托面，枝叶位于其靠前容器/家具前；未见逆层。|\n|71|B010 青花盆掌叶|30|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：盆/瓶完整，接触承托面，枝叶位于其靠前容器/家具前；未见逆层。|\n|72|B004 雕花圆形香料架|35|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：整件结构可辨、前面物件与后景分离；未见需新增分层的局部覆盖。|\n|73|B001 蓝灰裙蒸馏师|60|接受|重新实看本次实际Native Canvas正序稳定帧，接受。主体60及同源前景1060；实际铜管与手握/铜罐接触稳定，无新增缺手或盖脸。|\n|74|B002 铜蒸馏器与完整管件组|70|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|75|B003 紫花藤篮|75|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|76|B007 粉花绿盆|30|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：盆/瓶完整，接触承托面，枝叶位于其靠前容器/家具前；未见逆层。|\n|77|B011 铜花盆粉红花束|30|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：盆/瓶完整，接触承托面，枝叶位于其靠前容器/家具前；未见逆层。|\n|78|B012 铜花盆黄白野花|30|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：盆/瓶完整，接触承托面，枝叶位于其靠前容器/家具前；未见逆层。|\n|79|B013 金色细长烛台|35|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|80|B005 蓝纹长颈银壶|40|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|81|B032 柜顶粉玫瑰青花小瓶|45|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：盆/瓶完整，接触承托面，枝叶位于其靠前容器/家具前；未见逆层。|\n|82|B017 小金色香料壶|50|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|83|B018 金色细颈香料瓶|50|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|84|B019 蓝色玻璃圆香料瓶|50|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|85|B020 金色高香料瓶|50|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|86|B021 琥珀色圆香料瓶|50|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|87|B022 白瓷金颈香料碗|50|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|88|B023 青花双耳香料壶|50|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|89|B024 白瓷金饰香料瓶|50|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|90|B025 青白瓷香料瓶|50|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|91|B026 小金色长杆烛台|50|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|92|B015 银铜小蒸馏瓶|75|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|93|B014 手持铜色香料罐|80|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|94|C050 完整中央花纹地毯|10|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：地毯在对应家具人物下方，边缘仍落地；不改。|\n|95|C002 珠宝匠雕花工作桌|60|接受|重新实看本次实际Native Canvas正序稳定帧，接受。桌60在C001主体45前、桌上对象80+后，桌前沿与腿在桌后书篮C02130前；现C008位置另查。|\n|96|C021 桌后书篮|30|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|97|C001 紫裙珠宝匠|45|接受|重新实看本次实际Native Canvas正序稳定帧，接受。主体在桌后，现同源前景包含上身/袖手/绕桌裙摆；175稳定图中家具孔位未见新误盖。C008支撑失配需单独改，勿为此整人前提。|\n|98|C003 绿色绣花小凳|70|接受|重新实看本次实际Native Canvas正序稳定帧，接受。凳70在人物主体45前，同源裙摆截取留凳完整；四腿稳定显示，未见需另提凳。|\n|99|C005 彩色硬封面书叠|84|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|100|C006 摊开的植物图鉴|89|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|101|C020 高细金色器具架|80|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|102|C019 细长金色立杆器具|80|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|103|C014 右后金色长颈器皿|81|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|104|C012 金色珠宝托盘支架|82|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|105|C004 蓝白瓷鸢尾花瓶|85|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：盆/瓶完整，接触承托面，枝叶位于其靠前容器/家具前；未见逆层。|\n|106|C008 后缘摊开笔记本|85|接受|y522把后缘小本移进木桌面；本单独最早态有承托，后被C011前托盘部分盖住合理，和C015工具未串层。|\n|107|C015 金色精密工具组|87|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|108|C011 蓝白长托盘|88|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|109|C053 鸢尾花瓶旁翡翠绿小器皿|88|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|110|C054 蓝白小瓷杯|89|接受|重新实看本次实际Native Canvas正序稳定帧，接受。小杯89置金托盘C01282内，盘足在桌面，杯盖盘内底合理。|\n|111|C009 茶杯与碟|90|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|112|C016 左侧细颈玻璃瓶|90|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|113|C018 卧放浅绿玻璃香水小瓶|91|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|114|C010 宝石小碗|92|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|115|C047 书顶金色怀表|92|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|116|C013 玻璃橄榄绿细颈瓶|93|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|117|C017 独立珠宝小剪刀|94|接受|重新实看本次实际Native Canvas正序稳定帧，接受。桌面剪刀94，与C048镊子94实际不同源完整工具；两器轻交合理。|\n|118|C048 独立珠宝镊子|94|接受|重新实看本次实际Native Canvas正序稳定帧，接受。桌面真镊子94，与C017剪刀不同物；没有复制剪刀，轻交桌面位置合理。|\n|119|C007 前缘摊开记录本|95|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|120|C051 完整沙发区花纹地毯|11|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：地毯在对应家具人物下方，边缘仍落地；不改。|\n|121|R003 绿色绒面木沙发|56|接受|56主层恢复完整扶手/坐垫，在B01640及瓶50前；空沙发、两枕、白裙/猫先后出现都接受。|\n|122|R038 米色花纹方抱枕|57|接受|57位于沙发56前、绿枕58后，不再露出后柜蓝灰横条。|\n|123|R005 粉绿印花方抱枕|58|接受|58位于沙发/米枕前、白裙60及猫后，叠枕接触完整。|\n|124|R001 穿珠白裙女子|60|接受|重新实看本次实际Native Canvas正序稳定帧，接受。主体60/同源前景1060盖沙发，猫R004露出形状合理；沙发抬56仍在人物后。|\n|125|R004 蜷窝熟睡的棕白猫|65|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|126|R007 花鸟四折屏风|20|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：整件结构可辨、前面物件与后景分离；未见需新增分层的局部覆盖。|\n|127|R009 缝纫陈列木柜|70|接受|重新实看本次实际Native Canvas正序稳定帧，接受。柜70盖人物R00260下躯干、柜面盒90+在柜前；与C030玻璃柜重叠应被前景玻璃柜75压住。|\n|128|R031 右上蓝绿植物挂画|15|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|129|R033 屏风后左侧窄挂画|15|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。 有效alpha与其他owner无≥4像素交叠。|\n|130|R008 披肩与人体模特|50|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：整件结构可辨、前面物件与后景分离；未见需新增分层的局部覆盖。|\n|131|R002 缝纫绿裙女子|60|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：身体在相应桌/柜后，需露的上身与手可见；未见新增需改覆盖。|\n|132|R011 紫色圆凳|80|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：整件结构可辨、前面物件与后景分离；未见需新增分层的局部覆盖。|\n|133|R018 红色花纹锦盒|90|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|134|R019 深蓝色金边锦盒|90|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|135|R010 蕾丝折扇|94|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|136|R012 奶白珠宝展示盒|94|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|137|R017 青绿扁锦盒|95|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|138|R030 女子手持印花布|100|接受|重新实看本次实际Native Canvas正序稳定帧，接受。完整持布100在R00260前、柜70前；双手抓边可见，布盖后盒边合理。|\n|139|R020 垂落的白色蕾丝|105|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|140|R032 右侧窄花卉挂画|15|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|141|R034 右墙黄铜烛台|15|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。 有效alpha与其他owner无≥4像素交叠。|\n|142|R013 深蓝色扁锦盒|90|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|143|R023 蓝白大瓷锦盒|90|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|144|R041 墨绿色扁锦盒|90|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|145|R040 奶白绿边扁锦盒|91|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|146|R026 蓝白大锦盒|92|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|147|R024 蓝白小瓷锦盒|93|接受|重新实看本次实际Native Canvas正序稳定帧，接受。蓝白小盒93叠于大盒R02390之上、受手持布R030100遮后侧，叠放关系正确。|\n|148|R028 红色竖锦盒|93|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|149|R029 粉紫折叠小丝绸|93|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|150|R025 金黄色方锦盒|94|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|151|R027 金棕色竖锦盒|94|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|152|R014 水蓝色方形小盒|95|接受|重新实看本次实际Native Canvas正序稳定帧，接受。水蓝盒95坐在展示盒R01294及后扁盒叠顶，现无前景串层。|\n|153|R035 蓝色金边小锦盒|96|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|154|R042 奶油色短绸带束|96|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|155|R039 细金链项链|98|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|156|R015 蓝色长缎带|100|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|157|R016 粉色长缎带|101|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|158|R022 长珍珠项链|103|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|159|R021 垂落的粉色缎带|104|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|160|C030 完整玻璃珠宝展示柜|75|接受|75主层在R00970前，空玻璃柜及逐件珠宝出现都保持完整右上金框/透明玻璃；无木腿漏穿。|\n|161|C034 紫色天鹅绒项链盒|95|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|162|C031 展示柜蓝白粉花瓶|100|接受|重新实看本次实际Native Canvas正序稳定帧，接受。蓝白花瓶100盖珠宝盒95并位于玻璃面，瓶底脚仍在上台面内。|\n|163|C042 绿色圆形香水瓶|91|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|164|C037 金色怀表与紫盒|92|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|165|C040 金色圆形珠宝底座|92|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|166|C043 紫色珠饰梳子|92|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|167|C044 展示柜胸针|92|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|168|C038 珍珠项链与翻盖紫盒|93|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|169|C036 蓝色耳饰与完整托盘|94|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|170|C039 立放怀表与完整紫盒|94|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|171|C035 展示柜左前珠宝盒|95|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|172|C045 展示柜绿色戒指|98|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|173|C046 展示柜椭圆宝石戒指|98|接受|重新实看本次实际Native Canvas正序稳定帧，接受。175逐步画面实看：主体完整，桌/架承托与邻件前后交叠可辨，未见需改局部覆盖。|\n|174|C033 展示柜蓝绿玻璃瓶|100|接受|绿瓶与玻璃柜台面/后壁关系恢复，未贴在木柜脸上。|\n|175|C032 展示柜金色小瓶|101|接受|青花金盖罐完整PNG原字节不变，恢复玻璃柜框后在实际台面内，无错认棕木足。|\n",
+            "truncated": false
+          }
+        },
+        {
+          "type": "commandExecution",
+          "id": "exec-f37121e9-395e-4327-8456-710a5ee01b4c",
+          "command": "/bin/zsh -lc \"sed -n '1,220p' outputs/fragrance-pearl-game/tools/package.py\"",
+          "cwd": "/Users/wangye/Desktop/贴纸",
+          "status": "completed",
+          "exitCode": 0,
+          "durationMs": 0,
+          "output": {
+            "text": "\"\"\"Package the new game and its review artifacts without changing source artwork.\"\"\"\nfrom pathlib import Path\nimport hashlib\nimport json\nimport zipfile\n\nroot = Path(__file__).resolve().parents[1]\narchive_path = root.parent / '花香与珠光-手机游戏框架.zip'\nexcluded = {'node_modules', '__pycache__', '.git', '.DS_Store'}\nfiles = [(p, 'fragrance-pearl-game/' + str(p.relative_to(root)))\n         for p in sorted(root.rglob('*')) if p.is_file()\n         and not any(part in excluded for part in p.relative_to(root).parts)]\nhtml = root.parent / '花香与珠光-交互验证.html'\nif not html.is_file():\n    raise FileNotFoundError('Build the project before packaging: ' + str(html))\nfiles.append((html, html.name))\nfor name in ['花香与珠光-手机预览.png', '花香与珠光-6步修复预览.png', '花香与珠光-完成预览.png',\n             '花香与珠光-柜内覆盖修复.png', '花香与珠光-干净底图预览.png']:\n    p = root.parent / name\n    if p.is_file():\n        files.append((p, name))\nwith zipfile.ZipFile(archive_path, 'w', zipfile.ZIP_DEFLATED, compresslevel=6) as archive:\n    for p, name in files:\n        archive.write(p, name)\nwith zipfile.ZipFile(archive_path) as archive:\n    assert archive.testzip() is None\n    for p, name in files:\n        assert hashlib.sha256(archive.read(name)).digest() == hashlib.sha256(p.read_bytes()).digest(), name\nprint(json.dumps({'archive': str(archive_path), 'bytes': archive_path.stat().st_size,\n                  'entries': len(files), 'CRC': 'passed', 'payloadHashes': 'passed',\n                  'sha256': hashlib.sha256(archive_path.read_bytes()).hexdigest()}, ensure_ascii=False))\n",
+            "truncated": false
+          }
+        },
+        {
+          "type": "commandExecution",
+          "id": "exec-719ecf24-5abc-4259-8b99-b494eb1b965c",
+          "command": "/bin/zsh -lc \"sed -n '1,100p' outputs/fragrance-pearl-game/tests/occlusion-check.cjs\"",
+          "cwd": "/Users/wangye/Desktop/贴纸",
+          "status": "completed",
+          "exitCode": 0,
+          "durationMs": 0,
+          "output": {
+            "text": "/* Actual PNG/Native Canvas + legal GameSession state validation. No hardware claim. */\nconst fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),crypto=require('node:crypto');\nconst root=path.resolve(__dirname,'..'),workspace=path.resolve(root,'../..');\nlet ts;try{ts=require('typescript');}catch{const fallback=process.env.FRAGRANCE_TYPESCRIPT_PATH||path.join(workspace,'work/theatre-v2/tooling/node_modules/typescript');if(!fs.existsSync(fallback))throw Error('Install project dependencies with npm install, or set FRAGRANCE_TYPESCRIPT_PATH.');ts=require(fallback);}\nlet cocosTypes=process.env.FRAGRANCE_COCOS_TYPES_PATH;if(!cocosTypes){try{cocosTypes=require.resolve('@cocos/creator-types/cc.d.ts');}catch{cocosTypes=path.join(workspace,'work/theatre-v2/cocos-check/cc.d.ts');}}if(!fs.existsSync(cocosTypes))throw Error('Creator 3.8.8 declarations missing; install @cocos/creator-types or set FRAGRANCE_COCOS_TYPES_PATH.');\nlet canvasRuntime;try{canvasRuntime=require('@napi-rs/canvas');}catch{const fallback=process.env.FRAGRANCE_CANVAS_PATH||'/Users/wangye/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/@napi-rs/canvas';if(!fs.existsSync(fallback))throw Error('Install @napi-rs/canvas with npm install, or set FRAGRANCE_CANVAS_PATH.');canvasRuntime=require(fallback);}const{createCanvas,loadImage}=canvasRuntime;\nconst out=path.resolve(process.env.FRAGRANCE_OCCLUSION_OUTPUT||path.join(workspace,'work/fragrance-pearl/occlusion-v4/validation/final-current')),compiled=path.join(out,'compiled');fs.mkdirSync(out,{recursive:true});\nconst hash=b=>crypto.createHash('sha256').update(b).digest('hex'),read=f=>JSON.parse(fs.readFileSync(f)),write=(f,v)=>fs.writeFileSync(f,JSON.stringify(v,null,2));\nconst layoutFile=path.join(root,'data/fragrance-pearl-layout.json'),layout=read(layoutFile),layoutHash=hash(fs.readFileSync(layoutFile)),source=path.join(root,'src');\nconst walk=d=>fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(d,e.name)):[path.join(d,e.name)]);\nconst files=walk(source).filter(f=>f.endsWith('.ts'));files.push(cocosTypes);\nconst program=ts.createProgram(files,{target:ts.ScriptTarget.ES2020,module:ts.ModuleKind.CommonJS,moduleResolution:ts.ModuleResolutionKind.NodeJs,strict:true,allowJs:true,checkJs:false,experimentalDecorators:true,useDefineForClassFields:false,skipLibCheck:true,rootDir:source,outDir:compiled,lib:['lib.es2020.d.ts','lib.dom.d.ts']});\nconst diagnostics=ts.getPreEmitDiagnostics(program);if(diagnostics.length)throw Error(ts.formatDiagnosticsWithColorAndContext(diagnostics,{getCanonicalFileName:f=>f,getCurrentDirectory:()=>root,getNewLine:()=> '\\n'}));assert.equal(program.emit().emitSkipped,false);\nfor(const name of ['paper-motion.js','tweezers.js'])fs.copyFileSync(path.join(source,'rendering',name),path.join(compiled,'rendering',name));\nconst {CanvasGame}=require(path.join(compiled,'rendering/CanvasGame.js')),{GameSession,patchStickerDraft,reorderDraft}=require(path.join(compiled,'core/GameSession.js')),{assemblyRenderParts}=require(path.join(compiled,'core/AssemblyPose.js')),{validateFragranceDraft}=require(path.join(compiled,'adapters/cocos/FragranceLayoutGuard.js'));\nconst byId=new Map(layout.stickers.map(s=>[s.stickerId,s])),owners=layout.stickers.filter(s=>s.renderParts.length>1&&s.renderParts.every(p=>p.transformWithOwner));\nfunction commit(s,id){if(s.getSnapshot().phase==='transitioning')assert.ok(s.finishTransition());assert.ok(s.getSnapshot().availableStickerIds.includes(id),'legal '+id);assert.ok(s.select(id));assert.ok(s.commitPlacement(s.beginPlacement(id)));}\nfunction session(prefix){const s=new GameSession(layout);prefix.forEach(id=>commit(s,id));if(s.getSnapshot().phase==='transitioning')s.finishTransition();return s;}\nconst canonical=[],stages=new Map(),seed=new GameSession(layout);\nwhile(seed.getSnapshot().phase!=='completed'){if(seed.getSnapshot().phase==='transitioning')seed.finishTransition();else{const snap=seed.getSnapshot(),key=snap.activeBlockId+'/'+snap.activeAreaLevel;if(!stages.has(key))stages.set(key,{key,prefix:[...canonical],owners:[]});const id=snap.availableStickerIds[0];stages.get(key).owners.push(id);commit(seed,id);canonical.push(id);}}\nassert.equal(canonical.length,175);assert.equal(layout.stickers.flatMap(s=>s.renderParts).length,180);\nfunction ancestors(id,result=new Set()){for(const dep of byId.get(id).dependsOn){if(!result.has(dep)){result.add(dep);ancestors(dep,result);}}return result;}\nfunction recipe(stage,id,latest=false){const s=session(stage.prefix),ids=[...stage.prefix],deps=ancestors(id);for(let guard=0;guard<176;guard++){const snap=s.getSnapshot(),a=snap.availableStickerIds;let chosen;if(latest){chosen=a.find(other=>other!==id&&!ancestors(other).has(id))||id;}else chosen=a.includes(id)?id:a.find(other=>deps.has(other));assert.ok(chosen&&a.includes(chosen),'recipe '+id);commit(s,chosen);ids.push(chosen);if(chosen===id)return ids;}throw Error('recipe did not terminate');}\nconst framePlans=[];for(const stage of stages.values())for(const id of stage.owners){framePlans.push({kind:'earliest',id,stage:stage.key,prefix:recipe(stage,id)});framePlans.push({kind:'latest',id,stage:stage.key,prefix:recipe(stage,id,true)});}\nfunction data(image){const c=createCanvas(image.width,image.height);c.getContext('2d').drawImage(image,0,0);return c.getContext('2d').getImageData(0,0,c.width,c.height).data;}\nfunction pixelBounds(s){return{x:s.position.x,y:s.position.y,right:s.position.x+s.sourceSize.width,bottom:s.position.y+s.sourceSize.height};}\n(async()=>{\n const images=new Map(),keys=new Set([layout.scene.baseAssetKey,...layout.stickers.flatMap(s=>[s.assetKey,...s.renderParts.map(p=>p.assetKey)])]);await Promise.all([...keys].map(async key=>images.set(key,await loadImage(path.join(root,key)))));\n const hashes=Object.fromEntries([...keys].map(k=>[k,hash(fs.readFileSync(path.join(root,k)))]));\n const canvas=createCanvas(390,844),game=new CanvasGame({canvas,layout,platform:{createCanvas,loadImage:k=>loadImage(path.join(root,k)),storage:{get:()=>null,set(){},remove(){}},now:()=>0,requestFrame:()=>0,cancelFrame(){}}});game.images=images;\n const preserved=read(path.join(root,'tests/fixtures/revision3-resource-hashes.json'));for(const [key,digest]of Object.entries(preserved))assert.equal(hash(fs.readFileSync(path.join(root,key))),digest,'canonical source preserved '+key);\n const complements=[];for(const owner of owners){const full=images.get(owner.assetKey),rgba=data(full),parts=owner.renderParts.map(p=>({p,image:images.get(p.assetKey),rgba:data(images.get(p.assetKey)),ox:p.offset.x*full.width/owner.sourceSize.width,oy:p.offset.y*full.height/owner.sourceSize.height}));let pixels=0;\n  for(let y=0;y<full.height;y++)for(let x=0;x<full.width;x++){const idx=(y*full.width+x)*4,alpha=rgba[idx+3];let sum=0,n=0;for(const t of parts){assert.ok(Number.isInteger(t.ox)&&Number.isInteger(t.oy));const px=x-t.ox,py=y-t.oy;if(px<0||py<0||px>=t.image.width||py>=t.image.height)continue;const j=(py*t.image.width+px)*4,a=t.rgba[j+3];sum+=a;if(a){n++;assert.equal(a,alpha);for(let c=0;c<3;c++)assert.equal(t.rgba[j+c],rgba[idx+c],owner.stickerId+' own RGB');}}assert.equal(sum,alpha,owner.stickerId+' complete alpha partition');assert.ok(n<=1,'no doubled pixels');pixels++;}\n  complements.push({id:owner.stickerId,nativePixels:pixels,fullPNGUnchanged:true,exactRGBAAlphaComplement:true});\n }\n const edits=[];for(const owner of owners)for(const [kind,patch]of [['position',{position:{x:owner.position.x+29,y:owner.position.y-17}}],['rotation',{rotation:31}],['scale',{scale:1.25}],['anchor',{anchor:{x:.3,y:.25}}],['layer',{layerIndex:owner.layerIndex+30}]]){\n  let edited=patchStickerDraft(layout,owner.stickerId,patch);if(kind==='layer')edited=reorderDraft(edited);assert.deepEqual(validateFragranceDraft(edited,layout),[]);const parts=assemblyRenderParts(edited,layout).get(owner.stickerId);assert.equal(parts.length,owner.renderParts.length);assert.deepEqual(parts.map(p=>p.assetKey),owner.renderParts.map(p=>p.assetKey));const selected=edited.stickers.find(s=>s.stickerId===owner.stickerId),queue=game.worldQueue(edited,new Set([owner.stickerId]));assert.equal(queue.length,parts.length);queue.forEach(q=>{assert.deepEqual(q.position,selected.position);assert.equal(q.rotation,selected.rotation);assert.equal(q.scale,selected.scale);const p=parts.find(p=>p.assetKey===q.assetKey);assert.deepEqual(q.offset,{x:p.offset.x-selected.anchor.x*selected.sourceSize.width,y:p.offset.y-selected.anchor.y*selected.sourceSize.height});});edits.push({id:owner.stickerId,kind,partsRemainOwnerLocal:true});\n }\n const parts=assemblyRenderParts(layout,layout),seen=new Set(),frameResults=[],riskPairs=[];fs.mkdirSync(path.join(out,'frames'),{recursive:true});\n function render(prefix,id,tag,save=true){const s=session(prefix);assert.ok(s.getSnapshot().placedStickerIds.includes(id));const placed=new Set(prefix),queue=game.worldQueue(layout,placed);const count=prefix.reduce((n,i)=>n+parts.get(i).filter(p=>(p.requiresAssetIds||[]).every(x=>placed.has(x))).length,0);assert.equal(queue.length,count);const owner=byId.get(id),left=owner.position.x-24,top=owner.position.y-24,w=owner.sourceSize.width+48,h=owner.sourceSize.height+48,c=createCanvas(w*2,h*2),ctx=c.getContext('2d');ctx.scale(2,2);ctx.translate(-left,-top);game.drawWorld(ctx,layout,placed,false);const png=c.toBuffer('image/png'),digest=hash(ctx.getImageData(0,0,c.width,c.height).data);if(save)fs.writeFileSync(path.join(out,'frames',tag+'.png'),png);return{tag,id,placedCount:prefix.length,activeParts:queue.length,pixelSHA256:digest,legalPrefix:prefix,crop:{x:left,y:top,width:w,height:h,scale:2}};}\n for(const plan of framePlans){seen.add(plan.id);frameResults.push({...plan,...render(plan.prefix,plan.id,plan.kind+'-'+plan.id)});}\n assert.equal(seen.size,175);\n for(const stage of stages.values())for(let i=0;i<stage.owners.length;i++)for(let j=i+1;j<stage.owners.length;j++){\n  const a=byId.get(stage.owners[i]),b=byId.get(stage.owners[j]);if(ancestors(a.stickerId).has(b.stickerId)||ancestors(b.stickerId).has(a.stickerId))continue;const A=pixelBounds(a),B=pixelBounds(b),left=Math.max(A.x,B.x),right=Math.min(A.right,B.right),top=Math.max(A.y,B.y),bottom=Math.min(A.bottom,B.bottom);if(left>=right||top>=bottom)continue;let overlap=0;for(let y=top;y<bottom;y++)for(let x=left;x<right;x++){const p=game.screen({x:x+.5,y:y+.5});if(game.hitSticker(a,p)&&game.hitSticker(b,p))overlap++;}if(!overlap)continue;\n  const needed=new Set([...ancestors(a.stickerId),...ancestors(b.stickerId)]),s=session(stage.prefix),prefix=[...stage.prefix];while([...needed].some(id=>!prefix.includes(id))){const chosen=s.getSnapshot().availableStickerIds.find(id=>needed.has(id)&&!prefix.includes(id));assert.ok(chosen);commit(s,chosen);prefix.push(chosen);}assert.ok(s.getSnapshot().availableStickerIds.includes(a.stickerId)&&s.getSnapshot().availableStickerIds.includes(b.stickerId));const forward=[...prefix,a.stickerId,b.stickerId],reverse=[...prefix,b.stickerId,a.stickerId],tag=a.stickerId+'-'+b.stickerId,first=render(forward,a.stickerId,'pair-'+tag+'-AB'),last=render(reverse,a.stickerId,'pair-'+tag+'-BA');assert.equal(first.pixelSHA256,last.pixelSHA256,'same placed set '+tag);riskPairs.push({stage:stage.key,a:a.stickerId,b:b.stickerId,opaqueOverlapPixels:overlap,forward,reverse,samePlacedSetPixelSHA256:first.pixelSHA256});\n }\n for(const owner of owners){const plan=framePlans.find(p=>p.kind==='earliest'&&p.id===owner.stickerId),queue=game.worldQueue(layout,new Set(plan.prefix));for(const p of owner.renderParts){assert.deepEqual(p.requiresAssetIds,[]);assert.ok(queue.some(q=>q.assetKey===p.assetKey),'front active immediately '+owner.stickerId);}}\n const baselinePlans=['canonical','reverse-available'];for(const order of baselinePlans){const s=new GameSession(layout),history=[];while(s.getSnapshot().phase!=='completed'){if(s.getSnapshot().phase==='transitioning')s.finishTransition();else{const avail=s.getSnapshot().availableStickerIds,id=order==='canonical'?avail[0]:avail.at(-1);commit(s,id);history.push(id);frameResults.push({...render(history,id,order+'-'+String(history.length).padStart(3,'0')+'-'+id),kind:order});}}}\n assert.equal(hash(fs.readFileSync(layoutFile)),layoutHash);for(const[k,z]of Object.entries(hashes))assert.equal(hash(fs.readFileSync(path.join(root,k))),z);write(path.join(out,'resource-hashes.json'),hashes);write(path.join(out,'layout-snapshot.json'),layout);\n const result={passed:true,scope:'Actual source strict compilation, actual GameSession legal prefixes, real PNG/native Canvas stable raster; no visual automatic verdict and no device/GPU claim',layoutSHA256:layoutHash,owners:175,renderParts:180,canonicalPNGsPreserved:Object.keys(preserved).length,ownerLocalComplements:complements,ownerLocalEditorTransforms:edits,earliestLatestPrefixes:350,allOwnersCovered:seen.size,sameStageRiskPairs:riskPairs.length,eachRiskPairBothLegalOrdersAndEqualRaster:true,stableFrameCount:frameResults.length,stages:[...stages.values()],riskPairs,frames:frameResults};write(path.join(out,'results.json'),result);console.log(JSON.stringify({...result,stages:undefined,riskPairs:undefined,frames:undefined}));\n})().catch(e=>{write(path.join(out,'failure.json'),{passed:false,message:e.message,stack:e.stack});console.error(e);process.exitCode=1;});\n",
+            "truncated": false
+          }
+        },
+        {
+          "type": "commandExecution",
+          "id": "exec-77996b57-0cf8-4647-99b6-2814271d5942",
+          "command": "/bin/zsh -lc \"rg --files work/fragrance-pearl | rg '(HANDOFF|handoff|final-build|区域镜头修正说明|check_kit)'\"",
+          "cwd": "/Users/wangye/Desktop/贴纸",
+          "status": "completed",
+          "exitCode": 0,
+          "durationMs": 0,
+          "output": {
+            "text": "work/fragrance-pearl/HANDOFF.md\nwork/fragrance-pearl/validation/camera-followup/final-build.json\nwork/fragrance-pearl/validation/camera-followup/区域镜头修正说明.md\nwork/fragrance-pearl/source/花香与珠光-分割2号素材包/complete-scene-stickers-skill/scripts/check_kit.py\n",
+            "truncated": false
+          }
+        },
+        {
+          "type": "mcpToolCall",
+          "id": "call_V8fcnG85PwryzzgKDhLnTx6G",
+          "server": "cua_repl",
+          "tool": "js",
+          "arguments": {
+            "code": "await cameraProofTab.drag([350.469140625,546.3072916666667],[335.53130511474603,443.9562447916667]); let actualDragStateV4 = await cameraProofTab.getAXState({emit:false}); nodeRepl.write(actualDragStateV4.slice(0,2400));",
+            "title": "真实拖放完整花艺推车"
+          },
+          "status": "completed",
+          "durationMs": 1205
+        },
+        {
+          "type": "mcpToolCall",
+          "id": "call_MOQrYmy7bhrRLmH8vvfrCBzH",
+          "server": "cua_repl",
+          "tool": "js",
+          "arguments": {
+            "code": "nodeRepl.write(await cameraProofTab.playwright.locator('#diagnostic').textContent()); await cameraProofTab.getScreenshot();",
+            "title": "检查拖放后的进度与画面"
+          },
+          "status": "completed",
+          "durationMs": 85
+        },
+        {
+          "type": "commandExecution",
+          "id": "exec-1b26f498-e666-406c-8ab7-45ce37e05fc0",
+          "command": "/bin/zsh -lc \"rg -n 'diagnostic|prepare|pointer|progress|status|trial|samples' preview/occlusion-camera-validation.html work/fragrance-pearl/occlusion-v4/*camera* work/fragrance-pearl/occlusion-v4/validation/*browser*\"",
+          "cwd": "/Users/wangye/Desktop/贴纸",
+          "status": "failed",
+          "exitCode": 1,
+          "durationMs": 0,
+          "output": {
+            "text": "zsh:1: no matches found: work/fragrance-pearl/occlusion-v4/validation/*browser*\n",
+            "truncated": false
+          }
+        },
+        {
+          "type": "commandExecution",
+          "id": "exec-59d6d047-108c-4064-82b7-db9fcc7ead32",
+          "command": "/bin/zsh -lc \"rg --files | rg '(occlusion-camera-validation|browser-camera|iab-camera|camera-validation)'\"",
+          "cwd": "/Users/wangye/Desktop/贴纸",
+          "status": "completed",
+          "exitCode": 0,
+          "durationMs": 0,
+          "output": {
+            "text": "outputs/fragrance-pearl-game/preview/occlusion-camera-validation.html\nwork/fragrance-pearl/occlusion-v4/iab-camera-four-sizes-repeat.jpg\nwork/fragrance-pearl/occlusion-v4/iab-camera-four-sizes.jpg\nwork/fragrance-pearl/occlusion-v4/iab-camera-four-sizes.json\nwork/fragrance-pearl/occlusion-v4/iab-camera-four-sizes-repeat.json\n",
+            "truncated": false
+          }
+        },
+        {
+          "type": "commandExecution",
+          "id": "exec-9b4c77ea-9dcb-40f5-bb7b-2db22850bda1",
+          "command": "/bin/zsh -lc \"sed -n '1,170p' /Users/wangye/.codex/skills/complete-scene-stickers/scripts/check_kit.py\"",
+          "cwd": "/Users/wangye/Desktop/贴纸",
+          "status": "completed",
+          "exitCode": 0,
+          "durationMs": 0,
+          "output": {
+            "text": "#!/usr/bin/env python3\n\"\"\"Validate a complete-scene-sticker manifest and its actual image files.\"\"\"\nimport argparse,json,math\nfrom pathlib import Path\nfrom PIL import Image\nimport numpy as np\n\ndef finite_number(value):\n return isinstance(value,(int,float)) and not isinstance(value,bool) and math.isfinite(value)\n\ndef pair(value,positive=False):\n return isinstance(value,(list,tuple)) and len(value)==2 and all(finite_number(n) and (not positive or n>0) for n in value)\n\ndef camera_rect(value):\n return isinstance(value,(list,tuple)) and len(value)==4 and all(finite_number(n) for n in value) and value[2]>value[0] and value[3]>value[1]\n\ndef main():\n p=argparse.ArgumentParser(description=__doc__);p.add_argument('kit',type=Path);p.add_argument('--report',type=Path);a=p.parse_args()\n root=a.kit.resolve();m=json.loads((root/'manifest.json').read_text());errors=[];rows=[]\n canvas=m.get('canvas_size_wh',m.get('source',{}).get('size_wh'));assert canvas and len(canvas)==2,'Missing canvas_size_wh'\n for field in ['original','base','reconstructed']:\n  try:\n   im=Image.open(root/m[field])\n   if list(im.size)!=list(canvas):errors.append(field+': canvas dimensions differ')\n  except Exception as e:errors.append(field+': '+str(e))\n ids=[x['id'] for x in m['assets']]\n if len(ids)!=len(set(ids)):errors.append('Duplicate logical ids')\n def path(s):\n  f=(root/s).resolve()\n  if not f.is_relative_to(root):raise ValueError('File escapes kit: '+s)\n  return f\n for x in m['assets']:\n  try:\n   im=Image.open(path(x['file']))\n   if im.mode!='RGBA':errors.append(x['id']+': complete sticker is not RGBA')\n   elif not (np.array(im.getchannel('A'))==0).any():errors.append(x['id']+': no actual transparent pixels')\n   if list(im.size)!=x.get('pixel_size_wh'):errors.append(x['id']+': PNG dimensions missing or inconsistent')\n   size=x.get('logical_size_wh');origin=x.get('origin_xy')\n   if not pair(size,positive=True):errors.append(x['id']+': logical_size_wh missing or invalid; HD pixels are not scene dimensions')\n   if not pair(origin):errors.append(x['id']+': bad scene origin')\n   if not x.get('completed'):errors.append(x['id']+': incomplete object')\n   if 'z' not in x:errors.append(x['id']+': missing layer order')\n   mask=x.get('original_visible_mask',x.get('visible_mask'))\n   if mask:\n    mm=Image.open(path(mask)).convert('L')\n    if list(mm.size)!=list(canvas) or not np.array(mm).any():errors.append(x['id']+': invalid original correspondence mask')\n   else:errors.append(x['id']+': missing original correspondence')\n   parts=x.get('render_parts')\n   if not isinstance(parts,list) or not parts:errors.append(x['id']+': render_parts must be a nonempty array')\n   if not isinstance(parts,list):parts=[]\n   if not any(isinstance(r,dict) and r.get('kind')=='complete' for r in parts):errors.append(x['id']+': render_parts must include a complete layer')\n   for r in parts:\n    ri=Image.open(path(r['file']))\n    if ri.mode!='RGBA':errors.append(x['id']+': render part is not RGBA')\n    ri.verify()\n    if r.get('kind') not in ['complete','source_visible_overlay']:errors.append(x['id']+': render part kind missing or unsupported')\n    if not pair(r.get('origin_xy')) or not pair(r.get('size_wh'),positive=True) or not finite_number(r.get('z')):errors.append(x['id']+': bad render part')\n   if (x.get('intentional_edit') or x.get('use_source_visible_overlay') is False) and any(r.get('kind')!='complete' for r in parts):errors.append(x['id']+': intentional edit wrongly overridden by source pixels')\n   rows.append({'id':x['id'],'pixel_size_wh':list(im.size),'logical_size_wh':size,'completed':x.get('completed')})\n  except Exception as e:errors.append(x['id']+': '+str(e))\n order=m.get('assembly_order',[])\n if len(order)!=len(ids) or set(order)!=set(ids):errors.append('assembly_order does not cover every logical object exactly once')\n regions=m.get('regions',[])\n if not isinstance(regions,list):errors.append('regions must be an array');regions=[]\n region_ids=[r.get('id') for r in regions if isinstance(r,dict)]\n if any(not isinstance(i,str) or not i for i in region_ids) or len(region_ids)!=len(set(region_ids)):errors.append('Region ids must be unique nonempty strings')\n regional=[];region_requirements={}\n for region in regions:\n  if not isinstance(region,dict):errors.append('Invalid region record');continue\n  region_id=region.get('id')\n  if not camera_rect(region.get('camera_view_xyxy')):errors.append(str(region_id)+': camera_view_xyxy missing or invalid')\n  if 'next_region' not in region or (region['next_region'] is not None and region['next_region'] not in region_ids):errors.append(str(region_id)+': next_region missing or invalid')\n  required=region.get('required_asset_ids')\n  if not isinstance(required,list) or any(not isinstance(i,str) for i in required):errors.append(str(region_id)+': required_asset_ids must be an array of ids');continue\n  regional.extend(required);region_requirements[region_id]=set(required)\n if set(regional)!=set(ids) or len(regional)!=len(ids):errors.append('Regions do not cover all logical objects exactly once')\n for asset in m['assets']:\n  region_id=asset.get('region')\n  if region_id not in region_requirements:errors.append(asset['id']+': region missing or invalid')\n  elif asset['id'] not in region_requirements[region_id]:errors.append(asset['id']+': region differs from required_asset_ids ownership')\n report={'ok':not errors,'logical_asset_count':len(ids),'errors':errors,'assets':rows}\n original=m.get('original');final=m.get('reconstructed')\n if original and final and path(final).exists():\n  s=np.array(Image.open(path(original)).convert('RGB'));r=np.array(Image.open(path(final)).convert('RGB'))\n  if s.shape!=r.shape:errors.append('Final assembly dimensions differ from original');report['ok']=False\n  else:\n   diff=np.any(s!=r,axis=2);report['assembly_comparison']={'changed_pixels':int(diff.sum()),'changed_fraction':float(diff.mean()),'mean_absolute_rgb_difference':float(np.abs(s.astype('float32')-r).mean()),'pixel_exact':not bool(diff.any()),'policy':'Changes allowed; visual comparison must judge fidelity.'}\n if a.report:a.report.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\\n')\n print(json.dumps({k:v for k,v in report.items() if k!='assets'},ensure_ascii=False,indent=2));raise SystemExit(0 if report['ok'] else 1)\nif __name__=='__main__':main()\n",
+            "truncated": false
+          }
+        },
+        {
+          "type": "commandExecution",
+          "id": "exec-4a9fe97b-87d7-4101-b07f-387c37438447",
+          "command": "/bin/zsh -lc \"rg -n 'prepare|diagnostic|pointer|toDataURL|draw|onload|loadImage' outputs/fragrance-pearl-game/preview/occlusion-camera-validation.html\"",
+          "cwd": "/Users/wangye/Desktop/贴纸",
+          "status": "completed",
+          "exitCode": 0,
+          "durationMs": 0,
+          "output": {
+            "text": "4:<button id=\"run\">运行四尺寸镜头验证</button><button id=\"books\">显示四件合法最早状态</button><button id=\"prepare\">准备 L047 真拖放</button><span id=\"status\">准备就绪</span>\n5:<div id=\"stage\"><canvas id=\"canvas\"></canvas></div><div id=\"samples\"></div><pre id=\"result\">尚未运行</pre><pre id=\"diagnostic\"></pre>\n12:const loadImage=key=>new Promise((resolve,reject)=>{const image=new Image();image.onload=()=>resolve(image);image.onerror=()=>reject(Error(key));image.src='../'+key});\n13:async function boot(){if(g)return;const platform={createCanvas(w,h){const c=document.createElement('canvas');c.width=w;c.height=h;return c},loadImage,storage:{get:()=>null,set(){privateWrites++},remove(){}},now:()=>{const now=performance.now();if(monitor)monitor.tickNow=now;return now},requestFrame:callback=>requestAnimationFrame(timestamp=>{const m=monitor;if(m){if(m.last)m.intervals.push(timestamp-m.last);m.last=timestamp;}callback();if(m&&g.tour){const t=m.tickNow-g.tour.start;m.samples.push({t,camera:{...g.camera},queueLength:g.tour.queue.length});}}),cancelFrame:id=>cancelAnimationFrame(id)};g=new FragranceCanvas({canvas,layout,platform});window.validationGame=g;g.resize(390,844,2);await g.start();g.suspend();const keys=[...new Set([layout.scene.baseAssetKey,...(layout.scene.basePatches||[]).map(p=>p.assetKey),...layout.fixedLayers.map(f=>f.assetKey),...layout.stickers.flatMap(s=>[s.assetKey,...s.renderParts.map(p=>p.assetKey)])])];await Promise.all(keys.map(async key=>images.set(key,await loadImage(key))));g.images=images;const render=g.render.bind(g);g.render=now=>{const start=performance.now(),t=g.tour?now-g.tour.start:null;render(now);if(monitor&&t!==null)monitor.renders.push({t,ms:performance.now()-start});};const queue=g.worldQueue.bind(g);g.worldQueue=(...a)=>{if(monitor&&g.tour)monitor.queueCalls++;return queue(...a)};const tray=g.drawTray.bind(g);g.drawTray=(...a)=>{if(monitor&&g.tour)monitor.trayCalls++;return tray(...a)};canvas.addEventListener('pointerdown',e=>{canvas.setPointerCapture(e.pointerId);const r=canvas.getBoundingClientRect();g.pointerDown((e.clientX-r.x)*g.viewport.width/r.width,(e.clientY-r.y)*g.viewport.height/r.height,e.pointerId)});canvas.addEventListener('pointermove',e=>{const r=canvas.getBoundingClientRect();g.pointerMove((e.clientX-r.x)*g.viewport.width/r.width,(e.clientY-r.y)*g.viewport.height/r.height,e.pointerId)});canvas.addEventListener('pointerup',e=>{const r=canvas.getBoundingClientRect();g.pointerUp((e.clientX-r.x)*g.viewport.width/r.width,(e.clientY-r.y)*g.viewport.height/r.height,e.pointerId)});canvas.addEventListener('pointercancel',e=>g.pointerCancel(e.pointerId));}\n17:function capture(label){const img=document.createElement('img');img.src=canvas.toDataURL('image/png');img.alt=label;img.dataset.label=label;el('samples').append(img)}\n20:async function prepare(){await boot();g.suspend();const all=canonical(),index=all.indexOf('L047');prefix(all.slice(0,index));show({width:1280,height:720,ratio:1});g.camera=g.cameraForCurrent();g.render(performance.now());const s=g.sticker('L047'),card=g.hits.find(h=>h.id==='sticker:L047'),target=g.screen(g.center(s));const r=canvas.getBoundingClientRect(),point=p=>({x:r.x+p.x*g.uiScale*r.width/g.viewport.width,y:r.y+p.y*g.uiScale*r.height/g.viewport.height});el('diagnostic').textContent=JSON.stringify({cardClient:point({x:card.x+card.width/2,y:card.y+card.height/2}),targetClient:point(target),progress:g.session.getSnapshot().progress.placed,selectedNext:'L047'},null,2);g.running=true;g.tick();el('status').textContent='L047 真拖放已准备';}\n21:for(const [id,fn]of [['run',run],['books',books],['prepare',prepare]])el(id).onclick=()=>fn().catch(e=>{el('result').textContent=JSON.stringify({passed:false,error:e.message,stack:e.stack});el('status').textContent='FAIL'});\n",
+            "truncated": false
+          }
+        },
+        {
+          "type": "commandExecution",
+          "id": "exec-2d8bb202-6d59-43f3-98e4-2dcf7421ef00",
+          "command": "/bin/zsh -lc 'cat work/fragrance-pearl/validation/camera-followup/final-build.json'",
+          "cwd": "/Users/wangye/Desktop/贴纸",
+          "status": "completed",
+          "exitCode": 0,
+          "durationMs": 0,
+          "output": {
+            "text": "{\n  \"status\": \"final-rebuilt-restored-ordering-core-camera-passed\",\n  \"scope\": \"Region camera only; final layer validation pending\",\n  \"sources\": [\n    {\n      \"file\": \"src/rendering/CanvasGame.ts\",\n      \"beforeSha256\": \"9188c3fb5d008b8f7ea8c541dd6d3202d6638654d081058f6d1f54d83ebc1819\",\n      \"afterSha256\": \"116443f6cbc02951560c51cc16a91c1a9575f732296a93fc0674f08a34eb23e7\",\n      \"cameraOnlyAfterSha256\": \"116443f6cbc02951560c51cc16a91c1a9575f732296a93fc0674f08a34eb23e7\"\n    },\n    {\n      \"file\": \"src/adapters/cocos/FragranceGame.ts\",\n      \"beforeSha256\": \"ca909fb4a8d4e49dc848b5614c7c07742f4bc459906346e17a6da4f90cd38436\",\n      \"afterSha256\": \"005531abd5eba9ec87a6505f09eca8b02bf190024ea33f6c26903616e22babe7\",\n      \"cameraOnlyAfterSha256\": \"005531abd5eba9ec87a6505f09eca8b02bf190024ea33f6c26903616e22babe7\"\n    }\n  ],\n  \"layoutRevision\": 4,\n  \"layoutSha256\": \"6024fc6df3262ccca8ea81bb15279c5e2cd0ae00d6c1ff81dc00fd0f058eba16\",\n  \"htmlSha256\": \"8a45d3efa21b9b5fd2fe67960d2fb3089bb994a81eb3242c0cd0d5325dddaf91\",\n  \"htmlBytes\": 30291881,\n  \"buildReport\": {\n    \"typescript\": \"passed\",\n    \"cocosTypeDeclarations\": \"official-3.8.8-passed\",\n    \"logicalStickers\": 175,\n    \"blocks\": 8,\n    \"renderPartsAndFixed\": 180,\n    \"runtimeAssets\": 184,\n    \"totalRuntimeArtworkBytes\": 25908073,\n    \"wechat\": \"source-built-not-device-tested\",\n    \"cocos\": \"import-source-not-editor-built\",\n    \"platformBudgetBytes\": {\n      \"main\": 4194304,\n      \"eachSubpackage\": 4194304,\n      \"total\": 31457280\n    },\n    \"wechatMainBytes\": 665161,\n    \"wechatTotalBytes\": 23041172,\n    \"wechatSubpackages\": [\n      {\n        \"name\": \"fragrance-001\",\n        \"bytes\": 4189725,\n        \"assets\": 4\n      },\n      {\n        \"name\": \"fragrance-002\",\n        \"bytes\": 4190079,\n        \"assets\": 4\n      },\n      {\n        \"name\": \"fragrance-003\",\n        \"bytes\": 4189846,\n        \"assets\": 6\n      },\n      {\n        \"name\": \"fragrance-004\",\n        \"bytes\": 4190011,\n        \"assets\": 13\n      },\n      {\n        \"name\": \"fragrance-005\",\n        \"bytes\": 4190197,\n        \"assets\": 53\n      },\n      {\n        \"name\": \"fragrance-006\",\n        \"bytes\": 1426153,\n        \"assets\": 103\n      }\n    ],\n    \"layoutSha256\": \"6024fc6df3262ccca8ea81bb15279c5e2cd0ae00d6c1ff81dc00fd0f058eba16\"\n  },\n  \"cpuBenchmark\": {\n    \"baselineRevision\": 3,\n    \"logicalOwners\": 175,\n    \"renderParts\": 178,\n    \"layoutSha256\": \"9bae4062040e660b7dc8ecd76ce1429ca8a37e6e229fd44cdcc21d0ee474ff4f\",\n    \"gpuFpsMeasured\": false\n  },\n  \"fullTests\": {\n    \"status\": \"passed\",\n    \"command\": \"node tests/session-check.mjs && node tests/alpha-threshold-check.cjs && node tests/hd-paper-check.cjs && node tests/hd-resource-check.cjs && node tests/progress-migration-check.cjs && node tests/placement-intent-check.cjs && node tests/viewport-check.cjs && node tests/camera-check.cjs\",\n    \"log\": \"full-tests.log\",\n    \"sessionChecks\": 17,\n    \"migrationChecks\": 13,\n    \"dropChecks\": 22,\n    \"viewportChecks\": 9,\n    \"cameraChecks\": 9\n  },\n  \"sourceUnchangedFromPreviousCameraBuild\": true,\n  \"change\": \"L050 masks retained; original Cocos paintWorld restored after inactive-node test-fixture false alarm\",\n  \"cameraMotionBodiesUnchanged\": true,\n  \"additionalCocosLayerOrderFix\": false,\n  \"orderingAlarmCorrection\": \"Original +2 active visible ordering passed 40 actual-engine-method cases; inactive-node comparison was a fixture error. Append trial reverted.\",\n  \"lastSmoke\": {\n    \"strictBuild\": \"TypeScript / official Creator3.8.8 passed\",\n    \"coreSessionChecks\": 17,\n    \"cameraChecks\": 9,\n    \"fullTestsPreviouslyPassedOnRestoredOriginalOrdering\": true,\n    \"log\": \"restored-core-camera-smoke.log\"\n  }\n}\n",
+            "truncated": false
+          }
+        },
+        {
+          "type": "commandExecution",
+          "id": "exec-70ef14f7-377f-487e-a0d0-5fe3d51678e7",
+          "command": "/bin/zsh -lc 'cat work/fragrance-pearl/validation/camera-followup/区域镜头修正说明.md'",
+          "cwd": "/Users/wangye/Desktop/贴纸",
+          "status": "completed",
+          "exitCode": 0,
+          "durationMs": 0,
+          "output": {
+            "text": "# 区域镜头修正与 CPU 检查\n\n仅同步游戏1号的区域相机规则。Canvas 使用世界容器平移与等比缩放的同进度 smoothstep 插值，然后逆算原图中心；区域目标与端点不变。Cocos 仅相机移动与全景停留使用有限、非负的真实帧 dt，其它动效仍保留原0.06秒上限。末区缩全景0.7秒、停留0.45秒后完成，删除没有下一区时额外的0.8秒。\n\n镜头锁定期间只缓存解析后的全局绘制队列；各张高清PNG仍独立绘制。移动帧仅重画画板，保留静态界面像素与命中区域；全景停留没有脏变化时跳过重绘，图片读取/界面脏变化仍触发完整重绘。结束或挂起后不保留tour缓存，恢复时重建镜头且不提前推进进度。\n\n已按稳定候选revision4数据统一构建，175逻辑件、180绘制条目。候选layout SHA为 6024fc6df3262ccca8ea81bb15279c5e2cd0ae00d6c1ff81dc00fd0f058eba16。平台产物仍待独立图层/浏览器验收。官方Creator3.8.8声明的noEmit严格检查0错误。专用9项检查通过，覆盖3尺寸×8区同步插值、精确端点与触控逆变换、缓存/界面命中保留、hold脏刷新、末区按时完成、Cocos相机真实dt与其它动效原dt、后台暂停、取消及无效dt。最新测试按数据实时队列长度执行：175逻辑物体、180绘制条目。\n\nCPU对比冻结同一修前布局 9bae4062040e660b7dc8ecd76ce1429ca8a37e6e229fd44cdcc21d0ee474ff4f，使用175件、178parts、179张实际活动PNG，修前与修后使用同一组相机姿态、相同画面与DPR2。PNG解码完成后才开始计时，每版本每尺寸120次有效样本，交替执行并预热。4种尺寸/安全区×4帧的完整RGBA逐字节相等，包含DPR1.5与小数安全区；保留逐图高清渲染，没有整场bitmap缩放。\n\n| 尺寸 | 修前render()中位数 | 修后render()中位数 | 降幅 |\n| --- | --- | --- | --- |\n| 390×844 | 0.757 ms | 0.551 ms | 27.3% |\n| 1280×720 | 0.740 ms | 0.558 ms | 24.6% |\n| 844×390 | 0.753 ms | 0.549 ms | 27.0% |\n\n这是本机 @napi-rs/canvas / Skia 原生CPU绘制调用的耗时，**不是微信/App目标设备GPU帧率，也不包含PNG解码或显示合成刷新**。移动轨迹故意变化；像素比较给两版相同camera姿态，仅验证缓存绘制等价。\n\n源码范围检查确认Canvas其它44个方法、Cocos其它71个方法的函数体相对修前字节未变，包含拾取、最终松手、透明命中、纸张UV、压平、镊子与粒子。Cocos原paintWorld实现已恢复；此前sibling排序告警经真实引擎语义验证，确认是测试把inactive节点纳入比较的误报。相机、压平、镊子、粒子、拾取参数不变。素材/layout/AssemblyPose没有由相机任务改写。\n\n原始证据：camera-regressions.json、source-scope.json、cpu-and-pixels.json及before/源码与布局。专用脚本：tests/camera-check.cjs；CPU与像素复测：tests/camera-cpu-check.cjs（需要本工作区before证据与既有native Canvas）。二者内存编译源码，均不调用build。\n\n源码before/after SHA及候选HTML、布局、微信包体指纹见candidate-build.json；before/与after/保留两个相机源码版本。完整package test已通过：session17、alpha边界、HD UV8与实际PNG逻辑网格、migration13（含全部184个rev3合法前缀/过渡与6/7两入口）、drop22、viewport9、camera9。主代理已将旧L002唯一回退断言按同owner互补canonical parts契约修正。完整stdout见full-tests.log。\n\nL050最终技术mask更新后再次build和完整package test全部通过，相机源码SHA保持不变；最终HTML、layout与实际微信包体指纹见final-build.json。历史同9bae基线的CPU比较保留，不冒称最新180层GPU结果。\n\n排序误报历史：曾短暂尝试append已排序节点，随后独立验收忠实执行本机Creator3.8.7 Node.setSiblingIndex，原+2算法40个active可见排序用例全通过，确认inactive节点比较造成告警，主代理恢复原实现。append试版保存在superseded-append-trial-build.json及after/FragranceGame.append-trial.ts，不能称为已证实缺陷或必要修复。恢复后的镜像严格构建、核心17项、相机9项通过；相机版完整测试此前已通过，未重复CPUbench。\n",
+            "truncated": false
+          }
+        },
+        {
+          "type": "commandExecution",
+          "id": "exec-7ea58364-0cc9-4a7b-81c3-9d4124e20edd",
+          "command": "/bin/zsh -lc 'tail -n 45 work/fragrance-pearl/HANDOFF.md'",
+          "cwd": "/Users/wangye/Desktop/贴纸",
+          "status": "completed",
+          "exitCode": 0,
+          "durationMs": 0,
+          "output": {
+            "text": "\n`build-layout.py` 为最初导入175/349，会重置派生清理和修复，禁止直接重跑覆盖当前数据。`apply-clean-stickers.py` 为revision2三件清理。`upgrade-hd-complete.py` 为revision3移除旧overlay、HD与178mask；若下一步B033新比例已应用，不能不带参数直接重跑它恢复压扁旧尺寸。应保存最终可重复处理入口或以稳定JSON/resources为构建源。\n\n## 最终构建与承托校准（本节优先，2026-10-03）\n\n11 单件完整补绘全部通过独立实看。四处失去承托的完整结构已装入 B027/B028/B029/B030 原 owner，仍175/178。B027 最后候选白台完整但工具仍未精确达到请求台高；采用用户允许的必要构图调整，L029 y193 对真实白台面。门内 B030 完整木桌同样按实际透视表面，L012 y134，L052 x105/y223；B007 已在新柜顶平面内维持原 y247；B010 最终 y192。B033 layer22 在完整低柜23后；不要将旧段建议的 B007 上移8px或 B010 y190重新套用。\n\nfinalize-complete-geometry.py 已包含全部可重复校准和178显式nearest-center alpha，不重置已修复PNG。正式 layout SHA aee3848c37ff8ae4e36c95d40a767a8a14dea75054a2d7373f721a9ade0a5c64 已冻结；runtime 使用 bundled Node执行与package.json同一build/test串行入口，官方 Cocos3.8.8 strict、全部测试通过。微信main648708B，total22305086B、最大subpackage4190115B，均预算内。不要再重build除非实际素材改变。\n\nvalidation 已启动最终175真实touch稳定帧（手机/完整区域/2x owner），核心HD/RLE所有3267576逻辑像素、180源与Cocos/179wx映射、透明边界/外伸裁切/351初始文件哈希均通过。逐帧审图仍在进行，等待最后报告再封装。audit正在核对四处最终真实承托和全量台面/手持关系，不能提前宣称最终视觉通过。\n\nIAB已打开 http://127.0.0.1:8783/preview/?v=3 并markDeliverable，实际截图确认旧6/7合法存档迁到rev3，绿窗和柜体稳定干净。server仍活跃。README及素材记录已按11单件+4结构/所有几何调整更新。最终PNG目前 refreshed，手机PNG/ZIP待validation完成后交付。未微信真机/CocosGPU/App验收。\n\n## 最终全覆盖闭合（本节优先）\n\n上轮aee384逐步采完但审承托另发现5项，validation已全部归档before-support并未冒称通过。已全部处理：L027完整植物+金高台55×134@219,278；C032完整金盖青花瓷罐30×46@1267,675；L028落地y283；L017落花艺台y407；B002设备y113与B001人物/绑定前景y173一起+8。总计12个单体修复+5处承托（另3件清邻物/底图派生、B035既有完整HD、B033比例/层级）。game_rules_audit已独立实看全部5整改后结果、人物手/阀、金台落地/植物接盘、瓷罐落玻璃平面，全覆盖无未闭合必修项。\n\n现在最终冻结 layout SHA6b50279e182add59b20643b2d7a4a35b3a07d7e41ea829c39a27599915cbbacc，175/178/8。runtime重build与完整测试脚本一次全通过，HTML29358142B，SHAee8fa7a6c47e0c245d3c4fc7bbb5cae2ebb9ce4dfc59dcb505561c73f5d06d7c；wxmain649715B,total22334053B(21.299MiB)，6分包max4190115B。已触发validation final175采集及逐帧审图，等待通过后保存final报告/手机PNG并package。不得再套aee384SHA状态作最终。IAB已reload该最终build并markDeliverable，原6/7保存。所有原ZIP/original/manifest/349runtime及observed保持，完整最终图已实看。\n\n## 最终交付状态（本节优先）\n\n最终layout SHA **9bae4062040e660b7dc8ecd76ce1429ca8a37e6e229fd44cdcc21d0ee474ff4f**。L026花篮依赖已从错误推车L047改为实际椅L051，同步有限known-progress契约，新增椅未贴篮不可拿/椅提交后可拿测试。首区旧1/2合法6/7仍迁到3，非法依赖前缀保留旧key但拒绝。B014手持铜罐在最终逐步图发现随人物移动遗漏，旧y214出现空气缝；对比+8/+10/+12后采用y226，root和两名视觉审查者实看新93 region/detail接受，无窗口缝。此前support audit对y214的接受已被这一实际运行图纠正，不能沿用旧结论。\n\n最终所有175张的完整区域+2x detail已人工审图，174步与已审基线实绘帧同byte复用，B014新两帧直接审；first区0→7、6/7和Chrome迁移后手贴亦审。全部花屏/错位/穿模/承托阻断关闭。最终175触碰全玩法、HD/179活跃PNG/180Cocos与179wx副本、RLE/picker/crop、旧进度、Chrome4场景、官方Cocos3.8.8 strict23及真实compiled-controller hostmock12、session17全部PASS。报告 `outputs/fragrance-pearl-game/docs/verification/final/verification-final.md` 及同目录JSON/版本manifest，代理已停止写入，源码和素材冻结。\n\nwxmain650110B、total22334448B、maxpackage4190115B(6分包)，预算PASS。HTML29358477B，SHAd8a38b0efdf09352fee57057bca5032e1e801bcbb7a2ea79a4050ef1d4cdbffc；最终手机PNG SHA c068a9307440807314c5a8edcd3e059a8dcca3e8797a4604ef9434b9059b936b，另保存真实sequential6步PNG。用户IAB原6/7子集保留，可能与默认顺序6步缺的最后一张不同，都是合法状态；截图不得误称完全相同进度列表。IAB最后已reload并markDeliverable。微信/API是模拟宿主，Cocos是hostmock，尚无真机/GPU/App安装包验证。\n\nroot接下来执行一次tools/package.py生成 `outputs/花香与珠光-手机游戏框架.zip`，CRC和所有payload SHA验收，打包结果保存在work/fragrance-pearl/package-report.json，完成后交付。全部原ZIP/original/manifest/runtime/observed保持；共享准则已同步游戏1/2/3。\n\n交付已完成：ZIP166067324B、1067entries，CRC与全部payload hashes通过，SHA c78c0ad2991e1844cfd7ddcf40bca0bdd6846fde2fff23518fa872ed3b675aad。打包报告已保存 package-report.json；包内含最终项目/微信+Cocos源码、离线HTML、最终手机与6步PNG、完整图及修复底图。未包含旧花屏视频。最后预览已打开并保留原6/7进度。无尚未完成的本轮修复/验收/打包工作；后续若继续native设备验收须区分本轮范围，不声称已在真机运行。\n\n\n## L047拖不上去与最新分区镜头准则（本节优先，已交付）\n\n用户反馈“完整空…架子移不上去”，实际当前花艺区1/34纸栏L047完整空木质花艺推车。root实际IAB精确旧目标中心336.465,435.492复现退回，中心alpha0；held固定上移62px导致距离误判，底边held对准也因finger在board外误退回。旧Up沿最后Move也造成错拒与远处误贴。已新增共享PlacementIntent，当前选中目标finger/held分别入板+有限中心吸附，最终Up重算held与moved，无Move长拖仍能放；纸栏纯tap只选，远处仍拒，alpha拾取/editor原样，Cocos保留原18u外沿容差。旧tests+drop22+官方Cocos3.8.8strict与compiled-handlerhostmockPASS。\n\n主会话后同步用户认可的分区自动放大接入说明。Canvas/Cocos核心方案已等效；只读审核发现844x390左右safe44各越2px、forcedheight400与实际390失配。已局部修Canvas actual viewport保存、短屏uiScale=min(1,w/240,h/600)、buffer实际window*DPR、四边safe逻辑化与三个pointer入口client逆变换一次，start不能重复逻辑化resize。镜头目标/素材/Cocos视口原样。viewport9、真实nativebuffer、三尺寸2136partcorner均PASS；root四case2848corner亦PASS。\n\n最终HTML29360871B、SHA6174709253128a03467b182df3af564122acd90e853d89d33c0af7fb09fd954c，runtime7f9e10126b4fa3d9b3becc372f86e651fe864886108fb9a1ac0880d177646eb7，layout仍9bae4062040e660b7dc8ecd76ce1429ca8a37e6e229fd44cdcc21d0ee474ff4f。179 active PNG/微信+Cocos副本均与旧final一致。wxmain652441B,total22336779B,maxsubpackage4190115B预算PASS。7d4放置基线真实Chrome26例PASS；最终6174真实Chrome touch4组含横屏safe44 DPR2/0.75、portrait390844原存档/390660，desktop5关键Up/无Move/远处/cardtap PASS，实看PNG均接受。未重跑175美术、未真机/引擎GPU/App安装包。\n\nroot最终IAB同原失败动作已成功2/34，final JPEG在docs/verification/placement-followup/iab-final-hole-drop.jpg；已undo测试贴纸+reload实际截图确认用户原花艺1/34保持。127.0.0.1:8783/preview/?v=3 server仍活跃，browser2 tab2已markDeliverable；app open_in_codex返回queued，不可声称已在可见面板自动打开。\n\n专项证明已冻结复制到outputs/fragrance-pearl-game/docs/verification/placement-followup：verification.md、dropfix-baseline/、viewport/、art-preservation、camera审查、IAB动作/截图，旧final未改。README与docs共享规则/分区说明已更新。共享规则第9条真实纸栏拖放、空心中心、底边/最终Up已同步游戏1/2；接收的主会话镜头方案已核对并修好视口，不改其它关卡。\n\n新ZIP223991405B、1211entries、CRC与全部payload SHA PASS，SHA4be7dac1b9f323db11a9c8adf51175213d78108a08c3d7c7035486a4600ef436。旧交付ZIP完整保存work/fragrance-pearl/package-before-drop-fix.zip（SHA c78c0ad…），旧report保存package-before-drop-fix-report.json。最终package-report.json已更新。无待改源码/测试/打包项，本轮修复已完成；真机属于后续范围。\n",
+            "truncated": false
+          }
+        },
+        {
+          "type": "fileChange",
+          "id": "exec-1b8635de-292f-4e77-b044-c815959ff0d3",
+          "status": "completed",
+          "changes": [
+            {
+              "path": "/Users/wangye/Desktop/贴纸/outputs/fragrance-pearl-game/package.json",
+              "kind": {
+                "type": "update",
+                "move_path": null
+              },
+              "diff": {
+                "text": "@@ -6,3 +6,4 @@\n     \"build\": \"node tools/build.cjs\",\n-    \"test\": \"node tests/session-check.mjs && node tests/alpha-threshold-check.cjs && node tests/hd-paper-check.cjs && node tests/hd-resource-check.cjs && node tests/progress-migration-check.cjs && node tests/placement-intent-check.cjs && node tests/viewport-check.cjs && node tests/camera-check.cjs\"\n+    \"test\": \"node tests/session-check.mjs && node tests/alpha-threshold-check.cjs && node tests/hd-paper-check.cjs && node tests/hd-resource-check.cjs && node tests/progress-migration-check.cjs && node tests/placement-intent-check.cjs && node tests/viewport-check.cjs && node tests/camera-check.cjs\",\n+    \"test:occlusion\": \"node tests/occlusion-check.cjs\"\n   },\n@@ -10,3 +11,4 @@\n     \"typescript\": \"5.9.3\",\n-    \"@cocos/creator-types\": \"3.8.8\"\n+    \"@cocos/creator-types\": \"3.8.8\",\n+    \"@napi-rs/canvas\": \"0.1.100\"\n   }\n",
+                "truncated": false
+              }
+            },
+            {
+              "path": "/Users/wangye/Desktop/贴纸/work/fragrance-pearl/occlusion-v4/export-kit.py",
+              "kind": {
+                "type": "update",
+                "move_path": null
+              },
+              "diff": {
+                "text": "@@ -37,3 +37,11 @@\n for relative in ['all-175-occlusion-audit.md', 'all-175-occlusion-audit.json']:\n-    copy(WORK / 'audit' / relative, '证据/' + relative)\n+    copy(WORK / 'audit' / relative, '证据/修前-' + relative)\n+for relative in ['final-all-175-visual-acceptance.md', 'final-all-175-visual-acceptance.json']:\n+    copy(WORK / 'audit/after-review' / relative, '证据/' + relative)\n+for relative in ['verification.md', 'verification.json', 'current-fingerprints.json', 'art-preservation.json',\n+                 'kit-check.json', 'iab-camera-four-sizes.json', 'iab-camera-four-sizes-repeat.json',\n+                 'iab-real-drop.json']:\n+    proof = GAME / 'docs/verification/occlusion-v4' / relative\n+    if proof.exists():\n+        copy(proof, '证据/' + relative)\n copy(ROOT / 'work/fragrance-pearl/validation/camera-followup/区域镜头修正说明.md', '说明/区域放大接入.md')\n",
+                "truncated": false
+              }
+            }
+          ]
+        },
+        {
+          "type": "imageView",
+          "id": "exec-d4c68734-522e-4d11-b7d9-153f0ffccb5e",
+          "path": "/Users/wangye/Desktop/贴纸/work/fragrance-pearl/occlusion-v4/audit/after-review/perfume-cabinet-revision4.png"
+        },
+        {
+          "type": "mcpToolCall",
+          "id": "call_jHDvOChrONwteHAoutYTUjR5",
+          "server": "cua_repl",
+          "tool": "js",
+          "arguments": {
+            "code": "let realDropShotV4 = await cameraProofTab.getScreenshot({emit:false}); await rackProofFs.writeFile('/Users/wangye/Desktop/贴纸/work/fragrance-pearl/occlusion-v4/iab-real-drop.jpg',realDropShotV4); await rackProofFs.writeFile('/Users/wangye/Desktop/贴纸/work/fragrance-pearl/occlusion-v4/iab-real-drop.json',JSON.stringify({passed:true,scope:'CUA actual browser pointer drag; private memory fixture, no user storage access',layoutSHA256:'6024fc6df3262ccca8ea81bb15279c5e2cd0ae00d6c1ff81dc00fd0f058eba16',stickerId:'L047',from:[350.469140625,546.3072916666667],to:[335.53130511474603,443.9562447916667],preparedCanonicalPlaced:8,flowerBefore:'1 / 34',flowerAfterObservedInScreenshot:'2 / 34',observed:'Complete empty wooden flower cart remains placed; next four cards appear',screenshot:'iab-real-drop.jpg'},null,2)); await rackGameTab.goto('http://127.0.0.1:8783/preview/?v=4'); let finalMainStateV4 = await rackGameTab.getAXState({emit:false}); nodeRepl.write(finalMainStateV4.slice(0,1800)); await rackGameTab.markDeliverable();",
+            "title": "保存真实拖放证据并刷新游戏3预览"
+          },
+          "status": "completed",
+          "durationMs": 372
+        },
+        {
+          "type": "agentMessage",
+          "id": "msg_0a956b8366d1b95b016ac0d80fedb087d2b447cec7becaca19",
+          "text": "柜体上层板原先漏出的蓝、棕色碎边已修好，四件书盒单独贴上时也能被柜框正确遮住；空推车的真实拖放也已通过。镜头路径已核对，但桌面浏览器压力测试仍有偶发长帧，我会把这个限制写进验收记录。",
+          "phase": "commentary"
+        },
+        {
+          "type": "commandExecution",
+          "id": "exec-f4c0c1e0-32f4-4c94-8fdb-fad99212e118",
+          "command": "/bin/zsh -lc \"/Users/wangye/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 - <<'PY'\nfrom pathlib import Path\nimport json\nw=Path('work/fragrance-pearl/occlusion-v4')\nfor f in ['validation/final-current/results.json','validation/final-current/controller-results.json','validation/final-current/cocos-sibling-before-results.json','validation/core-focus/results.json','art-preservation.json','audit/after-review/summary.json']:\n d=json.loads((w/f).read_text()); print(f);print(json.dumps({k:v for k,v in d.items() if not isinstance(v,(list,dict))},ensure_ascii=False))\nPY\"",
+          "cwd": "/Users/wangye/Desktop/贴纸",
+          "status": "completed",
+          "exitCode": 0,
+          "durationMs": 0,
+          "output": {
+            "text": "validation/final-current/results.json\n{\"passed\": true, \"scope\": \"Actual source strict compilation, actual GameSession legal prefixes, real PNG/native Canvas stable raster; no visual automatic verdict and no device/GPU claim\", \"layoutSHA256\": \"6024fc6df3262ccca8ea81bb15279c5e2cd0ae00d6c1ff81dc00fd0f058eba16\", \"owners\": 175, \"renderParts\": 180, \"canonicalPNGsPreserved\": 179, \"earliestLatestPrefixes\": 350, \"allOwnersCovered\": 175, \"sameStageRiskPairs\": 105, \"eachRiskPairBothLegalOrdersAndEqualRaster\": true, \"stableFrameCount\": 700}\nvalidation/final-current/controller-results.json\n{\"passed\": true, \"scope\": \"Actual compiled Cocos component/controller and Sprite/node calls executed using a minimal cc host mock; no Cocos engine, GPU, scene preview or native App run\", \"layoutRevision\": 4, \"layoutSHA256\": \"6024fc6df3262ccca8ea81bb15279c5e2cd0ae00d6c1ff81dc00fd0f058eba16\", \"checks\": 13}\nvalidation/final-current/cocos-sibling-before-results.json\n{\"passed\": true, \"layoutSHA256\": \"6024fc6df3262ccca8ea81bb15279c5e2cd0ae00d6c1ff81dc00fd0f058eba16\", \"compiledSHA256\": \"8fad9d5a94050070f08c9180c3ec03aed1ccd0fcb1ceed9df3c2fc4da27e3327\", \"scope\": \"Actual Cocos component paintWorld plus locally installed engine setSiblingIndex method executed in Node/host fixtures, no engine renderer/GPU/native app\"}\nvalidation/core-focus/results.json\n{\"passed\": true, \"scope\": \"Revision4 occlusion final: genuine PNG decode and Native Canvas wx adapter paths; Cocos pure alpha picker parity; no device/native execution\", \"layoutRevision\": 4, \"layoutSHA256\": \"6024fc6df3262ccca8ea81bb15279c5e2cd0ae00d6c1ff81dc00fd0f058eba16\", \"threshold\": 32, \"alphaSampling\": \"logical nearest-centre floor((x+.5)*pixelWidth/logicalWidth), visual draw remains smooth\", \"masksChecked\": 182, \"hdArtwork\": 179, \"native1xArtwork\": 3, \"maskPixelsChecked\": 3405316, \"actualCanvasThresholdSamples\": 525, \"nativeCocosOriginalPoseHitSamples\": 13072, \"initialAssetsPreservedHashChecked\": 351, \"finalAssetsHashVerified\": 184, \"wxAssetsHashVerified\": 183, \"cocosAssetsHashVerified\": 184, \"wxAndCocosCopiesMatch\": true, \"referenceOmittedFromWx\": true, \"mappedImageReads\": 183, \"sourceImagesModifiedByValidation\": false}\nart-preservation.json\n{\"revision\": 4, \"completeOwnersUnchanged\": 175, \"sourceArchiveSHA256\": \"0cf298a6d3b98a6b8f7cd2b4506e12f806509f912388f0961796510f00360c9c\", \"layoutSHA256\": \"6024fc6df3262ccca8ea81bb15279c5e2cd0ae00d6c1ff81dc00fd0f058eba16\"}\naudit/after-review/summary.json\n{\"layoutRevision\": 4, \"layoutSHA256\": \"6024fc6df3262ccca8ea81bb15279c5e2cd0ae00d6c1ff81dc00fd0f058eba16\", \"accepted\": true, \"actualNativeCanonicalFramesDirectlyViewed\": 175, \"readableContactSheetsDirectlyViewed\": 15, \"independentRawResourceCompositeFullAreasDirectlyViewed\": 6, \"independentLegalEarliestSingleObjectCompositesDirectlyViewed\": 5, \"preservedCanonicalOwnerPNGs\": 175, \"scope\": \"Manual visual acceptance for all175 actual current Native Canvas canonical placement frames plus targeted earliest/latest + independent actual-resource composites. No assertion that all700 frames were individually viewed; same-stage105-pair equal raster proof supplied separately by validation. No native device/GPU claim. Black padding in diagnostic crop beyond source rect is not browser camera behavior; root verifies product viewport.\"}\n",
+            "truncated": false
+          }
+        },
+        {
+          "type": "commandExecution",
+          "id": "exec-bbfc33f1-6ed2-462a-833a-a33b4d9a7183",
+          "command": "/bin/zsh -lc \"rg -n '待|pending|版本4|revision4|区域镜头|occlusion|层级修' outputs/fragrance-pearl-game/README.md outputs/fragrance-pearl-game/docs/source-provenance.json\"",
+          "cwd": "/Users/wangye/Desktop/贴纸",
+          "status": "completed",
+          "exitCode": 0,
+          "durationMs": 0,
+          "output": {
+            "text": "outputs/fragrance-pearl-game/README.md:11:补全画与旧源可见碎片不匹配，曾造成窗格花屏、邻物残留和金色物穿模；版本 3 已停用全部旧 source_visible_overlay。版本3保留完整主图与三个人物的同源前景部分。版本4为调香柜前木框、层板与调香师前握指尖增加互补的同源绘制子层；它们仍是一张完整逻辑贴纸，随owner微调，纸栏使用完整主图。其它旧场景绑定覆盖在改变姿态后仍回退为完整 canonical PNG。\noutputs/fragrance-pearl-game/README.md:25:版本4仅同步游戏1号区域镜头：世界平移与scale以同一smoothstep进度过渡，镜头期间缓存全局队列、保留静态UI，在停留时不重复绘制无变化帧，保持逐PNG高清绘制。Cocos镜头计时使用有限真实dt，其余动效保持原时间处理。最后一区不多等无目标的0.8秒。完整贴纸PNG和取贴、镊子、压平、庆祝实现保留。\noutputs/fragrance-pearl-game/README.md:27:全175覆盖新审与496组原相交关系的记录、修复后逐件最早/最晚合法态及同阶段顺序独立核验位于 `docs/verification/occlusion-v4/`。当前修复柜内书盒与前木框、沙发与后柜、玻璃柜与后木柜、持瓶指尖；C008笔记本y500→522对齐实际桌面。版本1/2/3合法进度可迁移至4，经184个实际版本3进度前缀与转场验证，旧记录保留。中文完整素材包在旁边“花香与珠光-层级修正版素材包.zip”，含175完整RGBA、180组装部分、manifest、对应蒙版、原图、底图、最终组装图和离线试玩。\noutputs/fragrance-pearl-game/docs/source-provenance.json:526:      \"occlusionRule\": \"rear gold support is behind the complete restored low wooden cupboard\"\noutputs/fragrance-pearl-game/docs/source-provenance.json:1359:  \"occlusionRepair\": {\n",
+            "truncated": false
+          }
+        },
+        {
+          "type": "commandExecution",
+          "id": "exec-eeea325f-bd11-432b-a826-436fbaab4646",
+          "command": "/bin/zsh -lc \"sed -n '1,80p' outputs/fragrance-pearl-game/README.md\"",
+          "cwd": "/Users/wangye/Desktop/贴纸",
+          "status": "completed",
+          "exitCode": 0,
+          "durationMs": 0,
+          "output": {
+            "text": "# 花香与珠光 · 游戏 3 号\n\n本关使用「花香与珠光-分割 2 号素材包」的完整独立 PNG，面向微信小游戏和 Cocos Creator 3.8.x App 接入。当前布局版本为 4，共 175 张逻辑贴纸、8 个区域、180 个绘制部分。原素材包保留，运行目录使用其派生资源副本。\n\n`data/fragrance-pearl-layout.json` 是共享关卡，`src/core/` 负责逐区与 L1 → L2 → L3 拼装进度，`src/rendering/` 是平台无关 Canvas 游戏，`src/adapters/wechat/` 与 `src/adapters/cocos/` 分别接入微信和原生引擎。完整贴纸拿起、左向右压平、金色完成动效、区域自动巡游、撤销与 JSON 微调共用关卡数据。\n\n在项目安装依赖后执行 `npm run build`，再执行 `npm test`。当前工作区构建器也可读取已安装的共享 TypeScript 和官方 cc 声明，不复制 node_modules。外部环境可通过 `FRAGRANCE_TYPESCRIPT_PATH` 和 `FRAGRANCE_COCOS_TYPES_PATH` 指定已安装工具的绝对路径。\n\n构建生成 `preview/runtime.js`、`preview/layout.js`、旁边可离线打开的 `花香与珠光-交互验证.html`、微信 `wechat/` 和原生 `cocos-import/`。微信资源采用 canonical assetKey → 实体子包路径映射，按实际字节分桶，避免整目录堆入一个超大分包。打开微信开发者工具时导入 `wechat/`，填写自己的 AppID；源码构建不提交上传，也不生成商店安装包。\n\n补全画与旧源可见碎片不匹配，曾造成窗格花屏、邻物残留和金色物穿模；版本 3 已停用全部旧 source_visible_overlay。版本3保留完整主图与三个人物的同源前景部分。版本4为调香柜前木框、层板与调香师前握指尖增加互补的同源绘制子层；它们仍是一张完整逻辑贴纸，随owner微调，纸栏使用完整主图。其它旧场景绑定覆盖在改变姿态后仍回退为完整 canonical PNG。\n\n主图纹理采用 2 倍逻辑尺寸，PNG 的 pixelSize 与场景 sourceSize 分开计算。金色托架恢复完整比例，盆底对齐托盘，柜体正确遮住后方支架下部；断腿小架改用包内完整高清图。底图地砖接缝、三个夹带邻物的小件、12 件缺边或细节不清的物件通过内置 ImageGen 派生修复，并将五处缺失承托补进所属完整物件。植物、设备与手部位置按真实台面校准，保持原细墨线水彩画风。修复记录见 docs/素材接入说明.md。\n\n查看 `docs/build-report.json` 与 `tests/session-check-results.json` 获取实际检查结果。Cocos 组件的详细导入路径与纹理要求见 `src/adapters/cocos/COCOS接入.md`。编辑器、微信开发者工具和真机验收状态以报告为准，源码检查不能替代设备验收。\n\n此前版本3的175张贴纸曾通过稳定放置后的完整区域与2倍近景审图，首区0→7也逐步检查。原6/7合法存档继续保留。L026花篮须先放好L051椅子；B014铜罐随人物校准至y226。实际验收使用PNG解码与Canvas、模拟微信接口、真实Chrome浏览器及Cocos编译控制器宿主测试，尚无微信真机、Cocos GPU或iOS/Android安装包验收。\n\n版本3历史验收报告与资源版本清单位于 `docs/verification/final/`，对应布局 SHA `9bae4062040e660b7dc8ecd76ce1429ca8a37e6e229fd44cdcc21d0ee474ff4f`。\n\n后续拖放修复针对 L047 空木质花艺推车：选中后将手指或拿起的贴纸中心对准阴影中心附近即可吸附。镂空中心不再要求碰到木板，贴纸对准时手指可以略超出画板；松手按最终位置判断。已贴物件和编辑模式仍使用原透明轮廓。素材、坐标和存档版本保持不变，新增交互验收见 `docs/verification/placement-followup/`；此前最终目录保留原验收记录。\n\n分区镜头遵循游戏1号共享方案：当前区域自动放大，全部贴好并庆祝后，以 0.7 秒缩到全景、0.45 秒停留、0.8 秒进入下一区。短屏 Canvas 采用统一界面缩放，绘图缓冲精确匹配实际窗口和设备像素比；四边安全区、纸栏与触控统一换算。横屏与竖屏浏览器检查记录另存于后续交互验收目录，不能替代手机真机检查。\n\n版本4仅同步游戏1号区域镜头：世界平移与scale以同一smoothstep进度过渡，镜头期间缓存全局队列、保留静态UI，在停留时不重复绘制无变化帧，保持逐PNG高清绘制。Cocos镜头计时使用有限真实dt，其余动效保持原时间处理。最后一区不多等无目标的0.8秒。完整贴纸PNG和取贴、镊子、压平、庆祝实现保留。\n\n全175覆盖新审与496组原相交关系的记录、修复后逐件最早/最晚合法态及同阶段顺序独立核验位于 `docs/verification/occlusion-v4/`。当前修复柜内书盒与前木框、沙发与后柜、玻璃柜与后木柜、持瓶指尖；C008笔记本y500→522对齐实际桌面。版本1/2/3合法进度可迁移至4，经184个实际版本3进度前缀与转场验证，旧记录保留。中文完整素材包在旁边“花香与珠光-层级修正版素材包.zip”，含175完整RGBA、180组装部分、manifest、对应蒙版、原图、底图、最终组装图和离线试玩。\n",
+            "truncated": false
+          }
+        },
+        {
+          "type": "subAgentActivity",
+          "id": "subagent-completed-01a1011d-fbb5-7bb3-92ec-1d650234ea06",
+          "kind": "completed",
+          "agentThreadId": "01a10106-6fcc-7e23-90fb-5ff0d1889c29",
+          "agentPath": "/root/occlusion_audit"
+        },
+        {
+          "type": "fileChange",
+          "id": "exec-5898fcd9-590c-4866-b769-f7ea8ea5fd47",
+          "status": "completed",
+          "changes": [
+            {
+              "path": "/Users/wangye/Desktop/贴纸/work/fragrance-pearl/occlusion-v4/finalize-evidence.py",
+              "kind": {
+                "type": "add"
+              },
+              "diff": {
+                "text": "from pathlib import Path\nimport hashlib\nimport json\nimport shutil\n\nROOT = Path(__file__).resolve().parents[3]\nWORK = ROOT / 'work/fragrance-pearl/occlusion-v4'\nGAME = ROOT / 'outputs/fragrance-pearl-game'\nCAMERA = ROOT / 'work/fragrance-pearl/validation/camera-followup'\nDEST = GAME / 'docs/verification/occlusion-v4'\nDEST.mkdir(parents=True, exist_ok=True)\n\ndef copy(source, name):\n    target = DEST / name\n    target.parent.mkdir(parents=True, exist_ok=True)\n    shutil.copy2(source, target)\n\ndef read(path):\n    return json.loads(path.read_text())\n\ndef write(name, value):\n    (DEST / name).write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\\n')\n\nfor name in ['art-preservation.json', 'occlusion-repair.json', 'iab-camera-four-sizes.json',\n             'iab-camera-four-sizes-repeat.json', 'iab-camera-four-sizes.jpg',\n             'iab-camera-four-sizes-repeat.jpg', 'iab-real-drop.json', 'iab-real-drop.jpg',\n             'iab-final-progress.jpg']:\n    copy(WORK / name, name)\nfor name in ['all-175-occlusion-audit.md', 'all-175-occlusion-audit.json']:\n    copy(WORK / 'audit' / name, '修前/' + name)\nfor name in ['final-all-175-visual-acceptance.md', 'final-all-175-visual-acceptance.json', 'summary.json']:\n    copy(WORK / 'audit/after-review' / name, name)\nfor image in (WORK / 'audit/after-review').glob('native175-contact-*.jpg'):\n    copy(image, '175逐件审图/' + image.name)\nfor name in ['perfume-cabinet-revision4.png', 'held-perfume-revision4.png', 'sofa-distillery-revision4.png',\n             'glass-sewing-intersection-revision4.png', 'jeweler-arms-revision4.png', 'left-trolley-revision4.png',\n             'L055-earliest-single.png', 'L056-earliest-single.png', 'L057-earliest-single.png',\n             'L058-earliest-single.png', 'L049-earliest-single.png']:\n    copy(WORK / 'audit/after-review' / name, '重点覆盖/' + name)\nfor index in range(4):\n    copy(WORK / f'iab-book-earliest-{index}.png', f'重点覆盖/iab-book-earliest-{index}.png')\ncopy(WORK / 'validation/final-current/results.json', 'legal-states.json')\ncopy(WORK / 'validation/final-current/controller-results.json', 'cocos-controller-host.json')\ncopy(WORK / 'validation/final-current/cocos-sibling-before-results.json', 'cocos-visible-order-accepted.json')\ncopy(WORK / 'validation/core-focus/results.json', 'alpha-resource-crop.json')\nfor name in ['final-build.json', 'source-scope.json', 'camera-regressions.json', 'cpu-and-pixels.json',\n             'full-tests.log', 'restored-core-camera-smoke.log', '区域镜头修正说明.md']:\n    copy(CAMERA / name, 'camera/' + name)\n\nlayout = read(GAME / 'data/fragrance-pearl-layout.json')\nocclusion = read(WORK / 'validation/final-current/results.json')\nvisual = read(WORK / 'audit/after-review/summary.json')\nbrowser = [read(WORK / name) for name in ['iab-camera-four-sizes.json', 'iab-camera-four-sizes-repeat.json']]\nlayout_hash = hashlib.sha256((GAME / 'data/fragrance-pearl-layout.json').read_bytes()).hexdigest()\nassert visual['accepted'] and occlusion['passed']\nassert all(b['passed'] and b['layoutSHA256'] == layout_hash for b in browser)\nassert occlusion['layoutSHA256'] == visual['layoutSHA256'] == layout_hash\nsummary = {\n    'revision': 4, 'accepted': True, 'layoutSHA256': layout_hash,\n    'logicalStickers': 175, 'renderParts': 180, 'regions': 8,\n    'completeOwnerPNGsPreservedByteForByte': 175,\n    'manualActualCanonicalFramesViewed': 175, 'manualContactSheetsViewed': 15,\n    'automaticallyValidatedLegalStableFrames': 700,\n    'sameStageOverlappingPairsBothLegalOrdersEqualPixels': 105,\n    'oldRevision3ProgressPrefixesMigrated': 184,\n    'browserRealL047DragPassed': True, 'existingUserProgressRetained': 'flower 1 / 34',\n    'cameraScope': 'Only region camera follows Game1; other effect function bodies retained',\n    'unchangedOtherMethodBodies': {'Canvas': 44, 'Cocos': 71},\n    'cocosSorting': 'Original paintWorld retained; hidden-node fixture false alarm corrected; 40 active-visible real-engine-method cases passed',\n    'browserCamera': [{\n        'run': i + 1, 'records': [{k: r[k] for k in ['name', 'width', 'height', 'ratio',\n            'placed', 'activeParts', 'rafIntervalsMs', 'renderCPUms', 'overviewHoldPaints',\n            'resolvedQueueCallsDuringTour', 'staticTrayPaints', 'worldTranslationApproxError']}\n            for r in b['records']]\n    } for i, b in enumerate(browser)],\n    'limits': ['Desktop Chrome with simulated canvas sizes; no phone, WeChat device, Cocos GPU or native app validation',\n               'Full175-texture synthetic cross-region stress path: first/second390 RAF maxima117.6/349.1ms; CPU88/251.9ms. Cause not established; uniform60fps is not verified.',\n               'PNG sample encoding occurs outside measurement, but asynchronous image decoding/GC is not excluded. Maxima occur during second zoom-in, so cold-first-frame attribution is unproven.',\n               'CPU before/after benchmark uses fixed revision3 175/178 for identical input; it is not revision4 GPU FPS.']\n}\nwrite('verification.json', summary)\nfiles = ['data/fragrance-pearl-layout.json', 'src/rendering/CanvasGame.ts',\n         'src/adapters/cocos/FragranceGame.ts', 'src/core/AssemblyPose.ts',\n         'src/core/ProgressMigration.ts', 'src/core/KnownProgressContract.ts',\n         'src/core/RenderableLayout.ts', 'preview/runtime.js', 'package.json']\nfingerprints = {}\nfor name in files:\n    p = GAME / name\n    fingerprints[name] = {'bytes': p.stat().st_size, 'sha256': hashlib.sha256(p.read_bytes()).hexdigest()}\np = ROOT / 'outputs/花香与珠光-交互验证.html'\nfingerprints[p.name] = {'bytes': p.stat().st_size, 'sha256': hashlib.sha256(p.read_bytes()).hexdigest()}\nwrite('current-fingerprints.json', fingerprints)\n(DEST / 'verification.md').write_text('''# 游戏3 · 版本4最终验收\n\n当前6024fc6布局接受：175张逻辑贴纸、180绘制部分、8区域。175张完整PNG与修前逐字节相同，本轮未重绘素材。柜框/上下板、握瓶指尖采用所属原PNG互补分层，移动、旋转、缩放、锚点与层级编辑时跟随原物件；纸栏继续显示完整单体。\n\n人工重新实看当前真实Native Canvas的175个正序稳定帧与15页接触表；额外复看4件柜内书盒最早态、5处重点最早/最晚态，并以当前资源独立合成6处全完成与5单件最早态交叉检查。柜内书盒与前框、沙发与后柜、玻璃柜与后木柜、前后手与瓶均接受；小本y522位于桌面内。旧候选上层板蓝/棕碎边已修复。没有声称700帧全部逐张人工审图。\n\n实际PNG/Native Canvas自动核验700个合法稳定帧，逐件最早/最晚350态、两条不同合法放置路径350态；105组同阶段交叠物在两种合法先后顺序下相同集合像素完全一致。两组互补mask447700原像素精确合回可见RGBA/alpha、无重复；10种编辑变换保持同物件分层。182透明命中蒙版/3405316逻辑像素、13072个Canvas/Cocos原姿态命中及184资源指纹/平台副本通过。\n\n完整测试与Creator3.8.8声明严格构建通过。184个实际版本3进度前缀/过渡迁移到4，旧记录保留；真实IAB原花艺1/34仍在。独立内存试玩通过真实指针L047空推车拖放，画面1/34变2/34，用户存档不受测试影响。Cocos宿主13检查通过，真实3.8.7 Node.setSiblingIndex方法40可见排序用例通过；隐藏节点误报已纠正，临时append试版撤回，产品保留原排序实现。这是代码/宿主验证，不是引擎GPU运行。\n\n仅区域镜头跟随游戏1：世界平移与scale同进度smoothstep，0.7秒退全景、0.45秒停留、0.8秒进下一地区，末区1.15秒结束。保留独立HD纹理；镜头移动缓存绘制队列、保留静态界面，hold不重画无变化帧。相对修前Canvas44/Cocos71其它方法函数体字节不变，取贴、镊子、纸张压平、庆祝效果保留。\n\n当前真实Chrome四模拟尺寸×两轮相机数学/缓存/hold验证通过。全175纹理人工跨区压力路径存在长帧：390尺寸两轮RAF最大117.6/349.1ms，render CPU最大88/251.9ms，均在第二段放大期间，原因未定位。截图PNG编码在测量外，但无法排除异步解码/GC影响；不能称首次冷加载或稳定60fps。正常全175末区只退全景/停留，此压力路径不同于生产末区。历史同输入CPU基准采用修前175/178，约25–27%下降，不能冒称当前180层GPU帧率。\n\n最终微信源码main665161B、total23041172B，六分包最大4190197B，预算内；未上传发布。尚无手机真机、微信设备、Cocos GPU、iOS/Android安装包验证。旧版本3证明保留历史目录；本目录修前/仅供前后对照，当前证明以本文件和完整layoutSHA为准。\n\n复测入口：npm test；npm run test:occlusion（可选重型测试，生成700帧及配对图，需已安装项目依赖）。完整素材包提供manifest、完整175透明PNG、180组装部分、原图/底图/原始对应蒙版、重组脚本与离线试玩；原始ZIP保持。\n''')\nshutil.copy2(WORK / 'audit/after-review/perfume-cabinet-revision4.png', ROOT / 'outputs/花香与珠光-柜内覆盖修复.png')\nprint(json.dumps({'evidence': str(DEST), 'layoutSHA256': layout_hash, 'accepted': True}, ensure_ascii=False))\n",
+                "truncated": false
+              }
+            }
+          ]
+        },
+        {
+          "type": "commandExecution",
+          "id": "exec-4d64896d-1ec1-431a-9533-bf0c0ceb1c63",
+          "command": "/bin/zsh -lc '/Users/wangye/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 work/fragrance-pearl/occlusion-v4/finalize-evidence.py'",
+          "cwd": "/Users/wangye/Desktop/贴纸",
+          "status": "completed",
+          "exitCode": 0,
+          "durationMs": 0,
+          "output": {
+            "text": "{\"evidence\": \"/Users/wangye/Desktop/贴纸/outputs/fragrance-pearl-game/docs/verification/occlusion-v4\", \"layoutSHA256\": \"6024fc6df3262ccca8ea81bb15279c5e2cd0ae00d6c1ff81dc00fd0f058eba16\", \"accepted\": true}\n",
+            "truncated": false
+          }
+        },
+        {
+          "type": "mcpToolCall",
+          "id": "call_HCFjc05B3omNLDoOIgwNqx0U",
+          "server": "cua_repl",
+          "tool": "js",
+          "arguments": {
+            "code": "let finalPreviewShotV4 = await rackGameTab.getScreenshot(); await rackProofFs.writeFile('/Users/wangye/Desktop/贴纸/work/fragrance-pearl/occlusion-v4/iab-final-progress.jpg',finalPreviewShotV4); await cameraProofTab.close();",
+            "title": "确认正式预览保留原进度并关闭测试页"
+          },
+          "status": "completed",
+          "durationMs": 240
+        },
+        {
+          "type": "subAgentActivity",
+          "id": "subagent-completed-01a10107-02b9-7782-9dae-5c127aca81e0",
+          "kind": "completed",
+          "agentThreadId": "01a0ff58-361a-7101-8347-64762b16d7f3",
+          "agentPath": "/root/fragrance_validation"
+        },
+        {
+          "type": "fileChange",
+          "id": "exec-72cbde00-e489-43a5-8346-ffc392dfb8e8",
+          "status": "completed",
+          "changes": [
+            {
+              "path": "/Users/wangye/Desktop/贴纸/outputs/fragrance-pearl-game/README.md",
+              "kind": {
+                "type": "update",
+                "move_path": null
+              },
+              "diff": {
+                "text": "@@ -27 +27,3 @@\n 全175覆盖新审与496组原相交关系的记录、修复后逐件最早/最晚合法态及同阶段顺序独立核验位于 `docs/verification/occlusion-v4/`。当前修复柜内书盒与前木框、沙发与后柜、玻璃柜与后木柜、持瓶指尖；C008笔记本y500→522对齐实际桌面。版本1/2/3合法进度可迁移至4，经184个实际版本3进度前缀与转场验证，旧记录保留。中文完整素材包在旁边“花香与珠光-层级修正版素材包.zip”，含175完整RGBA、180组装部分、manifest、对应蒙版、原图、底图、最终组装图和离线试玩。\n+\n+当前175个真实Canvas正序稳定帧已人工复核，700个合法稳定态与105组两种先后顺序自动验证通过。可选执行 `npm run test:occlusion` 重做PNG/Native Canvas完整验证，会生成较多帧图。桌面浏览器四模拟尺寸的镜头数学、缓存与停留检查通过，175纹理跨区压力路径仍有偶发长帧，不能称稳定60fps或真机已验证；两轮原始结果保留在本次验收目录。\n",
+                "truncated": false
+              }
+            },
+            {
+              "path": "/Users/wangye/Desktop/贴纸/work/fragrance-pearl/occlusion-v4/finalize-evidence.py",
+              "kind": {
+                "type": "update",
+                "move_path": null
+              },
+              "diff": {
+                "text": "@@ -43,3 +43,5 @@\n copy(WORK / 'validation/final-current/controller-results.json', 'cocos-controller-host.json')\n-copy(WORK / 'validation/final-current/cocos-sibling-before-results.json', 'cocos-visible-order-accepted.json')\n+copy(WORK / 'validation/final-current/cocos-sibling-results.json', 'cocos-visible-order-accepted.json')\n+for name in ['summary-final.json', 'source-manifest-final.json', 'manual-selected-frames.json']:\n+    copy(WORK / 'validation/final-current' / name, 'validation/' + name)\n copy(WORK / 'validation/core-focus/results.json', 'alpha-resource-crop.json')\n",
+                "truncated": false
+              }
+            }
+          ]
+        },
+        {
+          "type": "commandExecution",
+          "id": "exec-87f6500a-b3b2-49c3-85e5-ff42be5b5463",
+          "command": "/bin/zsh -lc '/Users/wangye/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 work/fragrance-pearl/occlusion-v4/finalize-evidence.py'",
+          "cwd": "/Users/wangye/Desktop/贴纸",
+          "status": "completed",
+          "exitCode": 0,
+          "durationMs": 0,
+          "output": {
+            "text": "{\"evidence\": \"/Users/wangye/Desktop/贴纸/outputs/fragrance-pearl-game/docs/verification/occlusion-v4\", \"layoutSHA256\": \"6024fc6df3262ccca8ea81bb15279c5e2cd0ae00d6c1ff81dc00fd0f058eba16\", \"accepted\": true}\n",
+            "truncated": false
+          }
+        },
+        {
+          "type": "commandExecution",
+          "id": "exec-93396a2d-43bb-45e6-b690-e53d7a1bc1f3",
+          "command": "/bin/zsh -lc '/Users/wangye/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 work/fragrance-pearl/occlusion-v4/export-kit.py'",
+          "cwd": "/Users/wangye/Desktop/贴纸",
+          "status": "completed",
+          "exitCode": 0,
+          "durationMs": 462,
+          "output": {
+            "text": "Reconstructed 175 complete owners in 180 globally ordered parts.\n{\"kit\": \"/Users/wangye/Desktop/贴纸/outputs/花香与珠光-层级修正版素材包\", \"owners\": 175, \"parts\": 180}\n",
+            "truncated": false
+          }
+        },
+        {
+          "type": "commandExecution",
+          "id": "exec-c675efa5-0d0a-428d-8b07-9e5e443f20d6",
+          "command": "/bin/zsh -lc 'rg --files outputs/花香与珠光-层级修正版素材包/证据'",
+          "cwd": "/Users/wangye/Desktop/贴纸",
+          "status": "completed",
+          "exitCode": 0,
+          "durationMs": 0,
+          "output": {
+            "text": "outputs/花香与珠光-层级修正版素材包/证据/art-preservation.json\noutputs/花香与珠光-层级修正版素材包/证据/iab-camera-four-sizes.json\noutputs/花香与珠光-层级修正版素材包/证据/final-all-175-visual-acceptance.json\noutputs/花香与珠光-层级修正版素材包/证据/verification.json\noutputs/花香与珠光-层级修正版素材包/证据/current-fingerprints.json\noutputs/花香与珠光-层级修正版素材包/证据/final-all-175-visual-acceptance.md\noutputs/花香与珠光-层级修正版素材包/证据/verification.md\noutputs/花香与珠光-层级修正版素材包/证据/本次层级修改.json\noutputs/花香与珠光-层级修正版素材包/证据/iab-camera-four-sizes-repeat.json\noutputs/花香与珠光-层级修正版素材包/证据/修前-all-175-occlusion-audit.md\noutputs/花香与珠光-层级修正版素材包/证据/iab-real-drop.json\noutputs/花香与珠光-层级修正版素材包/证据/修前-all-175-occlusion-audit.json\noutputs/花香与珠光-层级修正版素材包/证据/all-175-occlusion-audit.md\noutputs/花香与珠光-层级修正版素材包/证据/all-175-occlusion-audit.json\n",
+            "truncated": false
+          }
+        },
+        {
+          "type": "commandExecution",
+          "id": "exec-785fe74e-e33c-4c31-a410-5c2be117a6ba",
+          "command": "/bin/zsh -lc 'cat work/fragrance-pearl/occlusion-v4/validation/final-current/summary-final.json'",
+          "cwd": "/Users/wangye/Desktop/贴纸",
+          "status": "completed",
+          "exitCode": 0,
+          "durationMs": 0,
+          "output": {
+            "text": "{\n  \"acceptedOcclusionAndFunctionalCamera\": true,\n  \"layoutSHA256\": \"6024fc6df3262ccca8ea81bb15279c5e2cd0ae00d6c1ff81dc00fd0f058eba16\",\n  \"HTMLSHA256\": \"8a45d3efa21b9b5fd2fe67960d2fb3089bb994a81eb3242c0cd0d5325dddaf91\",\n  \"owners\": 175,\n  \"parts\": 180,\n  \"legalEarliestLatestStates\": 350,\n  \"canonicalAndReverseStableFrames\": 350,\n  \"mainStableFrames\": 700,\n  \"additionalBothOrderRiskPairPNGs\": 210,\n  \"sameStageOpaqueRiskPairs\": 105,\n  \"riskPairSamePlacedSetRasterEqual\": true,\n  \"canonicalPNGPreserved\": 179,\n  \"nativeOwnerPartitionPixels\": 447700,\n  \"ownerLocalEditCasesCanvas\": 10,\n  \"ownerLocalEditCasesCocos\": 10,\n  \"controllerChecks\": 13,\n  \"faithfulLocalEngineSiblingCases\": 40,\n  \"decodedLogicalMaskPixels\": 3405316,\n  \"logicalMasks\": 182,\n  \"CanvasCocosPickerSamples\": 13072,\n  \"wxSourceCopyImages\": 183,\n  \"cocosSourceCopyImages\": 184,\n  \"manualAudit175Path\": \"../../audit/after-review/final-all-175-visual-acceptance.json\",\n  \"manualDirectSelectedPath\": \"manual-selected-frames.json\",\n  \"cameraEvidence\": \"../../iab-camera-four-sizes.json and ../../iab-camera-four-sizes-repeat.json\",\n  \"cameraScope\": \"Root used CUA to run real IAB Canvas/RAF with synthetic all175/180 stress tour under four simulated canvas sizes and private memory storage. Math/queue caching/static hold/pixel size passed. No stable60fps claim: maximum RAF117.6ms first round,349.1ms repeat; render wall-time88ms/251.9ms respectively. Cause unresolved. PNG serialization occurs after the measured tour, while asynchronous decode/GC may still interfere.\",\n  \"executionBoundary\": \"Real native Canvas PNG/raster plus real browser IAB; wx API simulation; actual Cocos component and local3.8.7 engine sibling method executed under host fixtures with official3.8.8 strict declarations. No phone hardware, Cocos engine renderer/GPU or native-app packaging run.\",\n  \"filesFrozen\": true,\n  \"oldRevision3AndEarlierReportsPreserved\": true\n}",
+            "truncated": false
+          }
+        },
+        {
+          "type": "commandExecution",
+          "id": "exec-7922e51a-9cf7-444c-9c3b-11de1351c819",
+          "command": "/bin/zsh -lc '/Users/wangye/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 /Users/wangye/.codex/skills/complete-scene-stickers/scripts/check_kit.py outputs/花香与珠光-层级修正版素材包 --report work/fragrance-pearl/occlusion-v4/kit-check.json'",
+          "cwd": "/Users/wangye/Desktop/贴纸",
+          "status": "completed",
+          "exitCode": 0,
+          "durationMs": 244,
+          "output": {
+            "text": "{\n  \"ok\": true,\n  \"logical_asset_count\": 175,\n  \"errors\": [],\n  \"assembly_comparison\": {\n    \"changed_pixels\": 1564246,\n    \"changed_fraction\": 0.9942123568025464,\n    \"mean_absolute_rgb_difference\": 39.094573974609375,\n    \"pixel_exact\": false,\n    \"policy\": \"Changes allowed; visual comparison must judge fidelity.\"\n  }\n}\n",
+            "truncated": false
+          }
+        },
+        {
+          "type": "imageView",
+          "id": "exec-0eaf39e9-331a-46c0-ad66-b44312a1da13",
+          "path": "/Users/wangye/Desktop/贴纸/outputs/花香与珠光-完成预览.png"
+        },
+        {
+          "type": "commandExecution",
+          "id": "exec-ad5e2f26-a0ae-4e49-87f4-2c4f8a18d40a",
+          "command": "/bin/zsh -lc \"/Users/wangye/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 - <<'PY'\nfrom pathlib import Path\nimport json,shutil,hashlib\nroot=Path.cwd(); work=root/'work/fragrance-pearl/occlusion-v4'; game=root/'outputs/fragrance-pearl-game'; kit=root/'outputs/花香与珠光-层级修正版素材包'; camera=root/'work/fragrance-pearl/validation/camera-followup'\np=camera/'区域镜头修正说明.md';s=p.read_text();s=s.replace('候选layout SHA为','最终layout SHA为').replace('平台产物仍待独立图层/浏览器验收。','当前6024布局已通过全175人工图层审查与独立浏览器验证；性能限制见最终验收记录。');p.write_text(s)\np=camera/'final-build.json'; d=json.loads(p.read_text());d['scope']='Camera-only build; current all175 layer acceptance and browser stress-run limits recorded in ../verification.json';p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\\\\n')\nfor name in ['all-175-occlusion-audit.md','all-175-occlusion-audit.json']:\n p=kit/'证据'/name; q=kit/'证据'/('修前-'+name)\n if p.exists():\n  assert hashlib.sha256(p.read_bytes()).digest()==hashlib.sha256(q.read_bytes()).digest()\n  p.unlink()\nfor target in [game/'docs/verification/occlusion-v4/kit-check.json',kit/'证据/kit-check.json']:\n shutil.copy2(work/'kit-check.json',target)\nshutil.copy2(camera/'区域镜头修正说明.md',kit/'说明/区域放大接入.md')\nshutil.copy2(camera/'区域镜头修正说明.md',game/'docs/verification/occlusion-v4/camera/区域镜头修正说明.md')\nshutil.copy2(camera/'final-build.json',game/'docs/verification/occlusion-v4/camera/final-build.json')\nlayout=json.loads((game/'data/fragrance-pearl-layout.json').read_text()); manifest=json.loads((kit/'manifest.json').read_text()); assert manifest['source_layout_sha256']==hashlib.sha256((game/'data/fragrance-pearl-layout.json').read_bytes()).hexdigest(); assert len(manifest['assets'])==175\nparts=[p for a in manifest['assets'] for p in a['render_parts']]; assert len(parts)==180 and len(set(p['z'] for p in parts))==180\nfor a in manifest['assets']:\n assert a['sha256']==hashlib.sha256((kit/a['file']).read_bytes()).hexdigest(),a['id']\n for p in a['render_parts']:assert p['sha256']==hashlib.sha256((kit/p['file']).read_bytes()).hexdigest(),p['part_id']\nassert (kit/'试玩.html').read_bytes()==(root/'outputs/花香与珠光-交互验证.html').read_bytes()\nprint('Final manifest:175 owners/180 unique paint orders/PNG hashes/current layout/current offline HTML passed.')\nPY\"",
+          "cwd": "/Users/wangye/Desktop/贴纸",
+          "status": "completed",
+          "exitCode": 0,
+          "durationMs": 0,
+          "output": {
+            "text": "Final manifest:175 owners/180 unique paint orders/PNG hashes/current layout/current offline HTML passed.\n",
+            "truncated": false
+          }
+        },
+        {
+          "type": "agentMessage",
+          "id": "msg_0a956b8366d1b95b016ac0d9b26fbc87d2943085aff47428a6",
+          "text": "175 张贴纸的逐件审图和不同贴放顺序验证已完成，修正版也已接入正式预览，原花艺进度仍是 1/34。现在封装素材包和游戏代码包，包内会附上层级数据、离线试玩及验收记录。",
+          "phase": "commentary"
+        },
+        {
+          "type": "commandExecution",
+          "id": "exec-a33485ac-3ccb-44bd-9701-73347d5f4dac",
+          "command": "/bin/zsh -lc \"/Users/wangye/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 - <<'PY'\nfrom pathlib import Path\nimport json,hashlib,zipfile\nroot=Path.cwd(); kit=root/'outputs/花香与珠光-层级修正版素材包'; out=root/'outputs/花香与珠光-层级修正版素材包.zip'; files=[p for p in sorted(kit.rglob('*')) if p.is_file() and '.DS_Store' not in p.parts and '__pycache__' not in p.parts]; names=[kit.name+'/'+str(p.relative_to(kit)) for p in files]\nwith zipfile.ZipFile(out,'w',zipfile.ZIP_DEFLATED,compresslevel=6) as z:\n for p,n in zip(files,names):z.write(p,n)\nwith zipfile.ZipFile(out) as z:\n assert z.testzip() is None\n for p,n in zip(files,names):assert hashlib.sha256(z.read(n)).digest()==hashlib.sha256(p.read_bytes()).digest(),n\nreport={'archive':str(out),'bytes':out.stat().st_size,'entries':len(files),'CRC':'passed','payloadHashes':'passed','layoutSHA256':'6024fc6df3262ccca8ea81bb15279c5e2cd0ae00d6c1ff81dc00fd0f058eba16','sha256':hashlib.sha256(out.read_bytes()).hexdigest()}\n(root/'work/fragrance-pearl/occlusion-v4/material-package-report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\\\\n');print(json.dumps(report,ensure_ascii=False))\nPY\"",
+          "cwd": "/Users/wangye/Desktop/贴纸",
+          "status": "completed",
+          "exitCode": 0,
+          "durationMs": 1697,
+          "output": {
+            "text": "{\"archive\": \"/Users/wangye/Desktop/贴纸/outputs/花香与珠光-层级修正版素材包.zip\", \"bytes\": 78231746, \"entries\": 559, \"CRC\": \"passed\", \"payloadHashes\": \"passed\", \"layoutSHA256\": \"6024fc6df3262ccca8ea81bb15279c5e2cd0ae00d6c1ff81dc00fd0f058eba16\", \"sha256\": \"17aca3fbc0aa5dd331bea03f1caf10665d271000578be12fddba7d9be94733ec\"}\n",
+            "truncated": false
+          }
+        },
+        {
+          "type": "commandExecution",
+          "id": "exec-b76e8153-07fd-47ad-a5cd-d8804a66b4f4",
+          "command": "/bin/zsh -lc '/Users/wangye/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 outputs/fragrance-pearl-game/tools/package.py > work/fragrance-pearl/package-report.json'",
+          "cwd": "/Users/wangye/Desktop/贴纸",
+          "status": "completed",
+          "exitCode": 0,
+          "durationMs": 4562
+        },
+        {
+          "type": "commandExecution",
+          "id": "exec-6e25bee4-bcbf-4608-8144-5d794853d0d1",
+          "command": "/bin/zsh -lc 'cat work/fragrance-pearl/package-report.json'",
+          "cwd": "/Users/wangye/Desktop/贴纸",
+          "status": "completed",
+          "exitCode": 0,
+          "durationMs": 0,
+          "output": {
+            "text": "{\"archive\": \"/Users/wangye/Desktop/贴纸/outputs/花香与珠光-手机游戏框架.zip\", \"bytes\": 243066102, \"entries\": 1293, \"CRC\": \"passed\", \"payloadHashes\": \"passed\", \"sha256\": \"7efcb5552ac35ef2fc54ae52e987594ad57c1cd3d3cc2fceba5ada7f16cd33bb\"}\n",
+            "truncated": false
+          }
+        },
+        {
+          "type": "commandExecution",
+          "id": "exec-9c74740b-aff3-4879-9b0d-e8ec6753c508",
+          "command": "/bin/zsh -lc \"/Users/wangye/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 - <<'PY'\nfrom pathlib import Path\nimport json,zipfile,hashlib\nroot=Path.cwd(); game=root/'outputs/fragrance-pearl-game'; work=root/'work/fragrance-pearl'; kit=root/'outputs/花香与珠光-层级修正版素材包'; report=json.loads((work/'package-report.json').read_text()); material=json.loads((work/'occlusion-v4/material-package-report.json').read_text()); layout=game/'data/fragrance-pearl-layout.json'; expected=hashlib.sha256(layout.read_bytes()).hexdigest(); html=root/'outputs/花香与珠光-交互验证.html'\nwith zipfile.ZipFile(report['archive']) as z:\n assert z.read('fragrance-pearl-game/data/fragrance-pearl-layout.json')==layout.read_bytes()\n assert z.read(html.name)==html.read_bytes()\n assert '花香与珠光-区域拼装演示.mp4' not in z.namelist()\n assert 'fragrance-pearl-game/docs/verification/occlusion-v4/verification.md' in z.namelist()\nwith zipfile.ZipFile(material['archive']) as z:\n m=json.loads(z.read(kit.name+'/manifest.json')); assert m['source_layout_sha256']==expected\n assert z.read(kit.name+'/试玩.html')==html.read_bytes()\n assert len(m['assets'])==175 and sum(len(a['render_parts']) for a in m['assets'])==180\nprint('Both archives contain accepted current layout and exact current offline HTML; stale movie excluded.')\nentry=f'''\\\\n\\\\n## 版本4区域缩放与全175覆盖终验（本节优先，已完成交付）\\\\n\\\\n用户要求仅区域放大参考游戏1号，其它效果/原画风保留，并重新逐件查层级。现最终revision4，layout SHA {expected}，HTML8a45d3efa21b9b5fd2fe67960d2fb3089bb994a81eb3242c0cd0d5325dddaf91 /30291881B，175owners/180parts/8区。175完整PNG字节保持，未重绘。L050前框+整个上板/前唇互补105、书L055/56/57层103与盒L058104，L002前握指尖116与瓶L049115；沙发R00356及枕57/58，玻璃C03075，小本C008y522。全部parts全局稳定排序；2新互补分层随owner位置/锚点/缩放/旋转/层级同步，无未来邻件才遮盖。纸栏仍完整owner。原171旧source overlay继续禁用。\\\\n\\\\n仅区域camera同game1世界平移与scale同smoothstep；0.7/.45/.8，最后1.15；缓存队列与静态UI/hold保真，不平铺低清bitmap。Canvas44/Cocos71其它方法字节保留。Cocos sibling错误告警是inactive节点fixture误判，真实本机3.8.7Node方法40active用例原+2全部PASS；临时append撤回，当前Cocos005531abd5eba9ec87a6505f09eca8b02bf190024ea33f6c26903616e22babe7镜像一致，不能称修过排序bug。\\\\n\\\\n全175实际Native Canvas正序帧/15接触页已人工实看，重点最早/最晚与6处全合成/5单物交叉接受；旧候选4cd7上板碎色确认补好。700合法稳定帧自动PASS、105交叠双方顺序同集合像素一致，182mask/3405316逻辑像素及13072pickers、184资源/platform copies，10编辑变换，13controllerhost均PASS。184实际旧rev3合法进度前缀/过渡迁至4，原记录保留。官方3.8.8strict+完整package tests通过。\\\\n\\\\n真实IAB3正式预览http://127.0.0.1:8783/preview/?v=4已reload/markDeliverable，用户花艺1/34保留；独立内存harness真实L047指针拖放1/34→2/34，未写用户存档，证据已保存，临时tab4关闭。四模拟尺寸两轮camera数学/缓存/hold通过；人工全175跨区压力路径390两轮RAFmax117.6/349.1ms，CPU88/251.9ms在第二段放大，原因未定位，不能称warm改善/首次cold或稳定60fps。PNG编码测量外，不能排除异步decode/GC。CPU改善25–27%历史同输入175/178基线，不冒称当前180层GPU。没有手机/微信真机/CocosGPU/nativeApp验收。\\\\n\\\\n本次终验证据outputs/fragrance-pearl-game/docs/verification/occlusion-v4，旧final与placement-followup为历史保留；原sourceZIP/original/manifest及原PNG保持。新共享准则10/11已同步游戏1/2；用户明确只借镜头，不借game1纸张等参数。禁止盲跑build-layout/upgrade-hd/finalize-complete重置新互补mask。工作区apply-occlusion若再跑须重新reorderDraft更新assemblyOrder；本轮数据已冻结不需重跑。\\\\n\\\\n完整素材ZIP {material['bytes']}B/{material['entries']}entries，SHA {material['sha256']}；框架ZIP {report['bytes']}B/{report['entries']}entries，SHA {report['sha256']}。两包CRC及所有payload hashes通过，包内layout/离线HTML精确匹配当前，未包旧视频。新素材包含175透明单体/180组装部分/原始对应mask/原图/底图/manifest/重组脚本/离线试玩与镜头接入说明，check_kit通过。旧frameworkZIP保存在occlusion-v4/before/game-framework.zip。报告package-report.json及occlusion-v4/material-package-report.json。所有本轮修复、验收与打包已完成；真机帧率属于未验证范围，不是本轮待完成承诺。\\\\n'''\nwith (work/'HANDOFF.md').open('a') as f:f.write(entry)\nPY\"",
+          "cwd": "/Users/wangye/Desktop/贴纸",
+          "status": "completed",
+          "exitCode": 0,
+          "durationMs": 11,
+          "output": {
+            "text": "Both archives contain accepted current layout and exact current offline HTML; stale movie excluded.\n",
+            "truncated": false
+          }
+        },
+        {
+          "type": "agentMessage",
+          "id": "msg_0a956b8366d1b95b016ac0da820b9087d29d5ed8659ab0fd84",
+          "text": "已更新：区域缩放参考游戏1号，其他效果保留。175 张贴纸已逐件复核，柜框与书盒、手指与瓶身等覆盖已修好，原画风和进度保留。\n\n[试玩](http://127.0.0.1:8783/preview/?v=4) · [修正版素材包](/Users/wangye/Desktop/贴纸/outputs/花香与珠光-层级修正版素材包.zip) · [游戏代码包](/Users/wangye/Desktop/贴纸/outputs/花香与珠光-手机游戏框架.zip) · [柜内修复近景](/Users/wangye/Desktop/贴纸/outputs/花香与珠光-柜内覆盖修复.png)\n\n浏览器压力测试仍有偶发长帧，手机真机帧率尚未验证。\n\n![当前试玩，原进度保留](/Users/wangye/Desktop/贴纸/work/fragrance-pearl/occlusion-v4/iab-final-progress.jpg)",
+          "phase": "final_answer"
+        }
+      ]
+    }
+  ]
+}

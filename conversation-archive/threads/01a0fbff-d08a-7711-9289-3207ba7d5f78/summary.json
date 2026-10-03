@@ -1,0 +1,162 @@
+{
+  "thread_id": "01a0fbff-d08a-7711-9289-3207ba7d5f78",
+  "title": "分割1号",
+  "source_host_id": "local",
+  "source_cwd": "/Users/wangye/Desktop/贴纸",
+  "page_count": 11,
+  "window_count": 11,
+  "response_count": 22,
+  "turn_count": 11,
+  "empty_turn_count": 0,
+  "empty_turn_ids": [],
+  "observed_item_count_before_deduplication": 3433,
+  "duplicate_item_observation_count": 2276,
+  "unique_item_count": 1157,
+  "message_count": 137,
+  "message_counts": {
+    "用户": 31,
+    "助手": 106
+  },
+  "item_counts": {
+    "userMessage": 31,
+    "agentMessage": 106,
+    "commandExecution": 438,
+    "subAgentActivity": 199,
+    "mcpToolCall": 11,
+    "imageView": 211,
+    "fileChange": 89,
+    "imageGeneration": 48,
+    "contextCompaction": 7,
+    "collabAgentToolCall": 12,
+    "webSearch": 3,
+    "functionCallOutput": 2
+  },
+  "pagination_complete": true,
+  "all_original_log_content_available": false,
+  "oldest_page_has_more": false,
+  "tool_output_truncation_count": 10,
+  "truncation_locations": [
+    {
+      "sources": [
+        "windows/00007.json",
+        "windows/00008.json",
+        "windows/00009.json",
+        "windows/00010.json",
+        "windows/00011.json"
+      ],
+      "selected_source": "windows/00007.json",
+      "turn_id": "01a0fc01-20da-7522-9023-c04f617c1e37",
+      "item_id": "exec-d163a8eb-c4f4-45f7-b544-67d84a2dfe11",
+      "item_type": "commandExecution",
+      "field": "output.truncated"
+    },
+    {
+      "sources": [
+        "pages/00005.json",
+        "windows/00005.json"
+      ],
+      "selected_source": "pages/00005.json",
+      "turn_id": "01a0fd40-1651-7de0-89a3-cc2c1c2c4640",
+      "item_id": "exec-2a11471d-d0de-4f51-9c4a-0c9f790d8de1",
+      "item_type": "commandExecution",
+      "field": "output.truncated"
+    },
+    {
+      "sources": [
+        "pages/00005.json",
+        "windows/00005.json"
+      ],
+      "selected_source": "pages/00005.json",
+      "turn_id": "01a0fd40-1651-7de0-89a3-cc2c1c2c4640",
+      "item_id": "exec-1399486b-eb83-4f8a-a80a-1f26c2834908",
+      "item_type": "commandExecution",
+      "field": "output.truncated"
+    },
+    {
+      "sources": [
+        "windows/00004.json"
+      ],
+      "selected_source": "windows/00004.json",
+      "turn_id": "01a0fd69-83f2-7e60-990c-9c7f248e0528",
+      "item_id": "exec-4a9eca85-6d3f-45c7-b7ff-51590ac1c566",
+      "item_type": "commandExecution",
+      "field": "output.truncated"
+    },
+    {
+      "sources": [
+        "windows/00004.json"
+      ],
+      "selected_source": "windows/00004.json",
+      "turn_id": "01a0fd69-83f2-7e60-990c-9c7f248e0528",
+      "item_id": "exec-8bc9c8f1-af4c-49f9-82b5-c5f53f4acf51",
+      "item_type": "commandExecution",
+      "field": "output.truncated"
+    },
+    {
+      "sources": [
+        "windows/00002.json",
+        "windows/00003.json"
+      ],
+      "selected_source": "windows/00002.json",
+      "turn_id": "01a0fe7c-e01e-75c2-9dae-930872a3f247",
+      "item_id": "exec-8be1d575-5d22-4265-b801-38ffc31b2812",
+      "item_type": "commandExecution",
+      "field": "output.truncated"
+    },
+    {
+      "sources": [
+        "windows/00001.json",
+        "windows/00002.json",
+        "windows/00003.json"
+      ],
+      "selected_source": "windows/00001.json",
+      "turn_id": "01a0fe7c-e01e-75c2-9dae-930872a3f247",
+      "item_id": "exec-aa9bee02-45df-4dae-b987-6c9d58981ea6",
+      "item_type": "fileChange",
+      "field": "changes[0].diff.truncated"
+    },
+    {
+      "sources": [
+        "windows/00001.json",
+        "windows/00002.json",
+        "windows/00003.json"
+      ],
+      "selected_source": "windows/00001.json",
+      "turn_id": "01a0fe7c-e01e-75c2-9dae-930872a3f247",
+      "item_id": "exec-4a89ea6b-d499-4b12-84c9-201465e85fce",
+      "item_type": "commandExecution",
+      "field": "output.truncated"
+    },
+    {
+      "sources": [
+        "windows/00001.json"
+      ],
+      "selected_source": "windows/00001.json",
+      "turn_id": "01a0ff79-d524-7a83-824e-ddaedb3e2d94",
+      "item_id": "exec-36d6964a-c73b-43bc-b32e-5a7b1e62cf9f",
+      "item_type": "commandExecution",
+      "field": "output.truncated"
+    },
+    {
+      "sources": [
+        "pages/00001.json",
+        "windows/00001.json"
+      ],
+      "selected_source": "pages/00001.json",
+      "turn_id": "01a0ff79-d524-7a83-824e-ddaedb3e2d94",
+      "item_id": "exec-2657ecc4-98af-4010-bf1c-ffb658605baa",
+      "item_type": "commandExecution",
+      "field": "output.truncated"
+    }
+  ],
+  "path_mention_count": 797,
+  "potential_downloadable_file_id_count": 0,
+  "completed_image_generations": 48,
+  "binary_files_archived": 0,
+  "limitations": [
+    "仅归档接口可读取的用户/助手消息及可见工具记录；reasoning 条目排除；不是全量原始日志。",
+    "接口可能仅返回长回合的局部内容，部分历史回合可能 items 为空；分页结束不证明所有历史条目可读取。",
+    "工具输出与消息可能存在接口字符截断；请查看 truncation_locations。",
+    "会话提及的 Mac 本地原始素材、生成图片、压缩包和其他文件当前没有云端 /Users 挂载，未取得二进制。"
+  ]
+}

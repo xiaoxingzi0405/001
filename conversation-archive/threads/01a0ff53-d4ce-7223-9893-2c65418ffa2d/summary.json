@@ -1,0 +1,445 @@
+{
+  "threadId": "01a0ff53-d4ce-7223-9893-2c65418ffa2d",
+  "title": "游戏3号",
+  "pages": 5,
+  "windows": 5,
+  "turns": 5,
+  "messages": 59,
+  "userMessages": 9,
+  "assistantMessages": 50,
+  "itemTypeCounts": {
+    "userMessage": 9,
+    "agentMessage": 50,
+    "mcpToolCall": 79,
+    "subAgentActivity": 140,
+    "commandExecution": 287,
+    "collabAgentToolCall": 23,
+    "imageView": 74,
+    "webSearch": 1,
+    "imageGeneration": 23,
+    "fileChange": 55,
+    "contextCompaction": 4,
+    "functionCallOutput": 1
+  },
+  "deduplicationKey": "turnId + itemId; richer text/output fields retained",
+  "ordering": "turn timestamp; window-first item order constraints followed by page order constraints",
+  "orderingUncertainty": [],
+  "paginationComplete": true,
+  "completeHistoricalMessageText": null,
+  "historicalTextCompleteness": "unknown; bounded read API may omit items even when pagination exhausted",
+  "lastPageHasMore": false,
+  "emptyItemTurns": [],
+  "rawEmptyTurnOccurrences": [
+    {
+      "turnId": "01a0ff79-d5d3-7c21-a6f6-5fa233a6e81d",
+      "source": "windows/00001.json",
+      "jsonPointer": "/turns/2"
+    },
+    {
+      "turnId": "01a0ff55-edf1-7322-a8ee-f20450b2409b",
+      "source": "windows/00001.json",
+      "jsonPointer": "/turns/3"
+    },
+    {
+      "turnId": "01a0ff53-f460-7d81-8f70-479f1bb702f6",
+      "source": "windows/00001.json",
+      "jsonPointer": "/turns/4"
+    },
+    {
+      "turnId": "01a0ff55-edf1-7322-a8ee-f20450b2409b",
+      "source": "windows/00002.json",
+      "jsonPointer": "/turns/2"
+    },
+    {
+      "turnId": "01a0ff53-f460-7d81-8f70-479f1bb702f6",
+      "source": "windows/00002.json",
+      "jsonPointer": "/turns/3"
+    },
+    {
+      "turnId": "01a0ff55-edf1-7322-a8ee-f20450b2409b",
+      "source": "windows/00003.json",
+      "jsonPointer": "/turns/1"
+    },
+    {
+      "turnId": "01a0ff53-f460-7d81-8f70-479f1bb702f6",
+      "source": "windows/00003.json",
+      "jsonPointer": "/turns/2"
+    }
+  ],
+  "rawTruncatedResponseOccurrences": [
+    {
+      "source": "windows/00001.json",
+      "jsonPointer": "/turns/0/items/25/output"
+    },
+    {
+      "source": "windows/00002.json",
+      "jsonPointer": "/turns/0/items/11/output"
+    },
+    {
+      "source": "windows/00002.json",
+      "jsonPointer": "/turns/1/items/18/output"
+    },
+    {
+      "source": "windows/00002.json",
+      "jsonPointer": "/turns/1/items/52/output"
+    },
+    {
+      "source": "windows/00002.json",
+      "jsonPointer": "/turns/1/items/125/output"
+    },
+    {
+      "source": "windows/00003.json",
+      "jsonPointer": "/turns/0/items/159/output"
+    },
+    {
+      "source": "windows/00003.json",
+      "jsonPointer": "/turns/0/items/182/output"
+    },
+    {
+      "source": "windows/00003.json",
+      "jsonPointer": "/turns/0/items/216/output"
+    },
+    {
+      "source": "windows/00003.json",
+      "jsonPointer": "/turns/0/items/289/output"
+    },
+    {
+      "source": "windows/00004.json",
+      "jsonPointer": "/turns/0/items/8/output"
+    },
+    {
+      "source": "windows/00004.json",
+      "jsonPointer": "/turns/0/items/9/output"
+    },
+    {
+      "source": "windows/00004.json",
+      "jsonPointer": "/turns/0/items/12/output"
+    },
+    {
+      "source": "windows/00004.json",
+      "jsonPointer": "/turns/0/items/18/output"
+    },
+    {
+      "source": "windows/00004.json",
+      "jsonPointer": "/turns/0/items/30/output"
+    },
+    {
+      "source": "pages/00003.json",
+      "jsonPointer": "/turns/0/items/41/output"
+    },
+    {
+      "source": "pages/00004.json",
+      "jsonPointer": "/turns/0/items/1/output"
+    }
+  ],
+  "truncatedItems": [
+    {
+      "turnId": "01a10103-11fe-7493-8c53-d5336600683a",
+      "itemId": "exec-eb436be8-9b8d-41f9-b24e-d971da28892d",
+      "source": "windows/00001.json",
+      "jsonPointer": "/turns/0/items/25",
+      "sourceRecords": [
+        {
+          "source": "windows/00001.json",
+          "jsonPointer": "/turns/0/items/25"
+        }
+      ],
+      "mergedFieldPointer": "/output",
+      "metadata": {
+        "truncated": true,
+        "originalChars": 27772
+      }
+    },
+    {
+      "turnId": "01a10095-62b6-7d70-87f9-6f1b5bca7a0e",
+      "itemId": "exec-7308faae-4a4e-458e-80c2-93655c1471d5",
+      "source": "windows/00002.json",
+      "jsonPointer": "/turns/0/items/11",
+      "sourceRecords": [
+        {
+          "source": "windows/00002.json",
+          "jsonPointer": "/turns/0/items/11"
+        }
+      ],
+      "mergedFieldPointer": "/output",
+      "metadata": {
+        "truncated": true,
+        "originalChars": 25907
+      }
+    },
+    {
+      "turnId": "01a0ff79-d5d3-7c21-a6f6-5fa233a6e81d",
+      "itemId": "exec-0cb0bcfe-76bf-461b-bec0-2d0e0635856c",
+      "source": "windows/00003.json",
+      "jsonPointer": "/turns/0/items/159",
+      "sourceRecords": [
+        {
+          "source": "windows/00003.json",
+          "jsonPointer": "/turns/0/items/159"
+        }
+      ],
+      "mergedFieldPointer": "/output",
+      "metadata": {
+        "truncated": true,
+        "originalChars": 52590
+      }
+    },
+    {
+      "turnId": "01a0ff79-d5d3-7c21-a6f6-5fa233a6e81d",
+      "itemId": "exec-ee5ca1df-0a9b-4aa0-af95-1dde17c449b2",
+      "source": "windows/00002.json",
+      "jsonPointer": "/turns/1/items/18",
+      "sourceRecords": [
+        {
+          "source": "windows/00002.json",
+          "jsonPointer": "/turns/1/items/18"
+        },
+        {
+          "source": "windows/00003.json",
+          "jsonPointer": "/turns/0/items/182"
+        }
+      ],
+      "mergedFieldPointer": "/output",
+      "metadata": {
+        "truncated": true,
+        "originalChars": 46132
+      }
+    },
+    {
+      "turnId": "01a0ff79-d5d3-7c21-a6f6-5fa233a6e81d",
+      "itemId": "exec-b8798058-25b7-4343-8f2c-6b6fc1795bf2",
+      "source": "windows/00002.json",
+      "jsonPointer": "/turns/1/items/52",
+      "sourceRecords": [
+        {
+          "source": "windows/00002.json",
+          "jsonPointer": "/turns/1/items/52"
+        },
+        {
+          "source": "windows/00003.json",
+          "jsonPointer": "/turns/0/items/216"
+        }
+      ],
+      "mergedFieldPointer": "/output",
+      "metadata": {
+        "truncated": true,
+        "originalChars": 24810
+      }
+    },
+    {
+      "turnId": "01a0ff79-d5d3-7c21-a6f6-5fa233a6e81d",
+      "itemId": "exec-0fe29006-89c4-4c39-b412-0f53949588f0",
+      "source": "windows/00002.json",
+      "jsonPointer": "/turns/1/items/125",
+      "sourceRecords": [
+        {
+          "source": "windows/00002.json",
+          "jsonPointer": "/turns/1/items/125"
+        },
+        {
+          "source": "windows/00003.json",
+          "jsonPointer": "/turns/0/items/289"
+        },
+        {
+          "source": "pages/00003.json",
+          "jsonPointer": "/turns/0/items/41"
+        }
+      ],
+      "mergedFieldPointer": "/output",
+      "metadata": {
+        "truncated": true,
+        "originalChars": 151230
+      }
+    },
+    {
+      "turnId": "01a0ff55-edf1-7322-a8ee-f20450b2409b",
+      "itemId": "exec-a8d97ece-ad79-4052-9748-e15183d88e3b",
+      "source": "windows/00004.json",
+      "jsonPointer": "/turns/0/items/8",
+      "sourceRecords": [
+        {
+          "source": "windows/00004.json",
+          "jsonPointer": "/turns/0/items/8"
+        }
+      ],
+      "mergedFieldPointer": "/output",
+      "metadata": {
+        "truncated": true,
+        "originalChars": 42138
+      }
+    },
+    {
+      "turnId": "01a0ff55-edf1-7322-a8ee-f20450b2409b",
+      "itemId": "exec-2a43f9c9-a758-463e-acf2-acf86307c68a",
+      "source": "windows/00004.json",
+      "jsonPointer": "/turns/0/items/9",
+      "sourceRecords": [
+        {
+          "source": "windows/00004.json",
+          "jsonPointer": "/turns/0/items/9"
+        }
+      ],
+      "mergedFieldPointer": "/output",
+      "metadata": {
+        "truncated": true,
+        "originalChars": 23626
+      }
+    },
+    {
+      "turnId": "01a0ff55-edf1-7322-a8ee-f20450b2409b",
+      "itemId": "exec-600f1c31-d256-4532-8575-eddd47d80cb6",
+      "source": "windows/00004.json",
+      "jsonPointer": "/turns/0/items/12",
+      "sourceRecords": [
+        {
+          "source": "windows/00004.json",
+          "jsonPointer": "/turns/0/items/12"
+        }
+      ],
+      "mergedFieldPointer": "/output",
+      "metadata": {
+        "truncated": true,
+        "originalChars": 117425
+      }
+    },
+    {
+      "turnId": "01a0ff55-edf1-7322-a8ee-f20450b2409b",
+      "itemId": "exec-773ecb24-3631-495c-a3e1-fd1ae5bd82ce",
+      "source": "windows/00004.json",
+      "jsonPointer": "/turns/0/items/18",
+      "sourceRecords": [
+        {
+          "source": "windows/00004.json",
+          "jsonPointer": "/turns/0/items/18"
+        }
+      ],
+      "mergedFieldPointer": "/output",
+      "metadata": {
+        "truncated": true,
+        "originalChars": 30561
+      }
+    },
+    {
+      "turnId": "01a0ff55-edf1-7322-a8ee-f20450b2409b",
+      "itemId": "exec-6050a880-deec-4e0d-8675-bbc484998003",
+      "source": "windows/00004.json",
+      "jsonPointer": "/turns/0/items/30",
+      "sourceRecords": [
+        {
+          "source": "windows/00004.json",
+          "jsonPointer": "/turns/0/items/30"
+        },
+        {
+          "source": "pages/00004.json",
+          "jsonPointer": "/turns/0/items/1"
+        }
+      ],
+      "mergedFieldPointer": "/output",
+      "metadata": {
+        "truncated": true,
+        "originalChars": 111432
+      }
+    }
+  ],
+  "commandExecutionsWithoutOutput": [
+    {
+      "source": "windows/00003.json",
+      "turnId": "01a0ff79-d5d3-7c21-a6f6-5fa233a6e81d",
+      "itemId": "exec-dd4e496a-f0d3-4078-9024-978e2f567dfc",
+      "status": "completed"
+    },
+    {
+      "source": "windows/00003.json",
+      "turnId": "01a0ff79-d5d3-7c21-a6f6-5fa233a6e81d",
+      "itemId": "exec-a7918164-c7ac-4d1d-8a24-7ec8e25ab223",
+      "status": "completed"
+    },
+    {
+      "source": "windows/00003.json",
+      "turnId": "01a0ff79-d5d3-7c21-a6f6-5fa233a6e81d",
+      "itemId": "exec-c9419b77-8952-4941-8487-6ca9a255b642",
+      "status": "completed"
+    },
+    {
+      "source": "windows/00003.json",
+      "turnId": "01a0ff79-d5d3-7c21-a6f6-5fa233a6e81d",
+      "itemId": "exec-e0445403-4127-4870-ae88-9a92f7f11cad",
+      "status": "completed"
+    },
+    {
+      "source": "windows/00002.json",
+      "turnId": "01a0ff79-d5d3-7c21-a6f6-5fa233a6e81d",
+      "itemId": "exec-74e09800-30ca-4408-8636-1e411be3efce",
+      "status": "failed"
+    },
+    {
+      "source": "windows/00002.json",
+      "turnId": "01a0ff79-d5d3-7c21-a6f6-5fa233a6e81d",
+      "itemId": "exec-5a865c3b-563d-47e0-94de-4964a6e6a96a",
+      "status": "failed"
+    },
+    {
+      "source": "windows/00002.json",
+      "turnId": "01a0ff79-d5d3-7c21-a6f6-5fa233a6e81d",
+      "itemId": "exec-ca64bb09-472a-49e8-aa82-8ae4323ca049",
+      "status": "completed"
+    },
+    {
+      "source": "windows/00002.json",
+      "turnId": "01a0ff79-d5d3-7c21-a6f6-5fa233a6e81d",
+      "itemId": "exec-420e6be1-3eca-4d4c-8b6f-d68bc73f885b",
+      "status": "failed"
+    },
+    {
+      "source": "windows/00001.json",
+      "turnId": "01a10103-11fe-7493-8c53-d5336600683a",
+      "itemId": "exec-a45ae7f2-f496-4f43-ae46-15bc5f258fef",
+      "status": "completed"
+    },
+    {
+      "source": "windows/00001.json",
+      "turnId": "01a10103-11fe-7493-8c53-d5336600683a",
+      "itemId": "exec-87c09ff6-6dd7-425b-93a1-2268a5d60ab1",
+      "status": "completed"
+    },
+    {
+      "source": "windows/00001.json",
+      "turnId": "01a10103-11fe-7493-8c53-d5336600683a",
+      "itemId": "exec-23dbe146-41dd-48db-b67a-252fbc882647",
+      "status": "completed"
+    },
+    {
+      "source": "windows/00001.json",
+      "turnId": "01a10103-11fe-7493-8c53-d5336600683a",
+      "itemId": "exec-20275260-e22c-412d-9c9e-bd6b8c5f3d4f",
+      "status": "completed"
+    },
+    {
+      "source": "windows/00001.json",
+      "turnId": "01a10103-11fe-7493-8c53-d5336600683a",
+      "itemId": "exec-0ddb813d-3501-43f6-a615-3bf085c17461",
+      "status": "completed"
+    },
+    {
+      "source": "windows/00001.json",
+      "turnId": "01a10103-11fe-7493-8c53-d5336600683a",
+      "itemId": "exec-b76e8153-07fd-47ad-a5cd-d8804a66b4f4",
+      "status": "completed"
+    }
+  ],
+  "explicitSecretMatchesInDownloadedRecords": 0,
+  "binaryFilesArchived": 0,
+  "pathReferenceCount": 202,
+  "relativePathReferenceCount": 1946,
+  "fileIdentifierCount": 0,
+  "imageGenerationRecordCount": 23,
+  "limitations": [
+    "这里归档的是可读取的会话记录；路径提及不代表原始文件已复制或在云环境可用。",
+    "源文件主要位于原主机 /Users 路径，当前云环境未挂载该目录；素材与成果二进制文件未归档。",
+    "推理条目不归档。工具输出可能存在截断、缺失或读取接口本身未返回的附件数据。",
+    "paginationComplete 仅表示接口可提供的分页已取完，不表示所有历史消息正文均可读取。",
+    "读取接口会按回合长度和窗口限制省略部分条目；pages 与 windows 去重合并仍不能证明全量原始日志已归档。",
+    "去重合并后仍被接口明确标记截断的条目共 11 个，详见 summary.json。",
+    "有 14 个命令执行条目未附输出。"
+  ]
+}

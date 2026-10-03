@@ -1,0 +1,610 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-03T16:13:33.561748+00:00",
+  "status": "no_accessible_sources",
+  "paths_file": "/workspace/001/conversation-archive/local-sources.json",
+  "requested_sources": [
+    {
+      "requested_path": "/Users/wangye/Desktop/贴纸",
+      "source_list": "source_roots",
+      "source_id": "0001",
+      "resolved_path": "/Users/wangye/Desktop/贴纸",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Documents/Codex/2026-10-02/wo",
+      "source_list": "source_roots",
+      "source_id": "0002",
+      "resolved_path": "/Users/wangye/Documents/Codex/2026-10-02/wo",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Documents/Codex/2026-10-02/github-plugin-github-openai-curated-remote",
+      "source_list": "source_roots",
+      "source_id": "0003",
+      "resolved_path": "/Users/wangye/Documents/Codex/2026-10-02/github-plugin-github-openai-curated-remote",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Documents/Codex/2026-10-03/v",
+      "source_list": "source_roots",
+      "source_id": "0004",
+      "resolved_path": "/Users/wangye/Documents/Codex/2026-10-03/v",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Documents/Codex/2026-10-03/gen",
+      "source_list": "source_roots",
+      "source_id": "0005",
+      "resolved_path": "/Users/wangye/Documents/Codex/2026-10-03/gen",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/.codex/generated_images/01a0fbd7-4d8a-7220-a2c1-0487662562c2",
+      "source_list": "source_roots",
+      "source_id": "0006",
+      "resolved_path": "/Users/wangye/.codex/generated_images/01a0fbd7-4d8a-7220-a2c1-0487662562c2",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/.codex/generated_images/01a0fbff-d08a-7711-9289-3207ba7d5f78",
+      "source_list": "source_roots",
+      "source_id": "0007",
+      "resolved_path": "/Users/wangye/.codex/generated_images/01a0fbff-d08a-7711-9289-3207ba7d5f78",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/.codex/generated_images/01a0fd6e-3a20-7be0-b98f-6ea35299628c",
+      "source_list": "source_roots",
+      "source_id": "0008",
+      "resolved_path": "/Users/wangye/.codex/generated_images/01a0fd6e-3a20-7be0-b98f-6ea35299628c",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/.codex/generated_images/01a0fdbd-87ca-7fe3-85eb-c71bf1dc0620",
+      "source_list": "source_roots",
+      "source_id": "0009",
+      "resolved_path": "/Users/wangye/.codex/generated_images/01a0fdbd-87ca-7fe3-85eb-c71bf1dc0620",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/.codex/generated_images/01a0fe5e-185b-7f20-917e-d6558aafc741",
+      "source_list": "source_roots",
+      "source_id": "0010",
+      "resolved_path": "/Users/wangye/.codex/generated_images/01a0fe5e-185b-7f20-917e-d6558aafc741",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/.codex/generated_images/01a0fe67-aeca-70b1-a1cb-6834350c2059",
+      "source_list": "source_roots",
+      "source_id": "0011",
+      "resolved_path": "/Users/wangye/.codex/generated_images/01a0fe67-aeca-70b1-a1cb-6834350c2059",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/.codex/generated_images/01a0fe6a-db08-7a60-b448-d6689edfd31a",
+      "source_list": "source_roots",
+      "source_id": "0012",
+      "resolved_path": "/Users/wangye/.codex/generated_images/01a0fe6a-db08-7a60-b448-d6689edfd31a",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/.codex/generated_images/01a0ff53-d4ce-7223-9893-2c65418ffa2d",
+      "source_list": "source_roots",
+      "source_id": "0013",
+      "resolved_path": "/Users/wangye/.codex/generated_images/01a0ff53-d4ce-7223-9893-2c65418ffa2d",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Documents/Codex/2026-10-02/github-plugin-github-openai-curated-remote/outputs/old-town-500-stickers 2/",
+      "source_list": "source_roots",
+      "source_id": "0014",
+      "resolved_path": "/Users/wangye/Documents/Codex/2026-10-02/github-plugin-github-openai-curated-remote/outputs/old-town-500-stickers 2",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Downloads/1687-全景视觉插画/",
+      "source_list": "source_roots",
+      "source_id": "0015",
+      "resolved_path": "/Users/wangye/Downloads/1687-全景视觉插画",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Downloads/2069-世界观的制作方法-绘画技法/",
+      "source_list": "source_roots",
+      "source_id": "0016",
+      "resolved_path": "/Users/wangye/Downloads/2069-世界观的制作方法-绘画技法",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Downloads/A-0030-日本插画师Schinako治愈系绘画作品图集 电子图片临摹参考素材/",
+      "source_list": "source_roots",
+      "source_id": "0017",
+      "resolved_path": "/Users/wangye/Downloads/A-0030-日本插画师Schinako治愈系绘画作品图集 电子图片临摹参考素材",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Downloads/INS高清图/",
+      "source_list": "source_roots",
+      "source_id": "0018",
+      "resolved_path": "/Users/wangye/Downloads/INS高清图",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Downloads/mouun._.factory/",
+      "source_list": "source_roots",
+      "source_id": "0019",
+      "resolved_path": "/Users/wangye/Downloads/mouun._.factory",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Downloads/日本画师 fuji25_2501/",
+      "source_list": "source_roots",
+      "source_id": "0020",
+      "resolved_path": "/Users/wangye/Downloads/日本画师 fuji25_2501",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Desktop/贴纸/国风海棠.png",
+      "source_list": "source_files",
+      "source_id": "0021",
+      "resolved_path": "/Users/wangye/Desktop/贴纸/国风海棠.png",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Desktop/贴纸/花香与珠光——细墨线与透明水彩.png",
+      "source_list": "source_files",
+      "source_id": "0022",
+      "resolved_path": "/Users/wangye/Desktop/贴纸/花香与珠光——细墨线与透明水彩.png",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Documents/Codex/2026-10-02/github-plugin-github-openai-curated-remote/outputs/japanese-cafe-sticker-kit-v1.zip",
+      "source_list": "source_files",
+      "source_id": "0023",
+      "resolved_path": "/Users/wangye/Documents/Codex/2026-10-02/github-plugin-github-openai-curated-remote/outputs/japanese-cafe-sticker-kit-v1.zip",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Downloads/ScreenRecording_10-02-2026 16-49-38_1.MP4",
+      "source_list": "source_files",
+      "source_id": "0024",
+      "resolved_path": "/Users/wangye/Downloads/ScreenRecording_10-02-2026 16-49-38_1.MP4",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Downloads/ScreenRecording_10-02-2026 16-55-49_1.MP4",
+      "source_list": "source_files",
+      "source_id": "0025",
+      "resolved_path": "/Users/wangye/Downloads/ScreenRecording_10-02-2026 16-55-49_1.MP4",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Downloads/ScreenRecording_10-02-2026 19-00-25_1.mov",
+      "source_list": "source_files",
+      "source_id": "0026",
+      "resolved_path": "/Users/wangye/Downloads/ScreenRecording_10-02-2026 19-00-25_1.mov",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Downloads/ScreenRecording_10-03-2026 15-09-25_1.mov",
+      "source_list": "source_files",
+      "source_id": "0027",
+      "resolved_path": "/Users/wangye/Downloads/ScreenRecording_10-03-2026 15-09-25_1.mov",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Downloads/export_1790930919027.MOV",
+      "source_list": "source_files",
+      "source_id": "0028",
+      "resolved_path": "/Users/wangye/Downloads/export_1790930919027.MOV",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Downloads/v0d00fg10000d4aqsafog65pv484vtvg.MP4",
+      "source_list": "source_files",
+      "source_id": "0029",
+      "resolved_path": "/Users/wangye/Downloads/v0d00fg10000d4aqsafog65pv484vtvg.MP4",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Downloads/v0d00fg10000d9bnrh7og65mj13ck1d0.MP4",
+      "source_list": "source_files",
+      "source_id": "0030",
+      "resolved_path": "/Users/wangye/Downloads/v0d00fg10000d9bnrh7og65mj13ck1d0.MP4",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Downloads/v1e00fgi0000d6l6cj7og65vje38beug.MP4",
+      "source_list": "source_files",
+      "source_id": "0031",
+      "resolved_path": "/Users/wangye/Downloads/v1e00fgi0000d6l6cj7og65vje38beug.MP4",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Downloads/v1e00fgi0000da02ab7og65h38b2hs60.MP4",
+      "source_list": "source_files",
+      "source_id": "0032",
+      "resolved_path": "/Users/wangye/Downloads/v1e00fgi0000da02ab7og65h38b2hs60.MP4",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Downloads/v2700fgi0000d6fvejfog65i185s8qh0.MP4",
+      "source_list": "source_files",
+      "source_id": "0033",
+      "resolved_path": "/Users/wangye/Downloads/v2700fgi0000d6fvejfog65i185s8qh0.MP4",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Downloads/v2700fgi0000daqai3nog65jjvfd5il0.MP4",
+      "source_list": "source_files",
+      "source_id": "0034",
+      "resolved_path": "/Users/wangye/Downloads/v2700fgi0000daqai3nog65jjvfd5il0.MP4",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/var/folders/bj/0rc3jw71747dgz42bqs6vd1m0000gn/T/codex-clipboard-2c4bffe6-dc86-4c3b-9875-c62fac454bec.jpg",
+      "source_list": "source_files",
+      "source_id": "0035",
+      "resolved_path": "/var/folders/bj/0rc3jw71747dgz42bqs6vd1m0000gn/T/codex-clipboard-2c4bffe6-dc86-4c3b-9875-c62fac454bec.jpg",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/var/folders/bj/0rc3jw71747dgz42bqs6vd1m0000gn/T/codex-clipboard-2fd4f5fb-27b9-41e1-b5bc-d0f9416604e4.jpg",
+      "source_list": "source_files",
+      "source_id": "0036",
+      "resolved_path": "/var/folders/bj/0rc3jw71747dgz42bqs6vd1m0000gn/T/codex-clipboard-2fd4f5fb-27b9-41e1-b5bc-d0f9416604e4.jpg",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/var/folders/bj/0rc3jw71747dgz42bqs6vd1m0000gn/T/codex-clipboard-40aff602-549a-470c-a6d9-b7b11f78de7d.jpg",
+      "source_list": "source_files",
+      "source_id": "0037",
+      "resolved_path": "/var/folders/bj/0rc3jw71747dgz42bqs6vd1m0000gn/T/codex-clipboard-40aff602-549a-470c-a6d9-b7b11f78de7d.jpg",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/var/folders/bj/0rc3jw71747dgz42bqs6vd1m0000gn/T/codex-clipboard-769c6cd2-1fac-45bf-9c5f-2bf98c6516d8.png",
+      "source_list": "source_files",
+      "source_id": "0038",
+      "resolved_path": "/var/folders/bj/0rc3jw71747dgz42bqs6vd1m0000gn/T/codex-clipboard-769c6cd2-1fac-45bf-9c5f-2bf98c6516d8.png",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/var/folders/bj/0rc3jw71747dgz42bqs6vd1m0000gn/T/codex-clipboard-7c382036-d895-49d3-9dc9-c9cc03580eb3.png",
+      "source_list": "source_files",
+      "source_id": "0039",
+      "resolved_path": "/var/folders/bj/0rc3jw71747dgz42bqs6vd1m0000gn/T/codex-clipboard-7c382036-d895-49d3-9dc9-c9cc03580eb3.png",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/var/folders/bj/0rc3jw71747dgz42bqs6vd1m0000gn/T/codex-clipboard-b70313d7-9b17-47a2-ad88-082bf24d6756.png",
+      "source_list": "source_files",
+      "source_id": "0040",
+      "resolved_path": "/var/folders/bj/0rc3jw71747dgz42bqs6vd1m0000gn/T/codex-clipboard-b70313d7-9b17-47a2-ad88-082bf24d6756.png",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/var/folders/bj/0rc3jw71747dgz42bqs6vd1m0000gn/T/codex-clipboard-ba57680b-b564-478d-b0e1-fbeed183d59a.png",
+      "source_list": "source_files",
+      "source_id": "0041",
+      "resolved_path": "/var/folders/bj/0rc3jw71747dgz42bqs6vd1m0000gn/T/codex-clipboard-ba57680b-b564-478d-b0e1-fbeed183d59a.png",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/var/folders/bj/0rc3jw71747dgz42bqs6vd1m0000gn/T/codex-clipboard-e5b28704-9b3c-46ea-b92d-693be32fd776.png",
+      "source_list": "source_files",
+      "source_id": "0042",
+      "resolved_path": "/var/folders/bj/0rc3jw71747dgz42bqs6vd1m0000gn/T/codex-clipboard-e5b28704-9b3c-46ea-b92d-693be32fd776.png",
+      "status": "missing"
+    }
+  ],
+  "missing_paths": [
+    {
+      "requested_path": "/Users/wangye/Desktop/贴纸",
+      "source_list": "source_roots",
+      "source_id": "0001",
+      "resolved_path": "/Users/wangye/Desktop/贴纸",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Documents/Codex/2026-10-02/wo",
+      "source_list": "source_roots",
+      "source_id": "0002",
+      "resolved_path": "/Users/wangye/Documents/Codex/2026-10-02/wo",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Documents/Codex/2026-10-02/github-plugin-github-openai-curated-remote",
+      "source_list": "source_roots",
+      "source_id": "0003",
+      "resolved_path": "/Users/wangye/Documents/Codex/2026-10-02/github-plugin-github-openai-curated-remote",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Documents/Codex/2026-10-03/v",
+      "source_list": "source_roots",
+      "source_id": "0004",
+      "resolved_path": "/Users/wangye/Documents/Codex/2026-10-03/v",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Documents/Codex/2026-10-03/gen",
+      "source_list": "source_roots",
+      "source_id": "0005",
+      "resolved_path": "/Users/wangye/Documents/Codex/2026-10-03/gen",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/.codex/generated_images/01a0fbd7-4d8a-7220-a2c1-0487662562c2",
+      "source_list": "source_roots",
+      "source_id": "0006",
+      "resolved_path": "/Users/wangye/.codex/generated_images/01a0fbd7-4d8a-7220-a2c1-0487662562c2",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/.codex/generated_images/01a0fbff-d08a-7711-9289-3207ba7d5f78",
+      "source_list": "source_roots",
+      "source_id": "0007",
+      "resolved_path": "/Users/wangye/.codex/generated_images/01a0fbff-d08a-7711-9289-3207ba7d5f78",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/.codex/generated_images/01a0fd6e-3a20-7be0-b98f-6ea35299628c",
+      "source_list": "source_roots",
+      "source_id": "0008",
+      "resolved_path": "/Users/wangye/.codex/generated_images/01a0fd6e-3a20-7be0-b98f-6ea35299628c",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/.codex/generated_images/01a0fdbd-87ca-7fe3-85eb-c71bf1dc0620",
+      "source_list": "source_roots",
+      "source_id": "0009",
+      "resolved_path": "/Users/wangye/.codex/generated_images/01a0fdbd-87ca-7fe3-85eb-c71bf1dc0620",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/.codex/generated_images/01a0fe5e-185b-7f20-917e-d6558aafc741",
+      "source_list": "source_roots",
+      "source_id": "0010",
+      "resolved_path": "/Users/wangye/.codex/generated_images/01a0fe5e-185b-7f20-917e-d6558aafc741",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/.codex/generated_images/01a0fe67-aeca-70b1-a1cb-6834350c2059",
+      "source_list": "source_roots",
+      "source_id": "0011",
+      "resolved_path": "/Users/wangye/.codex/generated_images/01a0fe67-aeca-70b1-a1cb-6834350c2059",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/.codex/generated_images/01a0fe6a-db08-7a60-b448-d6689edfd31a",
+      "source_list": "source_roots",
+      "source_id": "0012",
+      "resolved_path": "/Users/wangye/.codex/generated_images/01a0fe6a-db08-7a60-b448-d6689edfd31a",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/.codex/generated_images/01a0ff53-d4ce-7223-9893-2c65418ffa2d",
+      "source_list": "source_roots",
+      "source_id": "0013",
+      "resolved_path": "/Users/wangye/.codex/generated_images/01a0ff53-d4ce-7223-9893-2c65418ffa2d",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Documents/Codex/2026-10-02/github-plugin-github-openai-curated-remote/outputs/old-town-500-stickers 2/",
+      "source_list": "source_roots",
+      "source_id": "0014",
+      "resolved_path": "/Users/wangye/Documents/Codex/2026-10-02/github-plugin-github-openai-curated-remote/outputs/old-town-500-stickers 2",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Downloads/1687-全景视觉插画/",
+      "source_list": "source_roots",
+      "source_id": "0015",
+      "resolved_path": "/Users/wangye/Downloads/1687-全景视觉插画",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Downloads/2069-世界观的制作方法-绘画技法/",
+      "source_list": "source_roots",
+      "source_id": "0016",
+      "resolved_path": "/Users/wangye/Downloads/2069-世界观的制作方法-绘画技法",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Downloads/A-0030-日本插画师Schinako治愈系绘画作品图集 电子图片临摹参考素材/",
+      "source_list": "source_roots",
+      "source_id": "0017",
+      "resolved_path": "/Users/wangye/Downloads/A-0030-日本插画师Schinako治愈系绘画作品图集 电子图片临摹参考素材",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Downloads/INS高清图/",
+      "source_list": "source_roots",
+      "source_id": "0018",
+      "resolved_path": "/Users/wangye/Downloads/INS高清图",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Downloads/mouun._.factory/",
+      "source_list": "source_roots",
+      "source_id": "0019",
+      "resolved_path": "/Users/wangye/Downloads/mouun._.factory",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Downloads/日本画师 fuji25_2501/",
+      "source_list": "source_roots",
+      "source_id": "0020",
+      "resolved_path": "/Users/wangye/Downloads/日本画师 fuji25_2501",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Desktop/贴纸/国风海棠.png",
+      "source_list": "source_files",
+      "source_id": "0021",
+      "resolved_path": "/Users/wangye/Desktop/贴纸/国风海棠.png",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Desktop/贴纸/花香与珠光——细墨线与透明水彩.png",
+      "source_list": "source_files",
+      "source_id": "0022",
+      "resolved_path": "/Users/wangye/Desktop/贴纸/花香与珠光——细墨线与透明水彩.png",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Documents/Codex/2026-10-02/github-plugin-github-openai-curated-remote/outputs/japanese-cafe-sticker-kit-v1.zip",
+      "source_list": "source_files",
+      "source_id": "0023",
+      "resolved_path": "/Users/wangye/Documents/Codex/2026-10-02/github-plugin-github-openai-curated-remote/outputs/japanese-cafe-sticker-kit-v1.zip",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Downloads/ScreenRecording_10-02-2026 16-49-38_1.MP4",
+      "source_list": "source_files",
+      "source_id": "0024",
+      "resolved_path": "/Users/wangye/Downloads/ScreenRecording_10-02-2026 16-49-38_1.MP4",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Downloads/ScreenRecording_10-02-2026 16-55-49_1.MP4",
+      "source_list": "source_files",
+      "source_id": "0025",
+      "resolved_path": "/Users/wangye/Downloads/ScreenRecording_10-02-2026 16-55-49_1.MP4",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Downloads/ScreenRecording_10-02-2026 19-00-25_1.mov",
+      "source_list": "source_files",
+      "source_id": "0026",
+      "resolved_path": "/Users/wangye/Downloads/ScreenRecording_10-02-2026 19-00-25_1.mov",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Downloads/ScreenRecording_10-03-2026 15-09-25_1.mov",
+      "source_list": "source_files",
+      "source_id": "0027",
+      "resolved_path": "/Users/wangye/Downloads/ScreenRecording_10-03-2026 15-09-25_1.mov",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Downloads/export_1790930919027.MOV",
+      "source_list": "source_files",
+      "source_id": "0028",
+      "resolved_path": "/Users/wangye/Downloads/export_1790930919027.MOV",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Downloads/v0d00fg10000d4aqsafog65pv484vtvg.MP4",
+      "source_list": "source_files",
+      "source_id": "0029",
+      "resolved_path": "/Users/wangye/Downloads/v0d00fg10000d4aqsafog65pv484vtvg.MP4",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Downloads/v0d00fg10000d9bnrh7og65mj13ck1d0.MP4",
+      "source_list": "source_files",
+      "source_id": "0030",
+      "resolved_path": "/Users/wangye/Downloads/v0d00fg10000d9bnrh7og65mj13ck1d0.MP4",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Downloads/v1e00fgi0000d6l6cj7og65vje38beug.MP4",
+      "source_list": "source_files",
+      "source_id": "0031",
+      "resolved_path": "/Users/wangye/Downloads/v1e00fgi0000d6l6cj7og65vje38beug.MP4",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Downloads/v1e00fgi0000da02ab7og65h38b2hs60.MP4",
+      "source_list": "source_files",
+      "source_id": "0032",
+      "resolved_path": "/Users/wangye/Downloads/v1e00fgi0000da02ab7og65h38b2hs60.MP4",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Downloads/v2700fgi0000d6fvejfog65i185s8qh0.MP4",
+      "source_list": "source_files",
+      "source_id": "0033",
+      "resolved_path": "/Users/wangye/Downloads/v2700fgi0000d6fvejfog65i185s8qh0.MP4",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/Users/wangye/Downloads/v2700fgi0000daqai3nog65jjvfd5il0.MP4",
+      "source_list": "source_files",
+      "source_id": "0034",
+      "resolved_path": "/Users/wangye/Downloads/v2700fgi0000daqai3nog65jjvfd5il0.MP4",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/var/folders/bj/0rc3jw71747dgz42bqs6vd1m0000gn/T/codex-clipboard-2c4bffe6-dc86-4c3b-9875-c62fac454bec.jpg",
+      "source_list": "source_files",
+      "source_id": "0035",
+      "resolved_path": "/var/folders/bj/0rc3jw71747dgz42bqs6vd1m0000gn/T/codex-clipboard-2c4bffe6-dc86-4c3b-9875-c62fac454bec.jpg",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/var/folders/bj/0rc3jw71747dgz42bqs6vd1m0000gn/T/codex-clipboard-2fd4f5fb-27b9-41e1-b5bc-d0f9416604e4.jpg",
+      "source_list": "source_files",
+      "source_id": "0036",
+      "resolved_path": "/var/folders/bj/0rc3jw71747dgz42bqs6vd1m0000gn/T/codex-clipboard-2fd4f5fb-27b9-41e1-b5bc-d0f9416604e4.jpg",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/var/folders/bj/0rc3jw71747dgz42bqs6vd1m0000gn/T/codex-clipboard-40aff602-549a-470c-a6d9-b7b11f78de7d.jpg",
+      "source_list": "source_files",
+      "source_id": "0037",
+      "resolved_path": "/var/folders/bj/0rc3jw71747dgz42bqs6vd1m0000gn/T/codex-clipboard-40aff602-549a-470c-a6d9-b7b11f78de7d.jpg",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/var/folders/bj/0rc3jw71747dgz42bqs6vd1m0000gn/T/codex-clipboard-769c6cd2-1fac-45bf-9c5f-2bf98c6516d8.png",
+      "source_list": "source_files",
+      "source_id": "0038",
+      "resolved_path": "/var/folders/bj/0rc3jw71747dgz42bqs6vd1m0000gn/T/codex-clipboard-769c6cd2-1fac-45bf-9c5f-2bf98c6516d8.png",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/var/folders/bj/0rc3jw71747dgz42bqs6vd1m0000gn/T/codex-clipboard-7c382036-d895-49d3-9dc9-c9cc03580eb3.png",
+      "source_list": "source_files",
+      "source_id": "0039",
+      "resolved_path": "/var/folders/bj/0rc3jw71747dgz42bqs6vd1m0000gn/T/codex-clipboard-7c382036-d895-49d3-9dc9-c9cc03580eb3.png",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/var/folders/bj/0rc3jw71747dgz42bqs6vd1m0000gn/T/codex-clipboard-b70313d7-9b17-47a2-ad88-082bf24d6756.png",
+      "source_list": "source_files",
+      "source_id": "0040",
+      "resolved_path": "/var/folders/bj/0rc3jw71747dgz42bqs6vd1m0000gn/T/codex-clipboard-b70313d7-9b17-47a2-ad88-082bf24d6756.png",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/var/folders/bj/0rc3jw71747dgz42bqs6vd1m0000gn/T/codex-clipboard-ba57680b-b564-478d-b0e1-fbeed183d59a.png",
+      "source_list": "source_files",
+      "source_id": "0041",
+      "resolved_path": "/var/folders/bj/0rc3jw71747dgz42bqs6vd1m0000gn/T/codex-clipboard-ba57680b-b564-478d-b0e1-fbeed183d59a.png",
+      "status": "missing"
+    },
+    {
+      "requested_path": "/var/folders/bj/0rc3jw71747dgz42bqs6vd1m0000gn/T/codex-clipboard-e5b28704-9b3c-46ea-b92d-693be32fd776.png",
+      "source_list": "source_files",
+      "source_id": "0042",
+      "resolved_path": "/var/folders/bj/0rc3jw71747dgz42bqs6vd1m0000gn/T/codex-clipboard-e5b28704-9b3c-46ea-b92d-693be32fd776.png",
+      "status": "missing"
+    }
+  ],
+  "excluded": [],
+  "errors": [],
+  "entries": [],
+  "counts": {
+    "file_count": 0,
+    "file_bytes": 0,
+    "directory_count": 0,
+    "symlink_count": 0,
+    "missing_path_count": 42,
+    "excluded_path_count": 0,
+    "error_count": 0
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "thread_id": "01a0fd6e-3a20-7be0-b98f-6ea35299628c",
+  "title": "生图1号",
+  "page_count": 13,
+  "supplemental_window_count": 13,
+  "raw_source_response_count": 26,
+  "turn_count": 13,
+  "message_count": 124,
+  "user_message_count": 28,
+  "assistant_message_count": 96,
+  "turns_with_no_returned_items_count": 0,
+  "turns_without_returned_messages_count": 0,
+  "raw_response_empty_turn_observation_count": 30,
+  "within_turn_order_conflict_count": 0,
+  "raw_non_reasoning_item_observation_count": 3630,
+  "unique_item_count": 809,
+  "duplicate_item_observation_count": 2821,
+  "item_type_counts": {
+    "userMessage": 28,
+    "agentMessage": 96,
+    "commandExecution": 186,
+    "subAgentActivity": 157,
+    "fileChange": 119,
+    "imageView": 118,
+    "imageGeneration": 70,
+    "contextCompaction": 5,
+    "collabAgentToolCall": 17,
+    "mcpToolCall": 13
+  },
+  "path_candidate_count": 1567,
+  "cloud_present_candidate_count": 0,
+  "generated_image_record_count": 70,
+  "completed_image_generation_count": 70,
+  "download_file_id_candidate_count": 0,
+  "user_attachment_metadata_block_count": 0,
+  "derived_text_redaction_match_count": 0,
+  "read_time_final_page_has_more": false,
+  "completeness": {
+    "pagination_complete": true,
+    "raw_responses_with_empty_turn_items": [
+      {
+        "source_file": "windows/00001.json",
+        "turn_id": "01a100a3-bd8f-78d2-907c-abf4220313ef"
+      },
+      {
+        "source_file": "windows/00001.json",
+        "turn_id": "01a0ffd4-f1a9-7242-8594-d375d69368cc"
+      },
+      {
+        "source_file": "windows/00001.json",
+        "turn_id": "01a0ff79-d482-7143-a344-99e401023cd5"
+      },
+      {
+        "source_file": "windows/00001.json",
+        "turn_id": "01a0ff5f-ac4b-7912-8ad6-196a956ee510"
+      },
+      {
+        "source_file": "windows/00001.json",
+        "turn_id": "01a0fe66-f32e-7191-91d1-27e10b1453d4"
+      },
+      {
+        "source_file": "windows/00001.json",
+        "turn_id": "01a0fdb7-5bb1-7721-b6cc-2382b5f53c15"
+      },
+      {
+        "source_file": "windows/00002.json",
+        "turn_id": "01a100a3-bd8f-78d2-907c-abf4220313ef"
+      },
+      {
+        "source_file": "windows/00002.json",
+        "turn_id": "01a0ffd4-f1a9-7242-8594-d375d69368cc"
+      },
+      {
+        "source_file": "windows/00002.json",
+        "turn_id": "01a0ff79-d482-7143-a344-99e401023cd5"
+      },
+      {
+        "source_file": "windows/00002.json",
+        "turn_id": "01a0ff5f-ac4b-7912-8ad6-196a956ee510"
+      },
+      {
+        "source_file": "windows/00002.json",
+        "turn_id": "01a0fe66-f32e-7191-91d1-27e10b1453d4"
+      },
+      {
+        "source_file": "windows/00002.json",
+        "turn_id": "01a0fdb7-5bb1-7721-b6cc-2382b5f53c15"
+      },
+      {
+        "source_file": "windows/00002.json",
+        "turn_id": "01a0fdae-412b-7c83-a7f3-d79baeb88c01"
+      },
+      {
+        "source_file": "windows/00003.json",
+        "turn_id": "01a0ff5f-ac4b-7912-8ad6-196a956ee510"
+      },
+      {
+        "source_file": "windows/00003.json",
+        "turn_id": "01a0fe66-f32e-7191-91d1-27e10b1453d4"
+      },
+      {
+        "source_file": "windows/00003.json",
+        "turn_id": "01a0fdb7-5bb1-7721-b6cc-2382b5f53c15"
+      },
+      {
+        "source_file": "windows/00003.json",
+        "turn_id": "01a0fdae-412b-7c83-a7f3-d79baeb88c01"
+      },
+      {
+        "source_file": "windows/00003.json",
+        "turn_id": "01a0fd74-2f64-76b2-b349-bdae75de1e3d"
+      },
+      {
+        "source_file": "windows/00004.json",
+        "turn_id": "01a0fe66-f32e-7191-91d1-27e10b1453d4"
+      },
+      {
+        "source_file": "windows/00004.json",
+        "turn_id": "01a0fdb7-5bb1-7721-b6cc-2382b5f53c15"
+      },
+      {
+        "source_file": "windows/00004.json",
+        "turn_id": "01a0fdae-412b-7c83-a7f3-d79baeb88c01"
+      },
+      {
+        "source_file": "windows/00004.json",
+        "turn_id": "01a0fd74-2f64-76b2-b349-bdae75de1e3d"
+      },
+      {
+        "source_file": "windows/00004.json",
+        "turn_id": "01a0fd70-b814-7c91-af54-c4a269633bf5"
+      },
+      {
+        "source_file": "windows/00005.json",
+        "turn_id": "01a0fdae-412b-7c83-a7f3-d79baeb88c01"
+      },
+      {
+        "source_file": "windows/00005.json",
+        "turn_id": "01a0fd74-2f64-76b2-b349-bdae75de1e3d"
+      },
+      {
+        "source_file": "windows/00005.json",
+        "turn_id": "01a0fd70-b814-7c91-af54-c4a269633bf5"
+      },
+      {
+        "source_file": "windows/00006.json",
+        "turn_id": "01a0fdae-412b-7c83-a7f3-d79baeb88c01"
+      },
+      {
+        "source_file": "windows/00006.json",
+        "turn_id": "01a0fd74-2f64-76b2-b349-bdae75de1e3d"
+      },
+      {
+        "source_file": "windows/00006.json",
+        "turn_id": "01a0fd70-b814-7c91-af54-c4a269633bf5"
+      },
+      {
+        "source_file": "windows/00007.json",
+        "turn_id": "01a0fd70-b814-7c91-af54-c4a269633bf5"
+      }
+    ],
+    "within_turn_order_conflicts": [],
+    "turns_with_no_returned_items": [],
+    "turns_without_returned_user_or_assistant_messages": [],
+    "message_text_subject_to_tool_character_limit": true,
+    "truncated_output_or_diff_count": 2,
+    "command_items_without_returned_output": 29,
+    "material_files_archived": 0,
+    "mac_materials_available_on_cloud": false,
+    "notes": [
+      "分页读到 hasMore=false 只表示可读取页已取完，不保证所有历史消息正文均由接口返回。",
+      "接口对每次响应的总items及单条字符数设有上限，长回合可只返回尾部内容；pages和较大turnLimit的windows按turnId/itemId合并去重，并选择更完整的可读取文本和输出。",
+      "可读取用户/助手消息已整理；工具响应中的 reasoning 项未进入派生文件。",
+      "素材路径与成功生成状态来自历史记录，并不证明对应文件当前存在。",
+      "Mac 的 /Users 路径未挂载到云环境；本次派生文件没有复制素材或生成图片字节。",
+      "工具输出/文件差异截断与未返回输出已列出；消息文本也受到读取接口单条字符上限约束。"
+    ]
+  }
+}

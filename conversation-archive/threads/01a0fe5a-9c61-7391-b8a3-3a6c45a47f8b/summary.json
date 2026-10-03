@@ -1,0 +1,51 @@
+{
+  "threadId": "01a0fe5a-9c61-7391-b8a3-3a6c45a47f8b",
+  "title": "游戏2号（已归档）",
+  "pages": 1,
+  "windows": 1,
+  "turns": 1,
+  "messages": 4,
+  "userMessages": 1,
+  "assistantMessages": 3,
+  "itemTypeCounts": {
+    "userMessage": 1,
+    "agentMessage": 3,
+    "mcpToolCall": 4,
+    "commandExecution": 7,
+    "subAgentActivity": 2,
+    "fileChange": 1
+  },
+  "deduplicationKey": "turnId + itemId; richer text/output fields retained",
+  "ordering": "turn timestamp; window-first item order constraints followed by page order constraints",
+  "orderingUncertainty": [],
+  "paginationComplete": true,
+  "completeHistoricalMessageText": null,
+  "historicalTextCompleteness": "unknown; bounded read API may omit items even when pagination exhausted",
+  "lastPageHasMore": false,
+  "emptyItemTurns": [],
+  "rawEmptyTurnOccurrences": [],
+  "rawTruncatedResponseOccurrences": [],
+  "truncatedItems": [],
+  "commandExecutionsWithoutOutput": [
+    {
+      "source": "windows/00001.json",
+      "turnId": "01a0fe5b-4d5d-7ee1-a7e0-29cff7b38a00",
+      "itemId": "exec-082d8639-bd80-4995-be56-8a5245a76b27",
+      "status": "failed"
+    }
+  ],
+  "explicitSecretMatchesInDownloadedRecords": 0,
+  "binaryFilesArchived": 0,
+  "pathReferenceCount": 21,
+  "relativePathReferenceCount": 35,
+  "fileIdentifierCount": 0,
+  "imageGenerationRecordCount": 0,
+  "limitations": [
+    "这里归档的是可读取的会话记录；路径提及不代表原始文件已复制或在云环境可用。",
+    "源文件主要位于原主机 /Users 路径，当前云环境未挂载该目录；素材与成果二进制文件未归档。",
+    "推理条目不归档。工具输出可能存在截断、缺失或读取接口本身未返回的附件数据。",
+    "paginationComplete 仅表示接口可提供的分页已取完，不表示所有历史消息正文均可读取。",
+    "读取接口会按回合长度和窗口限制省略部分条目；pages 与 windows 去重合并仍不能证明全量原始日志已归档。",
+    "有 1 个命令执行条目未附输出。"
+  ]
+}

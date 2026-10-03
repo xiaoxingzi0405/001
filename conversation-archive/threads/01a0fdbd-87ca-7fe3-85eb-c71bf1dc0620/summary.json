@@ -1,0 +1,72 @@
+{
+  "thread_id": "01a0fdbd-87ca-7fe3-85eb-c71bf1dc0620",
+  "title": "分割2号",
+  "source_host_id": "local",
+  "source_cwd": "/Users/wangye/Desktop/贴纸",
+  "page_count": 3,
+  "window_count": 3,
+  "response_count": 6,
+  "turn_count": 3,
+  "empty_turn_count": 0,
+  "empty_turn_ids": [],
+  "observed_item_count_before_deduplication": 918,
+  "duplicate_item_observation_count": 630,
+  "unique_item_count": 288,
+  "message_count": 32,
+  "message_counts": {
+    "用户": 9,
+    "助手": 23
+  },
+  "item_counts": {
+    "userMessage": 9,
+    "agentMessage": 23,
+    "mcpToolCall": 6,
+    "commandExecution": 83,
+    "imageView": 70,
+    "subAgentActivity": 43,
+    "fileChange": 23,
+    "imageGeneration": 28,
+    "contextCompaction": 1,
+    "functionCallOutput": 2
+  },
+  "pagination_complete": true,
+  "all_original_log_content_available": false,
+  "oldest_page_has_more": false,
+  "tool_output_truncation_count": 2,
+  "truncation_locations": [
+    {
+      "sources": [
+        "windows/00001.json",
+        "windows/00002.json",
+        "windows/00003.json"
+      ],
+      "selected_source": "windows/00001.json",
+      "turn_id": "01a0fdbf-2e9b-7681-bb88-6c870061d9e0",
+      "item_id": "exec-a31fd702-0e1d-4aaa-84bc-79e9cf141630",
+      "item_type": "commandExecution",
+      "field": "output.truncated"
+    },
+    {
+      "sources": [
+        "windows/00001.json",
+        "windows/00002.json",
+        "windows/00003.json"
+      ],
+      "selected_source": "windows/00001.json",
+      "turn_id": "01a0fdbf-2e9b-7681-bb88-6c870061d9e0",
+      "item_id": "exec-e4db400a-2eaa-43ab-9c1c-bb77831677ef",
+      "item_type": "fileChange",
+      "field": "changes[0].diff.truncated"
+    }
+  ],
+  "path_mention_count": 261,
+  "potential_downloadable_file_id_count": 0,
+  "completed_image_generations": 28,
+  "binary_files_archived": 0,
+  "limitations": [
+    "仅归档接口可读取的用户/助手消息及可见工具记录；reasoning 条目排除；不是全量原始日志。",
+    "接口可能仅返回长回合的局部内容，部分历史回合可能 items 为空；分页结束不证明所有历史条目可读取。",
+    "工具输出与消息可能存在接口字符截断；请查看 truncation_locations。",
+    "会话提及的 Mac 本地原始素材、生成图片、压缩包和其他文件当前没有云端 /Users 挂载，未取得二进制。"
+  ]
+}
