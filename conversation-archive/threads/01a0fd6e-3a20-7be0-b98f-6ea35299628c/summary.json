@@ -2,35 +2,35 @@
   "thread_id": "01a0fd6e-3a20-7be0-b98f-6ea35299628c",
   "title": "生图1号",
   "page_count": 13,
-  "supplemental_window_count": 13,
-  "raw_source_response_count": 26,
-  "turn_count": 13,
-  "message_count": 124,
-  "user_message_count": 28,
-  "assistant_message_count": 96,
+  "supplemental_window_count": 14,
+  "raw_source_response_count": 27,
+  "turn_count": 14,
+  "message_count": 129,
+  "user_message_count": 29,
+  "assistant_message_count": 100,
   "turns_with_no_returned_items_count": 0,
   "turns_without_returned_messages_count": 0,
-  "raw_response_empty_turn_observation_count": 30,
+  "raw_response_empty_turn_observation_count": 35,
   "within_turn_order_conflict_count": 0,
-  "raw_non_reasoning_item_observation_count": 3630,
-  "unique_item_count": 809,
-  "duplicate_item_observation_count": 2821,
+  "raw_non_reasoning_item_observation_count": 3972,
+  "unique_item_count": 843,
+  "duplicate_item_observation_count": 3129,
   "item_type_counts": {
-    "userMessage": 28,
-    "agentMessage": 96,
-    "commandExecution": 186,
-    "subAgentActivity": 157,
-    "fileChange": 119,
-    "imageView": 118,
-    "imageGeneration": 70,
+    "userMessage": 29,
+    "agentMessage": 100,
+    "commandExecution": 203,
+    "subAgentActivity": 163,
+    "fileChange": 122,
+    "imageView": 119,
+    "imageGeneration": 71,
     "contextCompaction": 5,
-    "collabAgentToolCall": 17,
+    "collabAgentToolCall": 18,
     "mcpToolCall": 13
   },
-  "path_candidate_count": 1567,
+  "path_candidate_count": 1624,
   "cloud_present_candidate_count": 0,
-  "generated_image_record_count": 70,
-  "completed_image_generation_count": 70,
+  "generated_image_record_count": 71,
+  "completed_image_generation_count": 71,
   "download_file_id_candidate_count": 0,
   "user_attachment_metadata_block_count": 0,
   "derived_text_redaction_match_count": 0,
@@ -157,6 +157,26 @@
       {
         "source_file": "windows/00007.json",
         "turn_id": "01a0fd70-b814-7c91-af54-c4a269633bf5"
+      },
+      {
+        "source_file": "windows/00014.json",
+        "turn_id": "01a100a3-bd8f-78d2-907c-abf4220313ef"
+      },
+      {
+        "source_file": "windows/00014.json",
+        "turn_id": "01a0ffd4-f1a9-7242-8594-d375d69368cc"
+      },
+      {
+        "source_file": "windows/00014.json",
+        "turn_id": "01a0ff79-d482-7143-a344-99e401023cd5"
+      },
+      {
+        "source_file": "windows/00014.json",
+        "turn_id": "01a0ff5f-ac4b-7912-8ad6-196a956ee510"
+      },
+      {
+        "source_file": "windows/00014.json",
+        "turn_id": "01a0fe66-f32e-7191-91d1-27e10b1453d4"
       }
     ],
     "within_turn_order_conflicts": [],
@@ -164,7 +184,7 @@
     "turns_without_returned_user_or_assistant_messages": [],
     "message_text_subject_to_tool_character_limit": true,
     "truncated_output_or_diff_count": 2,
-    "command_items_without_returned_output": 29,
+    "command_items_without_returned_output": 31,
     "material_files_archived": 0,
     "mac_materials_available_on_cloud": false,
     "notes": [

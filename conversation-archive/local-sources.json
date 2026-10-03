@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "captured_at_utc": "2026-10-03T16:14:50+00:00",
-  "captured_at_asia_shanghai": "2026-10-04T00:14:50+08:00",
+  "captured_at_utc": "2026-10-03T16:57:36+00:00",
+  "captured_at_asia_shanghai": "2026-10-04T00:57:36+08:00",
   "purpose": "在保存原始文件的 Mac 上收集实际存在的工程、附件和成功生图目录；不是云端文件清单。",
   "source_roots": [
     "/Users/wangye/Desktop/贴纸",
@@ -625,6 +625,13 @@
           "item_id": "exec-3144f766-8541-4b8e-8037-437cedc33411",
           "turn_id": "01a100ba-6230-7160-a50b-63966685c780",
           "recorded_saved_path": "/Users/wangye/.codex/generated_images/01a0fd6e-3a20-7be0-b98f-6ea35299628c/exec-3144f766-8541-4b8e-8037-437cedc33411.png"
+        },
+        {
+          "thread_id": "01a0fd6e-3a20-7be0-b98f-6ea35299628c",
+          "origin": "completed_imageGeneration.savedPath",
+          "item_id": "exec-3273eddc-5a4f-47f7-8fb5-068fc2ecd163",
+          "turn_id": "01a10254-8380-75e3-aeb7-fabc7e2427e1",
+          "recorded_saved_path": "/Users/wangye/.codex/generated_images/01a0fd6e-3a20-7be0-b98f-6ea35299628c/exec-3273eddc-5a4f-47f7-8fb5-068fc2ecd163.png"
         },
         {
           "thread_id": "01a0fd6e-3a20-7be0-b98f-6ea35299628c",
